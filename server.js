@@ -1,15 +1,11 @@
 var express = require('express'),
-	app = express();
+	app = express(),
+	homeControler = require('./controllers/home.js');
 
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
 
-app.get('/orders.json', function(req, res) {
-	res.json({
-		status: 'OK'
-	})
+app.get('/', homeControler);
 
-});
-
-app.listen(3000, function() {
+var server = app.listen(3000, function() {
 	console.log('Working 3000');
 });

@@ -3,7 +3,13 @@ var gulp = require('gulp'),
     jade = require('gulp-jade'),
     webserver = require('gulp-webserver'),
     jscs = require('gulp-jscs'),
-    gutil = require('gulp-util');
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify'),
+    argv = require('minimist')(process.argv.slice(2)),
+    gutil = require('gulp-util'),
+    htmlmin = require('gulp-htmlmin');
+
+
 
 gulp.task('sass', function () {
     return gulp.src('./sass/**/*.scss')
@@ -25,6 +31,18 @@ gulp.task('jade', function () {
         .pipe(gulp.dest('./public'));
 });
 
+gulp.task('minify', function() {
+    return gulp.src('./public/*.html')
+    .pipe(gulpif(argv.production, htmlmin({collapseWhitespace: true})))
+    .pipe(gulp.dest('./public'));
+});
+
+gulp.task('uglify', function() {
+  return gulp.src('./public/*.js')
+    .pipe(gulpif(argv.production, uglify()))
+    .pipe(gulp.dest('./public'));
+});
+
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./views/**/*.jade', ['jade']);
@@ -38,5 +56,5 @@ gulp.task('webserver', function () {
         }));
 });
 
-gulp.task('default', ['sass', 'jade','watch', 'webserver']);
+gulp.task('default', ['sass', 'jade','watch', 'webserver','minify','uglify']);
 
