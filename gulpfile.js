@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     jade = require('gulp-jade'),
     webserver = require('gulp-webserver'),
-    jscs = require('gulp-jscs');
+    jscs = require('gulp-jscs'),
+    gutil = require('gulp-util');
 
 gulp.task('sass', function () {
     return gulp.src('./sass/**/*.scss')
@@ -11,16 +12,16 @@ gulp.task('sass', function () {
 });
 
 gulp.task('jscs', function () {
-    return gulp.src(['./public/**/*.js','gulpfile.js'])
+    return gulp.src(['./public/**/*.js','gulpfile.js', 'server.js'])
         .pipe(jscs())
         .pipe(jscs.reporter());
 });
 
 gulp.task('jade', function () {
-    return gulp.src('./views/**/*.jade')
+    gulp.src('./views/**/*.jade')
         .pipe(jade({
             pretty: true
-        }))
+        }).on('error', gutil.log))
         .pipe(gulp.dest('./public'));
 });
 
