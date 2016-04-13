@@ -1,3 +1,11 @@
+header = #FFFFFF
+header-text-color = #FA2D2D
+buttons = #C41414
+buttons-text-color = #FFFFFF
+company-header = #fff5bf
+main-font = "Verdana", scans-serif 
+
+
 .main 
     min-height 100%
     margin auto
@@ -5,8 +13,8 @@
 .header 
     max-height 90px
     font-size 22pt
-    font-family "Verdana", scans-serif
-    color #FA2D2D
+    font-family main-font
+    color header-text-color
     background-color #FFFFFF
 .header__title 
     padding 10px
@@ -27,11 +35,11 @@
     height 50px
     width 270px
     font-size 16pt
-    background-color #C41414
+    background-color buttons
     color white
     &:hover 
         background-color white
-        color #C41414
+        color buttons
 .wrapper__body 
     position relative
     top 70px
