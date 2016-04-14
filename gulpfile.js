@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
     jade = require('gulp-jade'),
     webserver = require('gulp-webserver'),
     jscs = require('gulp-jscs'),
@@ -15,12 +14,6 @@ gulp.task('stylus', function() {
         .pipe(stylus())
         .pipe(gulp.dest('./public/css'))
 });
-
-// gulp.task('sass', function () {
-//     return gulp.src('./sass/**/*.scss')
-//         .pipe(sass().on('error', sass.logError))
-//         .pipe(gulp.dest('./public/css'));
-// });
 
 gulp.task('jscs', function () {
     return gulp.src(['./public/**/*.js','gulpfile.js', 'server.js'])
@@ -49,7 +42,6 @@ gulp.task('uglify', function() {
 });
 
 gulp.task('watch', function () {
-    // gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./stylus/**/*.styl', ['stylus']);
     gulp.watch('./views/**/*.jade', ['jade']);
 });
