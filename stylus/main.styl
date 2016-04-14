@@ -1,0 +1,63 @@
+buttons = #fb6362
+buttons-active = #b14544
+dark-text-color = #666666
+.company
+    display block
+    background-color: buttons
+    list-style-type none
+    height auto
+
+
+.company__header
+    //height 100px
+    &:hover
+        box-shadow 0 7px 10px -5px dark-text-color
+    &:active .company__people_list
+        display block
+
+.person__name
+    float left
+    font-size 2em
+    //padding 20px
+    padding-left 5%
+
+.service__logo
+    //display inline
+    //float right
+
+    margin-left 60%
+
+.company__deadline
+    //float left
+    padding-left 7%
+    padding-top 20px
+    font-size 1.5em
+
+.button_company-same .button__button
+    float left
+    margin-left 5%
+    margin-right 20px
+    margin-bottom 20px
+    &:hover
+        background-color white
+        color buttons
+    &:active
+        background-color buttons-active
+        color white
+
+.button_company-add .button__button
+
+    &:hover
+        background-color white
+        color buttons
+    &:active
+        background-color buttons-active
+        color white
+
+.company__people_list
+    display none
+    background-color dark-text-color
+
+.service__logo
+    width 150px
+
