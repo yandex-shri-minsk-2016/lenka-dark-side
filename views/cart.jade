@@ -7,11 +7,21 @@ block content
 	.wrapper
 		.wrapper__title
 			span Корзина
-		.wrapper__zakaz
-			ul.wrapper__zakaz-list
+		form.wrapper__form(action="#" method="post")
+			ul.wrapper__form-zakaz-list
 				each item in foodtitle
-					li.wrapper__zakaz-list__element-title: a(href="#") #{item}
-		.wrapper__allcost
-			.wrapper__allcost-element
-		.wrapper__button
-			button.wrapper__button-button Заказать!
+					li.wrapper__form-zakaz-element
+						a.wrapper__form-zakaz-element-close(href="#")
+						.wrapper__form-zakaz-element-info #{item}
+						
+				//- li 
+				//- 	a.wrapper__form-zakaz-close(href="#")
+
+		//- .wrapper__zakaz
+		//- 	ul.wrapper__zakaz-list
+		//- 		each item in foodtitle
+		//- 			li.wrapper__zakaz-list__element-title: a(href="#") #{item}
+		//- .wrapper__allcost
+		//- 	.wrapper__allcost-element
+		//- .wrapper__button
+		//- 	button.wrapper__button-button Заказать!
