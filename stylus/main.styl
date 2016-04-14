@@ -1,9 +1,13 @@
 buttons = #fb6362
 buttons-active = #b14544
 dark-text-color = #666666
+
+.companies
+    padding 0
+
 .company
     display block
-    background-color: buttons
+    background-color: white
     list-style-type none
     height auto
 
@@ -12,8 +16,17 @@ dark-text-color = #666666
     //height 100px
     &:hover
         box-shadow 0 7px 10px -5px dark-text-color
-    &:active .company__people_list
+        background-color: buttons
+        color white
+    &:hover .company__people_list
         display block
+    &:hover .button_company-same .button__button
+        background-color white
+        color buttons
+    &:hover .button_company-add .button__button
+        background-color white
+        color buttons
+
 
 .person__name
     float left
@@ -24,7 +37,6 @@ dark-text-color = #666666
 .service__logo
     //display inline
     //float right
-
     margin-left 60%
 
 .company__deadline
@@ -54,10 +66,31 @@ dark-text-color = #666666
         background-color buttons-active
         color white
 
+.service__logo
+    width 150px
+
 .company__people_list
     display none
     background-color dark-text-color
+    padding 0
 
-.service__logo
-    width 150px
+.person_customer
+    clear left
+    list-style-type none
+    border-bottom: 1px solid black
+
+.company__people_list .person__name
+    //float left
+    //height auto
+    font-size 1.2em
+    //padding-right 30%
+
+.orders
+    padding-top 10px
+    //float left
+
+.person__check-money
+    //float left
+    margin-left 10px
+
 
