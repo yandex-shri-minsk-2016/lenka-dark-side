@@ -8,15 +8,15 @@ block content
 		.wrapper__title
 			span Корзина
 		form.wrapper__form(action="#" method="post")
-			ul.wrapper__form-zakaz-list
+			ul.wrapper__form-order-list
 				each item in foodtitle
-					li.wrapper__form-zakaz-element
-						a.wrapper__form-zakaz-element-close(href="#")
-						.wrapper__form-zakaz-element-info #{item}
-						a.wrapper__form-zakaz-element-less(href="#")
-						input.wrapper__form-zakaz-element-value(value="1")
-						a.wrapper__form-zakaz-element-more(href="#")
-						.wrapper__form-zakaz-element-cost
+					li.wrapper__form-order-element
+						a.wrapper__form-order-element-close(href="#")
+						.wrapper__form-order-element-info #{item}
+						a.wrapper__form-order-element-less(href="#")
+						input.wrapper__form-order-element-value(value="1")
+						a.wrapper__form-order-element-more(href="#")
+						.wrapper__form-order-element-cost
 							span $
 		.wrapper__allcost
 			span Общая стоимость:
