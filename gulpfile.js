@@ -10,9 +10,14 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin');
 
 gulp.task('stylus', function() {
-    return gulp.src('./stylus/**/*.styl')
+    return gulp.src('./stylus/*.styl')
         .pipe(stylus())
         .pipe(gulp.dest('./public/css'))
+});
+
+gulp.task('js', function() {
+    return gulp.src('./views/*.js')
+        .pipe(gulp.dest('./public/js'))
 });
 
 gulp.task('jscs', function () {
@@ -36,9 +41,9 @@ gulp.task('minify', function() {
 });
 
 gulp.task('uglify', function() {
-  return gulp.src('./public/*.js')
+  return gulp.src('./public/js/*.js')
     .pipe(gulpif(argv.production, uglify()))
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('watch', function () {
@@ -54,5 +59,5 @@ gulp.task('webserver', function () {
         }));
 });
 
-gulp.task('default', ['stylus','jade','watch', 'webserver','minify','uglify']);
+gulp.task('default', ['js','stylus','jade','watch', 'webserver','minify','uglify']);
 
