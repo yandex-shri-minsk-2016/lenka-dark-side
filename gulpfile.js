@@ -15,11 +15,6 @@ gulp.task('stylus', function() {
         .pipe(gulp.dest('./public/css'))
 });
 
-gulp.task('js', function() {
-    return gulp.src('./views/*.js')
-        .pipe(gulp.dest('./public/js'))
-});
-
 gulp.task('jscs', function () {
     return gulp.src(['./public/**/*.js','gulpfile.js', 'server.js'])
         .pipe(jscs())
