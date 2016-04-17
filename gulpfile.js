@@ -54,5 +54,5 @@ gulp.task('webserver', function () {
         }));
 });
 
-gulp.task('default', ['js','stylus','jade','watch', 'webserver','minify','uglify']);
+gulp.task('default', ['stylus','jade','watch', 'webserver','minify','uglify']);
 
