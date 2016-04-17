@@ -5,47 +5,47 @@ html
         meta(charset="utf-8")
         link(rel="stylesheet" href="css/common.css")
         link(rel="stylesheet" href="css/creating.css")
-        script(src="js/creatingJS.js" type="text/javascript")
-    body()
+
+    body
         .main
             header.header
                 h1.header__title Lenka-d-s
                 img.header__logo(alt="logo")
             div.slider
-                div.header-m(id="header-1") LIDO
-                div.content(id="content-1")
-                    div.text
-                        div.logo
-                            img(src="/images/Logo.png")
+                div.slider_header(id="header-1") LIDO
+                div.slider_content(id="content-1")
+                    div.content__text
+                        div.content__logo
+                            img.content__image(src="/images/Logo.png")
                         .attributes Вы можете сделать заказ по будним дням с 8.30 до 16.30. Заказ сегодня на завтра принимается до 16.30, сегодня на сегодня до 11.00. Доставка производится БЕСПЛАТНО. Минимальная сумма заказа 300 000 рублей. Возможен наличный и безналичный расчёт (заключение договора, выставление счет-фактуры).
-                            form
+                            form.content__form
                                 .attributes Введите время
                                 input(type="date")
                                 input(type="time")
-                                button.company__same-button Создать
+                                button.content__create-button Создать
 
-                div.header-m(id="header-2") Пицца темпо
-                div.content(id="content-2")
-                    div.text
-                        div.logo
-                            img(src="/images/tempo_logo.png")
+                div.slider_header(id="header-2") Пицца темпо
+                div.slider_content(id="content-2")
+                    div.content__text
+                        div.content__logo
+                            img.content__image(src="/images/tempo_logo.png")
                         h2 Режим работы службы доставки:
                         ul
                             li воскресенье — четверг принимаются с 10.00. до 22.00.
                             li пятница — суббота:  заказы принимаются с 10.00. до 02.00.
                             li меню завтраков ежедневно: заказы принимаются с 10.00. до 12.00.
                             li меню обеденных комплексов: понедельник — пятница: с 12.00. до 16.00.
-                        form
+                        form.content__form
                             .attributes Введите время
                             input(type="date")
                             input(type="time")
-                            button.company__same-button Создать
+                            button.content__create-button Создать
 
-                div.header-m(id="header-3") eda.by
-                div.content(id="content-3")
-                    div.text
-                        div.logo
-                            img(src="/images/justeat.png")
+                div.slider_header(id="header-3") eda.by
+                div.slider_content(id="content-3")
+                    div.content__text
+                        div.content__logo
+                            img.content_image(src="/images/justeat.png")
                         .attributes Just-Eat - сервис по доставке вкусной еды, в которым для Вашего удобства мы объединили разные рестораны. Мы экономим ваше время и предлагаем выбрать то, что подходит именно Вам.
                             ul В чем преимущества Just-eat?
                                 li Возможность сравнить цены в разных заведениях и сделать объективный выбор
@@ -53,8 +53,8 @@ html
                                 li Видеть историю своих заказов
                                 li Просматривать рейтинги блюд, оценивать работу наших партнеров
                                 li Публиковать и на сайте свои отзывы и читать отзывы других пользователей
-                        form
+                        form.content__form
                             .attributes Введите время
                             input(type="date")
                             input(type="time")
-                            button.company__same-button Создать
+                            button.content__create-button Создать
