@@ -1,135 +1,101 @@
 transition(condition)
-	if condition==ease-in-out
-		-webkit-transition all 0.35s ease-in-out
-	  	-moz-transition all 0.35s ease-in-out
-	  	transition all 0.35s ease-in-out
-	if condition==linear
-		-webkit-transition all 0.35s 0.1s linear
-  		-moz-transition all 0.35s 0.1s linear
-  		transition all 0.35s 0.1s linear
-		 	
+    if(condition==ease-in-out)
+        -webkit-transition all 0.35s ease-in-out
+        -moz-transition all 0.35s ease-in-out
+        transition all 0.35s ease-in-out
+    else if(condition==linear)
+        -webkit-transition all 0.35s 0.1s linear
+        -moz-transition all 0.35s 0.1s linear
+        transition all 0.35s 0.1s linear           
 scale(condition)
-	if(condition == 1)
-		-webkit-transform scale(1)
-	  	-moz-transform scale(1)
-	  	-ms-transform scale(1)
-	  	-o-transform scale(1)
-	  	transform scale(1)
-	if(condition == 1.2)
-		-webkit-transform scale(1.2)
-		-moz-transform scale(1.2)
-		-ms-transform scale(1.2)
-		-o-transform scale(1.2)
-		transform scale(1.2)
-		
+    -webkit-transform 'scale(%s)' % condition
+    -moz-transform 'scale(%s)' % condition
+    -ms-transform 'scale(%s)' % condition
+    -o-transform 'scale(%s)' % condition
+    transform 'scale(%s)' % condition
 translateY(condition)
-	if(condition == -100)
-		-webkit-transform translateY(-100%)
-		-moz-transform translateY(-100%)
-		-ms-transform translateY(-100%)
-		-o-transform translateY(-100%)
-		transform translateY(-100%)
-	if(condition==100)
-		-webkit-transform translateY(100%)
-		-moz-transform translateY(100%)
-		-ms-transform translateY(100%)
-		-o-transform translateY(100%)
-		transform translateY(100%)
-	if(condition == 0)
-		-webkit-transform translateY(0)
-		-moz-transform translateY(0)
-		-ms-transform translateY(0)
-		-o-transform translateY(0)
-		transform translateY(0)
-  		
-translateX(condition)
-	if(condition == -100)
-		-webkit-transform translateX(-100%)
-		-moz-transform translateX(-100%)
-		-ms-transform translateX(-100%)
-		-o-transform translateX(-100%)
-		transform translateX(-100%)
-	if(condition == 100)
-		-webkit-transform translateX(100%)
-		-moz-transform translateX(100%)
-		-ms-transform translateX(100%)
-		-o-transform translateX(100%)
-		transform translateX(100%)
-	if(condition == 0)
-		-webkit-transform translateX(0)
-		-moz-transform translateX(0)
-		-ms-transform translateX(0)
-		-o-transform translateX(0)
-		transform translateX(0)
-  		
+    -webkit-transform 'translateY(%s)' % condition
+    -moz-transform 'translateY(%s)' % condition
+    -ms-transform 'translateY(%s)' % condition
+    -o-transform 'translateY(%s)' % condition
+    transform 'translateY(%s)' % condition
+        
 box-sizing()
-	-webkit-box-sizing border-box
-	-moz-box-sizing border-box
- 	box-sizing border-box
+    -webkit-box-sizing border-box
+    -moz-box-sizing border-box
+    box-sizing border-box
  
 .menu-item
-	overflow hidden
-	position relative
-	width 316px
-	height 216px
-	border 8px solid #fff
-	box-shadow 1px 1px 3px rgba(0, 0, 0, 0.3)
-	position relative
-	transition(ease-in-out)
-	box-sizing()
-	a
-		color #333
-		.menu-item__image
-			width 100%
-			height 100%
-	.menu-item__info
-		position absolute
-		top 0
-		bottom 0
-		left 0
-		right 0
-		text-align center
- 		-webkit-backface-visibility hidden
-		backface-visibility hidden
-		background #1a4a72
-		background rgba(26, 74, 114, 0.6)
-		background #333333
-		background rgba(0, 0, 0, 0.6)
-		visibility hidden
-		opacity 0
-		transition(ease-in-out)
-		.menu-item__title
-			background rgba(12, 34, 52, 0.6)
-			text-transform uppercase
-			color #fff
-			text-align center
-			font-size 17px
-			padding 10px
-			background #111111
-			margin 30px 0 0 0
-			transition(ease-in-out)
-			translateY(-100)
-		.menu-item__other-info
-			font-style italic
-			font-size 12px
-			position relative
-			color #bbb
-			padding 20px 20px 20px
-			text-align center
-			transition(linear)
-			translateY(100)
-	.menu-item__image
-		transition(ease-in-out)
-		scale(1)
+    overflow hidden
+    position relative
+    width 200px
+    height 200px
+    position relative
+    transition(ease-in-out)
+    box-sizing()
+    margin 6px
+    a
+        color #333
+        .menu-item__image
+            width 100%
+            height 100%
+            background url("../../images/vakkanai_maki.jpg")
+            background-size cover
+            transition(ease-in-out)
+    .menu-item__info
+        position absolute
+        
+        top 0
+        bottom 0
+        left 0
+        right 0
+        text-align center
+        -webkit-backface-visibility hidden
+        backface-visibility hidden
+        visibility hidden
+        opacity 0
+        transition(ease-in-out)
+        .menu-item__title
+            background rgba(12, 34, 52, 0.8)
+            text-transform uppercase
+            color #fff
+            font-weight bold
+            text-align center
+            font-size 17px
+            padding 10px
+            margin 10% 0 0 0
+            height 10%
+            transition(ease-in-out)
+            translateY(-100%)
+        .menu-item__other-info
+            background rgba(12, 34, 52, 0.6)
+            font-style italic
+            font-size 16px
+            position relative
+            height 100%
+            color #bbb
+            text-align center
+            transition(linear)
+            .menu_item__price
+                margin 80% 0 0 0
+            .button__menu-item
+                width 25px
+                height 25px
+                .button__button
+                    float right
+                    margin 0 10px 0 0
+                    background #d80027 url("../../images/basket.png")
+                    background-size contain
+                
 
 .menu-item a:hover
-	text-decoration none
-	.menu-item__image
-		scale(1.2)
-	.menu-item__info 
-		visibility visible
-		opacity 1
-		.menu-item__info.menu-item__title, .menu-item__info.menu-item__other-info
-			translateY(0)
+    text-decoration none
+    .menu-item__image
+        scale(1.2)
+    .menu-item__info 
+        visibility visible
+        opacity 1
+        .menu-item__info.menu-item__title, .menu-item__info.menu-item__other-info
+            translateY(0)
 
 
