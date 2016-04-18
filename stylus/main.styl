@@ -16,7 +16,7 @@ dark-text-color = #666666
         box-shadow 0 7px 10px -5px dark-text-color
         background-color: buttons
         color white
-    &:hover .company__people_list
+    &:hover .company-people_list
         display block
     &:hover .button_company-same .button__button
         background-color white
@@ -37,10 +37,12 @@ dark-text-color = #666666
     font-size 1.5em
 
 .button_company-same .button__button
+    position relative
     float left
-    margin-left 5%
+    margin-left 3%
     margin-right 20px
     margin-bottom 20px
+    top -5px
     &:hover
         background-color white
         color buttons
@@ -49,7 +51,8 @@ dark-text-color = #666666
         color white
 
 .button_company-add .button__button
-
+    position relative
+    top -5px
     &:hover
         background-color white
         color buttons
@@ -60,8 +63,9 @@ dark-text-color = #666666
 .service__logo
     width 150px
     padding-left 10px
+    margin-bottom 10px
 
-.company__people_list
+.company-people_list
     display none
     background-color dark-text-color
     padding 0
@@ -71,7 +75,7 @@ dark-text-color = #666666
     list-style-type none
     border-bottom: 1px solid black
 
-.company__people_list .person__name
+.company-people_list .person__name
     font-size 1.2em
 
 .orders
