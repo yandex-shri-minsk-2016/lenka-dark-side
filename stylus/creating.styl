@@ -2,7 +2,7 @@
     font-family: Georgia
     font-size: 18px
 
-.slider_header
+.slider__header
     width: 90%
     margin: auto
     background-color: #fb6362
@@ -14,11 +14,19 @@
     cursor: pointer
     text-align: center
 
-.slider_content
+.slider__content
     position: relative
     overflow: hidden
     width: 90%
     margin: auto
+
+.content
+    color: #393939
+    padding: 15px
+    border: 2px solid #3F3F3F
+    border-top: none
+    text-align: left
+    background: linear-gradient(to right, #efefef, #c9c9c9)
 
 .content__logo
     float: right
@@ -28,22 +36,14 @@
 .content__image
     width: 100%
 
-.content__text
-    color: #393939
-    padding: 15px
-    border: 2px solid #3F3F3F
-    border-top: none
-    text-align: left
-    background: linear-gradient(to right, #efefef, #c9c9c9)
-
-.content__text:after //распорка
+.content:after //распорка
     content: ""
     display: table
     clear: both
 
-.content__create-button
+.form__create-button
     margin-left: 5px
     margin-top: 5px
 
-.content__form
+.form
     margin-top: 15px
