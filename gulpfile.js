@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin');
 
 gulp.task('stylus', function() {
-    return gulp.src('./stylus/**/*.styl')
+    return gulp.src('./stylus/*.styl')
         .pipe(stylus())
         .pipe(gulp.dest('./public/css'))
 });
@@ -36,9 +36,9 @@ gulp.task('minify', function() {
 });
 
 gulp.task('uglify', function() {
-  return gulp.src('./public/*.js')
+  return gulp.src('./public/js/*.js')
     .pipe(gulpif(argv.production, uglify()))
-    .pipe(gulp.dest('./public'));
+    .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('watch', function () {
