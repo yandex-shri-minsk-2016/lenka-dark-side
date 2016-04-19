@@ -35,8 +35,6 @@ gulp.task('minify', function() {
     .pipe(gulp.dest('./public'));
 });
 
-
-
 gulp.task('uglify', function() {
   return gulp.src('./public/js/*.js')
     .pipe(gulpif(argv.production, uglify()))
