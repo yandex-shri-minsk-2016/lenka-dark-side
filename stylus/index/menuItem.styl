@@ -1,0 +1,95 @@
+transition(condition)
+    if(condition==ease-in-out)
+        -webkit-transition all 0.5s ease-in-out
+        -moz-transition all 0.5s ease-in-out
+        transition all 0.5s ease-in-out
+    else if(condition==linear)
+        -webkit-transition all 0.35s 0.1s linear
+        -moz-transition all 0.35s 0.1s linear
+        transition all 0.35s 0.1s linear           
+scale(condition)
+    -webkit-transform 'scale(%s)' % condition
+    -moz-transform 'scale(%s)' % condition
+    -ms-transform 'scale(%s)' % condition
+    -o-transform 'scale(%s)' % condition
+    transform 'scale(%s)' % condition
+translateY(condition)
+    -webkit-transform 'translateY(%s)' % condition
+    -moz-transform 'translateY(%s)' % condition
+    -ms-transform 'translateY(%s)' % condition
+    -o-transform 'translateY(%s)' % condition
+    transform 'translateY(%s)' % condition
+        
+box-sizing()
+    -webkit-box-sizing border-box
+    -moz-box-sizing border-box
+    box-sizing border-box
+ 
+.menu-item
+    overflow hidden
+    position relative
+    text-align center
+    width 200px
+    height 200px
+    position relative
+    transition(ease-in-out)
+    background rgba(12, 34, 52, 0.8)
+    box-sizing()
+    margin 6px
+.menu-item__image
+    width 100%
+    height 100%
+    background url("../../images/menuItem/vakkanai_maki.jpg")
+    background-size cover
+    transition(ease-in-out)
+.menu-item__info
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    text-align center
+    -webkit-backface-visibility hidden
+    backface-visibility hidden
+    visibility hidden
+    opacity 0
+    transition(ease-in-out)
+.menu-item__title
+    background rgba(12, 34, 52, 0.8)
+    text-transform uppercase
+    color #fff
+    font-weight bold
+    font-size 17px
+    padding 10px
+    margin 10% 0 0 0
+    height 10%
+    transition(ease-in-out)
+.menu-item__other-info
+    background rgba(12, 34, 52, 0.6)
+    font-style italic
+    font-size 16px
+    position relative
+    color #bbb
+    height 100%
+    margin-top 50%
+    transition(linear)
+.button__button
+    float right
+    width 25px
+    height 25px
+    margin 0 10px 0 0
+    background #d80027 url("../../images/menuItem/basket.png")
+    background-size contain
+                
+.menu-item:hover
+    .menu-item__image
+        scale(1.2)
+    .menu-item__title
+        translateY(40%)
+    .menu-item__other-info
+        translateY(-10%)
+    .menu-item__info 
+        visibility visible
+        opacity 1
+
+
