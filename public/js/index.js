@@ -1,1 +1,0 @@
-var xhr=new XMLHttpRequest;xhr.open("GET","/orders.json",!0),xhr.onload=function(){console.log(xhr.responseText)},xhr.send(null);
