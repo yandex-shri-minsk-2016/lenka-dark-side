@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "autoprefixer-stylus": "^0.9.2",
     "express": "^4.13.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
