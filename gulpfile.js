@@ -7,11 +7,16 @@ var gulp = require('gulp'),
     argv = require('minimist')(process.argv.slice(2)),
     gutil = require('gulp-util'),
     stylus = require('gulp-stylus'),
+    autoprefixer = require('gulp-autoprefixer'),
     htmlmin = require('gulp-htmlmin');
 
 gulp.task('stylus', function() {
     return gulp.src('./stylus/*.styl')
         .pipe(stylus())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(gulp.dest('./public/css'))
 });
 
