@@ -1,28 +1,18 @@
-extends ../layout/layout-total.jade
-block title
-    title Total
-block content
-    .main
-        header.header
-            h1.header__title Lenka-d-s
-            img.header__logo(alt="logo")
-        section.wrapper
-            .wrapper__body
-                .group
-                    h2.group__name Супы
-                    ul.meals
-                        li.dish
-                            .dish__header
-                                a.dish__link(href="http://www.pizzatempo.by/menu/obed.html" target="_blank")
-                                    img.link(src="/images/link.png")
-                                .dish__title Рассольник
-                                .dish__amount Кол-во: 3
-                                .dish__cost 60 000 руб.
-                        li.dish
-                            .dish__header
-                                a.dish__link(href="http://www.pizzatempo.by/menu/obed.html")
-                                    img.link(src="/images/link.png")
-                                .dish__title Рассольник
-                                .dish__amount Кол-во: 3
-                                .dish__cost 60 000 руб.
+.group
+    h2.group__name Супы
+        ul.meals
+            li.dish
+                .dish__header
+                    a.dish__link(href="http://www.pizzatempo.by/menu/obed.html" target="_blank")
+                        img.link(src="/images/link.png")
+                            .dish__title Рассольник
+                            .dish__amount Кол-во: 3
+                            .dish__cost 60 000 руб.
+            li.dish
+                .dish__header
+                    a.dish__link(href="http://www.pizzatempo.by/menu/obed.html")
+                        img.link(src="/images/link.png")
+                            .dish__title Рассольник
+                            .dish__amount Кол-во: 3
+                            .dish__cost 60 000 руб.
 
