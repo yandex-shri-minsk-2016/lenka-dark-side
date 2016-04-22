@@ -1,0 +1,4 @@
+include ../layout/layout-main
+    block title
+        title MenuPage
+include menuItem

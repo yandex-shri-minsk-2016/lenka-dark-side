@@ -1,10 +1,11 @@
-extends ../layout/layout-main
-    block title
-        title "index"
-    block link
-        link(rel="stylesheet" href="css/main.css")
-        link(rel="stylesheet" href="css/header.css")
-    block content
-        .main
-            include header.jade
-            include main.jade
+extends ../layout/layout-main.jade
+block title
+    title index
+block link
+    link(rel="stylesheet" href="css/main.css")
+    link(rel="stylesheet" href="css/button.css")
+block content
+    include header.jade
+    .main
+        include button
+        include main.jade
