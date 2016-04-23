@@ -15,7 +15,8 @@
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
     "gulp-webserver": "^0.9.1",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "mongoose": "~4.4.13"
   },
   "devDependencies": {},
   "scripts": {
