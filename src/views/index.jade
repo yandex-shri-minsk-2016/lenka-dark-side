@@ -1,9 +1,10 @@
 extends layout/layout
+include ../blocks/header/header
 
 block title
     title index
 block content
-    include header
+	+header
     .main
         include ../blocks/button/button
         include main
