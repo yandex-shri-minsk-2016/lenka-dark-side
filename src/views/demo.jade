@@ -1,0 +1,11 @@
+extends layout/layout
+include ../blocks/button/button
+
+block title
+    title Demo
+block content
+    h1 This DEMO
+    +button("Кнопка 1")
+    +button("Кнопка 2")
+    +button("Кнопка 3", ['button_cart', 'button_white'])
+
