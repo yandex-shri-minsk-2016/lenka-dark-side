@@ -2,9 +2,9 @@ var express = require('express'),
 	app = express(),
 	homeControler = require('./src/controllers/home.js'),
 	helloController = require('./src/controllers/hello.js'),
-	serviceController = require('./src/controllers/services.js'),
+	serviceController = require('./src/controllers/services'),
+	
 	mongoose = require('mongoose');
-
 //TODO: Избавиться от хардкода(сделать конфиг) 
 mongoose.connect('mongodb://localhost/lenka');
 
