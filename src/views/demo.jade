@@ -1,15 +1,23 @@
 extends layout/layout
 include ../blocks/button/button
 include ../blocks/header/header
+include ../blocks/session/session
+
 
 block title
     title Demo
-block content
+block content 
     h1 This DEMO
     hr
     +header()
     hr
-    +button("Кнопка 1", [])
-    +button("", ['button_icon', 'button_icon-only', 'button_icon-cart'])
-    +button("Кнопка 3", ['button_icon', 'button_icon-cart'])
-
+    //- +button("Кнопка 1", [])
+    //- +button("", ['button_icon', 'button_icon-only', 'button_icon-cart'])
+    //- +button("Кнопка 3", ['button_icon', 'button_icon-cart'])
+    +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
+    +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
+    +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
+    +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
+    +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
+    +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
+    
