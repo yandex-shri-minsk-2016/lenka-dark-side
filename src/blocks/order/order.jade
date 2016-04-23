@@ -1,0 +1,15 @@
+mixin order(title, sum)
+    .order
+        a.order__close(href="#")
+            i.order__icon.order__icon_close
+        .order__info #{item}
+            = title
+        a.order__less(href="#")
+            i.order__icon.order__icon_less
+        input.order__value(value="1")
+        a.order__more(href="#")
+            i.order__icon.order__icon_more
+        .order__cost
+            span.order__cost_val $
+            = sum
+

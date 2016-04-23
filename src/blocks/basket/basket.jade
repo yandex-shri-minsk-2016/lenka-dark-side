@@ -1,0 +1,16 @@
+include ../order/order
+
+mixin basket()
+    .basket
+        - var foodtitle = ["Название блюда 1", "Название 2", "Название блюда 3", "Название блюда 4"];
+        .basket__title Корзина
+        form.basket__form(action="#" method="post")
+            .orders
+                each item in foodtitle
+                    +order(item, 123)
+        hr.basket__hr
+        .basket__allcost
+            span Общая стоимость: 1000$
+        .basket__button
+            +button("Заказать", ['button_icon', 'button_icon-cart'])
+        .basket__image
