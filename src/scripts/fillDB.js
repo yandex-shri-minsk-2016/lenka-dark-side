@@ -3,20 +3,10 @@
  */
 var DishModel = require('../models/dish').model;
 var ServiceModel = require('../models/service').model;
-
+var seed = require('./seed.json');
+//TODO: сделать папку с посевными данными, дописать скрипт, который перебирает все эти файлы
 module.exports = function fillDB() {
-    var dish = new DishModel({
-        name: 'SOUP',
-        price: "40$",
-        url: '1515125',
-        picture: 'soupPicture'
-    });
-    var service = new ServiceModel({
-        title: "PizzaTempo",
-        logo: 'tempoLogo',
-        description: 'bestPizza',
-        dishes: [dish]
-    });
+    var service = new ServiceModel(seed);
     service.save(function (err, model) {
         console.log(model.toJSON());
     });
