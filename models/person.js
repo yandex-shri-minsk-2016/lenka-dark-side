@@ -3,12 +3,12 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var personSchema = new Schema({
-	name:  {type: String, require: true},
-	avatar: String,
-	telephon: String
+    name:  {type: String, require: true},
+    avatar: String,
+    telephon: String
 });
 
 module.exports = {
-	model: mongoose.model('Person', personSchema),
-	schema: personSchema
+    model: mongoose.model('Person', personSchema),
+    schema: personSchema
 };

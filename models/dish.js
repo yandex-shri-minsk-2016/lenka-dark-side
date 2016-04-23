@@ -10,6 +10,6 @@ var dishSchema = new Schema({
 });
 
 module.exports = {
-	model: mongoose.model('Dish', dishSchema),
-	schema: dishSchema
+    model: mongoose.model('Dish', dishSchema),
+    schema: dishSchema
 };

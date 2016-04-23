@@ -11,6 +11,6 @@ var serviceSchema = new Schema({
 });
 
 module.exports = {
-	model: mongoose.model('Service', serviceSchema),
-	schema: serviceSchema
+    model: mongoose.model('Service', serviceSchema),
+    schema: serviceSchema
 };

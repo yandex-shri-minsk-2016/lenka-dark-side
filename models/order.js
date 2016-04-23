@@ -6,13 +6,13 @@ var personSchema = require('./person').schema;
 var Schema = mongoose.Schema;
 
 var orderSchema = new Schema({
-	owner: personSchema,
-	service: serviceSchema,
-	time: String,
-	subscriber: [{ person: personSchema, dish: dishSchema, paid: Boolean }]
+    owner: personSchema,
+    service: serviceSchema,
+    time: String,
+    subscriber: [{ person: personSchema, dish: dishSchema, paid: Boolean }]
 });
 
 module.exports = {
-	model: mongoose.model('Order', orderSchema),
-	schema: orderSchema
+    model: mongoose.model('Order', orderSchema),
+    schema: orderSchema
 };;
