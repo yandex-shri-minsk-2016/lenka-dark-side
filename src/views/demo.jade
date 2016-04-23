@@ -1,10 +1,14 @@
 extends layout/layout
 include ../blocks/button/button
+include ../blocks/header/header
 
 block title
     title Demo
 block content
     h1 This DEMO
+    hr
+    +header()
+    hr
     +button("Кнопка 1")
     +button("Кнопка 2")
     +button("Кнопка 3", ['button_cart', 'button_white'])
