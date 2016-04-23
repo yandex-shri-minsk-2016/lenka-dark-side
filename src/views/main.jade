@@ -1,39 +1,43 @@
-ul.companies
-    li.company
-        .company__header
-            .person.person_creator
-                .company__deadline 00:00
-                .person__name Василий
-            .service
-                img.service__logo(src="/images/tempo_logo.png")
-                .button.button_company-same
-                    button.button__button Хочу так же
-                .button.button_company-add
-                    button.button__button +
-                ol.company-people.company-people_list
-                    li.person.person_customer
-                        .person__name Name1
-                        ul.orders
-                            li.order
-                                span.order__name макароны1
-                                span.order__hyphen -
-                                span.order__price 40000 руб.
-                            li.order
-                                span.order__name макароны2
-                                span.order__hyphen -
-                                span.order__price 40000 руб.
-                        input.person__check-money(type="checkbox")
-                    li.person.person_customer
-                        .person__name Name1
-                        ul.orders
-                            li.order
-                                span.order__name макароны1
-                                span.order__hyphen -
-                                span.order__price 40000 руб.
-                            li.order
-                                span.order__name макароны2
-                                span.order__hyphen -
-                                span.order__price 40000 руб.
-                        input.person__check-money(type="checkbox")
+include ../blocks/button/button
+extends layout/layout
+
+block title
+    title index
+block content
+    ul.companies
+        li.company
+            .company__header
+                .person.person_creator
+                    .company__deadline 00:00
+                    .person__name Василий
+                .service
+                    img.service__logo(src="/images/tempo_logo.png")
+                    +button("Хочу так же", [])
+                    +button("", ['button_icon', 'button_icon-only', 'button_icon-plus'])
+                    ol.company-people.company-people_list
+                        li.person.person_customer
+                            .person__name Name1
+                            ul.orders
+                                li.order
+                                    span.order__name макароны1
+                                    span.order__hyphen -
+                                    span.order__price 40000 руб.
+                                li.order
+                                    span.order__name макароны2
+                                    span.order__hyphen -
+                                    span.order__price 40000 руб.
+                            input.person__check-money(type="checkbox")
+                        li.person.person_customer
+                            .person__name Name1
+                            ul.orders
+                                li.order
+                                    span.order__name макароны1
+                                    span.order__hyphen -
+                                    span.order__price 40000 руб.
+                                li.order
+                                    span.order__name макароны2
+                                    span.order__hyphen -
+                                    span.order__price 40000 руб.
+                            input.person__check-money(type="checkbox")
 
 

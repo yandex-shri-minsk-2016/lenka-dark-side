@@ -1,3 +1,5 @@
+include ../blocks/button/button
+
 .slider
     .slider__header(id="header-1") LIDO
     .slider__content(id="content-1")
@@ -9,6 +11,5 @@
                 .form__attributes Введите время
                 input.form__date(type="date")
                 input.form__time(type="time")
-                div.button.button_create_button
-                    button.button__button Создать
+                +button("Создать", [])
 
