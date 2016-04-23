@@ -11,13 +11,13 @@ var gulp = require('gulp'),
     htmlmin = require('gulp-htmlmin');
 
 gulp.task('stylus', function() {
-    return gulp.src('./stylus/*.styl')
+    return gulp.src('./src/index.styl')
         .pipe(stylus())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest('./public/css'))
+        .pipe(gulp.dest('./dist/css'))
 });
 
 gulp.task('jscs', function () {
@@ -27,11 +27,11 @@ gulp.task('jscs', function () {
 });
 
 gulp.task('jade', function () {
-    gulp.src('./views/**/*.jade')
+    gulp.src('./src/views/**/*.jade')
         .pipe(jade({
             pretty: true
         }).on('error', gutil.log))
-        .pipe(gulp.dest('./public'));
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('minify', function() {
@@ -47,17 +47,17 @@ gulp.task('uglify', function() {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./stylus/**/*.styl', ['stylus']);
-    gulp.watch('./views/**/*.jade', ['jade']);
+    gulp.watch('./src/**/*.styl', ['stylus']);
+    gulp.watch('./src/**/*.jade', ['jade']);
 });
 
 gulp.task('webserver', function () {
-    gulp.src('./public/')
+    gulp.src('./dist/')
         .pipe(webserver({
             livereload: true,
             open: true
         }));
 });
 
-gulp.task('default', ['stylus','jade','watch', 'webserver','minify','uglify']);
+gulp.task('default', ['stylus','jade','watch', 'webserver']);
 
