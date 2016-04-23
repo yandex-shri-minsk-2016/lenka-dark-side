@@ -1,0 +1,11 @@
+{
+    "title": "PizzaTempo",
+    "logo": "tempoLogo",
+    "description": "bestPizza",
+    "dishes": [{
+        "name": "SOUP",
+        "price": "40$",
+        "url": "1515125",
+        "picture": "soupPicture"
+    }]
+}
