@@ -7,7 +7,8 @@ var express = require('express'),
 mongoose.connect('mongodb://localhost/lenka');
 
 // app.use(express.static(__dirname + '/public'));
-
+app.set('view engine', 'jade');
+app.set('views', './src/views');
 app.get('/', homeControler);
 app.get('/hello', helloController);
 
