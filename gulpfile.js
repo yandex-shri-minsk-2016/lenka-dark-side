@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     stylus = require('gulp-stylus'),
     autoprefixer = require('gulp-autoprefixer'),
-    htmlmin = require('gulp-htmlmin');
+    htmlmin = require('gulp-htmlmin'),
+    fillDB = require('./src/scripts/fillDB');
 
 gulp.task('img', function () {
     return gulp.src('./src/images/**')
@@ -64,6 +65,14 @@ gulp.task('webserver', function () {
             livereload: true,
             open: true
         }));
+});
+
+gulp.task('fillDB', function () {
+    var mongoose = require('mongoose');
+    mongoose.connect('mongodb://localhost/lenka');
+    //FIXME: Clear DB
+    fillDB();
+    //FIXME: Сделать так чтобы задача завершалась без CTRL+C
 });
 
 gulp.task('default', ['stylus','jade','watch', 'webserver', 'img']);

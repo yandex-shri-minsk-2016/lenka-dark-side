@@ -3,7 +3,7 @@ var express = require('express'),
 	homeControler = require('./src/controllers/home.js'),
 	helloController = require('./src/controllers/hello.js'),
 	mongoose = require('mongoose');
-
+//TODO: Избавиться от хардкода(сделать конфиг) 
 mongoose.connect('mongodb://localhost/lenka');
 
 // app.use(express.static(__dirname + '/public'));
