@@ -1,0 +1,16 @@
+include ../order/order
+
+mixin basket(orders)
+    .basket
+
+        .basket__title Корзина
+        form.basket__form(action="#" method="post")
+            .orders
+                each item in orders
+                    +order(item, 123)
+        hr.basket__hr
+        .basket__allcost
+            span Общая стоимость: 1000$
+        .basket__button
+            +button("Заказать", ['button_icon', 'button_icon-cart'])
+        .basket__image

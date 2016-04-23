@@ -1,8 +1,10 @@
 extends layout/layout
+include ../blocks/header/header
 
 block title
     title creating
 block link
-    link(rel="stylesheet" href="css/creating.css")
+    link(rel="stylesheet" href="/index.css")
 block content
+    +header()
     include main
