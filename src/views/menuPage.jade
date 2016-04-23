@@ -1,0 +1,10 @@
+extends layout/layout
+include ../blocks/header/header
+
+block title
+    title index
+block content
+    +header
+    ul
+        each dish in dishes
+            li= dish
