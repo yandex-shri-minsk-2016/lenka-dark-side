@@ -6,3 +6,6 @@ block link
     link(rel="stylesheet" href="css/creating.css")
 block content
     include main
+        ul
+            each service in services
+                li= service
