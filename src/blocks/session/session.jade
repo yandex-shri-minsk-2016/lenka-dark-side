@@ -1,0 +1,12 @@
+include ../button/button
+include ../company/company
+
+mixin session(name, time, logo)
+    .session
+        .session__name= name
+        .session__time= time
+        +company(logo, '#')
+
+        .session__controls
+            +button("Хочу также!", [])
+            +button("Своё меню!", [])

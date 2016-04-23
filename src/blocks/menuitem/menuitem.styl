@@ -1,4 +1,4 @@
-@import "../vars.styl"
+@import '../../stylus/vars.styl'
 
 transition(condition)
     if(condition==ease-in-out)
@@ -16,18 +16,27 @@ box-sizing()
 .menu-item
     overflow hidden
     text-align center
-    width 200px
-    height 200px
     position relative
     transition(ease-in-out)
-    background rgba(12, 34, 52, 0.8)
     box-sizing()
-    margin 6px
+    padding 6px
+    display inline-block
+
+@media (min-width: 0px)
+  .menu-item
+    width 100%
+@media (min-width: 300px)
+  .menu-item
+    width 50%
+@media (min-width: 600px)
+  .menu-item
+    width 33%
+@media (min-width: 900px)
+  .menu-item
+    width 24%
+    
 .menu-item__image
     width 100%
-    height 100%
-    background url("../../images/menuItem/vakkanai_maki.jpg")
-    background-size cover
     transition(ease-in-out)
 .menu-item__info
     position absolute
@@ -47,17 +56,17 @@ box-sizing()
     font-weight bold
     font-size 17px
     padding 10px
-    margin 10% 0 0 0
-    height 10%
     transition(ease-in-out)
 .menu-item__other-info
     background rgba(12, 34, 52, 0.6)
     font-style italic
-    font-size 16px
-    position relative
-    color #bbb
-    height 100%
+    font-size 18px
+    position absolute
+    color #fff
     margin-top 50%
+    width 100%
+    padding 5px
+    bottom -6px
     transition(linear)
                 
 .menu-item:hover

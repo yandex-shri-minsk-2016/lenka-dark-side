@@ -1,0 +1,10 @@
+include ../button/button
+
+mixin menuitem(text, price, imgurl)
+    .menu-item
+        img.menu-item__image(src= imgurl)
+        .menu-item__info
+            .menu-item__title= text
+            .menu-item__other-info
+                .menu_item__price= price
+                +button("В заказ!", ["button_size-s"])
