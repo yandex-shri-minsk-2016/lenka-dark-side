@@ -1,20 +1,7 @@
+var OrderModel = require('../models/order').model;
+
 module.exports = function HomeController(req, res, next) {
-	res.render('index');
+    OrderModel.find({}, function(err, orders){
+        res.render('index', {orders: orders});
+    });
 }
-
-
-/*var a = requ
-
-
-// file: a.js
-
-module.exports = function() {
-
-};
-
-
-
-var a = function () {
-
-};
-*/
