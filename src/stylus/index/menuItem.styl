@@ -1,33 +1,20 @@
+@import "../vars.styl"
+
 transition(condition)
     if(condition==ease-in-out)
-        -webkit-transition all 0.5s ease-in-out
-        -moz-transition all 0.5s ease-in-out
         transition all 0.5s ease-in-out
     else if(condition==linear)
-        -webkit-transition all 0.35s 0.1s linear
-        -moz-transition all 0.35s 0.1s linear
         transition all 0.35s 0.1s linear           
 scale(condition)
-    -webkit-transform 'scale(%s)' % condition
-    -moz-transform 'scale(%s)' % condition
-    -ms-transform 'scale(%s)' % condition
-    -o-transform 'scale(%s)' % condition
     transform 'scale(%s)' % condition
 translateY(condition)
-    -webkit-transform 'translateY(%s)' % condition
-    -moz-transform 'translateY(%s)' % condition
-    -ms-transform 'translateY(%s)' % condition
-    -o-transform 'translateY(%s)' % condition
     transform 'translateY(%s)' % condition
         
 box-sizing()
-    -webkit-box-sizing border-box
-    -moz-box-sizing border-box
     box-sizing border-box
  
 .menu-item
     overflow hidden
-    position relative
     text-align center
     width 200px
     height 200px
@@ -49,7 +36,6 @@ box-sizing()
     left 0
     right 0
     text-align center
-    -webkit-backface-visibility hidden
     backface-visibility hidden
     visibility hidden
     opacity 0
