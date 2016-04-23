@@ -1,23 +1,49 @@
 @import '../../stylus/vars.styl'
 
-.button__button
-  position relative
-  top -5px
-  padding 15px 25px
-  border-radius 4px
-  color #FFFFFF
-  background #d80027
+.button
+  display inline-block
   text-decoration none
-  font-size 10pt
   text-align center
   font-weight bold
+  margin 6px
+
+
+.button__button
+  border 0
+  padding 15px 25px
+  color buttons-text-color
+  background buttons
+  border-radius 4px
   &:hover
-    background-color white
-    color #d80027
+    background-color buttons-hover
   &:active
     background-color buttons-active
-    color white
-    
+
+.button__icon
+  display none
+  padding-left 16px
+
+.button_icon .button__icon
+  display inline-block
+  width 25px
+  height 25px
+  background-size 25px
+  margin -6px
+
+.button_icon-cart .button__icon
+  background url(../../images/basket.png) 0 no-repeat
+  background-size 25px
+
+.button_icon-plus .button__icon
+  background url(../../images/icon_plus.png) 0 no-repeat
+  background-size 25px
+
+.button__title
+  padding 0
+
+.button_icon-only .button__icon
+  padding 0
+
 .button_new-order
   position absolute
   top 30px

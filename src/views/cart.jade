@@ -1,5 +1,5 @@
 extends layout/layout
-
+include ../blocks/button/button
 block title
 	title Корзина
 block content 
@@ -21,6 +21,5 @@ block content
 		hr.wrapper__hr
 		.wrapper__allcost
 			span Общая стоимость: 1000$
-		.wrapper__button
-			button.wrapper__button_button Заказать!
+		+button("Заказать", ['button_icon', 'button_icon-cart'])
 		.wrapper__image
