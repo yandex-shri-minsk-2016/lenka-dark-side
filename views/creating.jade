@@ -1,63 +1,14 @@
-doctype html
-html
-    head
-        title creating
-        meta(charset="utf-8")
-        link(rel="stylesheet" href="css/common.css")
-        link(rel="stylesheet" href="css/creating.css")
+.slider
+    .slider__header(id="header-1") LIDO
+    .slider__content(id="content-1")
+        .content
+            .content__logo
+                img.content__image(src="/images/Logo.png")
+            .content__attributes Вы можете сделать заказ по будним дням с 8.30 до 16.30. Заказ сегодня на завтра принимается до 16.30, сегодня на сегодня до 11.00. Доставка производится БЕСПЛАТНО. Минимальная сумма заказа 300 000 рублей. Возможен наличный и безналичный расчёт (заключение договора, выставление счет-фактуры).
+                form.form
+                .form__attributes Введите время
+                input.form__date(type="date")
+                input.form__time(type="time")
+                div.button.button_create_button
+                    button.button__button Создать
 
-    body
-        .main
-            header.header
-                h1.header__title Lenka-d-s
-                img.header__logo(alt="logo")
-            .slider
-                .slider__header(id="header-1") LIDO
-                .slider__content(id="content-1")
-                    .content
-                        .content__logo
-                            img.content__image(src="/images/Logo.png")
-                        .content__attributes Вы можете сделать заказ по будним дням с 8.30 до 16.30. Заказ сегодня на завтра принимается до 16.30, сегодня на сегодня до 11.00. Доставка производится БЕСПЛАТНО. Минимальная сумма заказа 300 000 рублей. Возможен наличный и безналичный расчёт (заключение договора, выставление счет-фактуры).
-                            form.form
-                                .form__attributes Введите время
-                                input.form__date(type="date")
-                                input.form__time(type="time")
-                                div.button.button_create_button
-                                    button.button__button Создать
-
-                .slider__header(id="header-2") Пицца темпо
-                .slider__content(id="content-2")
-                    .content
-                        .content__logo
-                            img.content__image(src="/images/tempo_logo.png")
-                        h2.content__mode-header Режим работы службы доставки:
-                        ul.modes
-                            li.mode воскресенье — четверг принимаются с 10.00. до 22.00.
-                            li.mode пятница — суббота:  заказы принимаются с 10.00. до 02.00.
-                            li.mode меню завтраков ежедневно: заказы принимаются с 10.00. до 12.00.
-                            li.mode меню обеденных комплексов: понедельник — пятница: с 12.00. до 16.00.
-                        form.form
-                            .form__attributes Введите время
-                            input.form__date(type="date")
-                            input.form__time(type="time")
-                            div.button.button_create_button
-                                button.button__button Создать
-
-                .slider__header(id="header-3") eda.by
-                .slider__content(id="content-3")
-                    .content
-                        .content__logo
-                            img.content_image(src="/images/justeat.png")
-                        .content__attributes Just-Eat - сервис по доставке вкусной еды, в которым для Вашего удобства мы объединили разные рестораны. Мы экономим ваше время и предлагаем выбрать то, что подходит именно Вам.
-                            ul.modes В чем преимущества Just-eat?
-                                li.mode Возможность сравнить цены в разных заведениях и сделать объективный выбор
-                                li.mode Заказывать через личный кабинет во всех ресторанах, не вводя каждый раз свои контактные данные
-                                li.mode Видеть историю своих заказов
-                                li.mode Просматривать рейтинги блюд, оценивать работу наших партнеров
-                                li.mode Публиковать и на сайте свои отзывы и читать отзывы других пользователей
-                        form.form
-                            .form__attributes Введите время
-                            input.form__date(type="date")
-                            input.form__time(type="time")
-                            div.button.button_create_button
-                                button.button__button Создать
