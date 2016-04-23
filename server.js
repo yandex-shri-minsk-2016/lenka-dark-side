@@ -1,7 +1,7 @@
 var express = require('express'),
 	app = express(),
-	homeControler = require('./controllers/home.js'),
-	helloController = require('./controllers/hello.js'),
+	homeControler = require('./src/controllers/home.js'),
+	helloController = require('./src/controllers/hello.js'),
 	mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/lenka');
