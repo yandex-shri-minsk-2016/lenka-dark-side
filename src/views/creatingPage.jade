@@ -8,3 +8,9 @@ block link
 block content
     +header()
     include main
+        ul
+            each service in services
+                li
+                    a(href = service.link) ссылка
+
+

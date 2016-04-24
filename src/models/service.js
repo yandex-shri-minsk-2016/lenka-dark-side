@@ -7,6 +7,7 @@ var serviceSchema = new Schema({
     title:  String,
     logo: String,
     description: String,
+    link: String,
     dishes: [dishSchema]
 });
 
