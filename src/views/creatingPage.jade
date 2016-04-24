@@ -8,5 +8,7 @@ block content
     include main
         ul
             each service in services
-                li= service
-                    a(href='/services/service.id')
+                li
+                    a(href = service.link) ссылка
+
+

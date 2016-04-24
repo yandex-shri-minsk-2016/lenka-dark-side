@@ -2,6 +2,7 @@
     "title": "PizzaTempo",
     "logo": "tempoLogo",
     "description": "bestPizza",
+    "link": "http://www.lido.by/",
     "dishes": [{
         "name": "SOUP",
         "price": "40$",
