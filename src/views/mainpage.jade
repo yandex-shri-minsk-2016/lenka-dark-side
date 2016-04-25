@@ -1,8 +1,21 @@
 extends layout/layout
-include ../blocks/mainpage/mainpage
+include ../blocks/button/button
+include ../blocks/header/header
+include ../blocks/basket/basket
+include ../blocks/order/order
+include ../blocks/session/session
+include ../blocks/menuitem/menuitem
 
 block title
     title Главная страница
 block content
     +header()
-    +mainpage()
+    .main
+        +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
+        +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
+        +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
+        +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
+        +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
+    footer.main-footer
+        .main-footer__text Этот божий проект работает при поддержке LDS developers. 
+
