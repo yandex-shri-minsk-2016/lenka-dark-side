@@ -1,26 +1,36 @@
 @import '../../stylus/vars.styl'
 
 .session
-    width 980px
-    height 160px
+    width 680px
+    height 200px
     // border 3px solid #ccc
     position relative
     margin 0 auto
+    background #fff
     
 .session + .session 
-    margin-top 10px
-    
+    margin-top 30px
+
+.session
+    &:first-child
+        margin-top 10px
+    &:last-child
+        margin-bottom 10px
+
+
 .session__name
-    width 500px
+    width 325px
     font-size 2em
     margin-left 250px
-    border-bottom 2px solid #ccc
+    padding-top 10px
+    border-bottom 1px solid #ccc
 
 .session__time
     width 50px
     font-size 1.6em
     margin-left 250px
-    margin-bottom 30px
+    margin-bottom 10px
 
 .session__controls
-    margin-left 250px
+    margin-left 245px
+    padding-bottom 10px
