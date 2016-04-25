@@ -5,6 +5,7 @@ include ../blocks/basket/basket
 include ../blocks/order/order
 include ../blocks/session/session
 include ../blocks/menuitem/menuitem
+include ../blocks/group/group
 
 
 block title
@@ -20,7 +21,11 @@ block content
     hr
     +order("item", 123)
     hr
-    +basket(["Название блюда 1", "Название 2", "Название блюда 3", "Название блюда 4"])
+    +basket([
+        {title: 'Блюдо 1', price: '170'},
+        {title: 'Блюдо 2', price: '130'},
+        {title: 'Блюдо 3', price: '270'}
+    ])
     hr
     +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
     hr
@@ -30,3 +35,10 @@ block content
     +menuitem("Сладкий мир", "10000 руб", "../../images/menuItem/vakkanai_maki.jpg")
     +menuitem("Сладкий мир", "10000 руб", "../../images/menuItem/vakkanai_maki.jpg")
     +menuitem("Сладкий мир", "10000 руб", "../../images/menuItem/vakkanai_maki.jpg")
+    hr
+    +group(
+         'Супы', [
+        {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3',  price: '170'},
+        {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3',  price: '170'}]
+    )
+    hr
