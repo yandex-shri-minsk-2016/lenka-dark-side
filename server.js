@@ -13,6 +13,9 @@ app.set('views', './src/views');
 app.get('/', homeControler);
 app.get('/services/:id', serviceController);
 app.get('/hello', helloController);
+app.use(function(req, res, next) {
+  res.render('404.jade');
+});
 
 var server = app.listen(3000, function() {
 	console.log('Working 3000');
