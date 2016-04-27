@@ -13,7 +13,8 @@ app.set('views', './src/views');
 app.get('/', homeControler);
 app.get('/services/:id', serviceController);
 app.get('/hello', helloController);
-app.use(function(req, res, next) {
+//already last(error processing)
+app.use(function(req, res) {
   res.render('404.jade');
 });
 
