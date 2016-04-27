@@ -10,12 +10,13 @@ block content
         each service in services
             li=service
                 a(href = service.link) ссылка
-    form(name="add-estimation", method="post")
+
+    form(action="serviceChoose" method="POST")
     div.input
         span.label ServiceId
-        input(type="text", name="title")
+        input(type="text", name="ServiceId")
     div.input
         span.label Time
-        input(type="text", name="title")
+        input(type="text", name="time")
     div.actions
         input(type="submit", value="Создать")
