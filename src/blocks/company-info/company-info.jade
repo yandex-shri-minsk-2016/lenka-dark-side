@@ -1,0 +1,12 @@
+mixin company-info(categories, mincost, derpature, timework)
+    .company-info
+        .company-info__first
+            span.cook Кухня:
+            span.categories= categories
+        .company-info__second
+            .tab_cost= mincost
+                .cost_info мин-сумма заказа
+            .tab_dep= derpature
+                .dep_info стоимость доставки
+            .tab_time= timework
+                .time_info гарантированное время доставки
