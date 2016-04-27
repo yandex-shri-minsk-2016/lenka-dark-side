@@ -4,19 +4,19 @@ extends layout/layout
 block title
     title creating
 block link
-    link(rel="stylesheet" href="css/creating.css")
+    link(rel='stylesheet' href='css/creating.css')
 block content
-    ul
+    //ul
         each service in services
             li=service
                 a(href = service.link) ссылка
 
-    form(action="serviceChoose" method="POST")
+    form(action='/serviceChoose' method='POST')
     div.input
         span.label ServiceId
-        input(type="text", name="ServiceId")
+        input(type='text', name='serviceId', value='571b8aea4f6319ce591479db')
     div.input
         span.label Time
-        input(type="text", name="time")
+        input(type='text', name='time', value='154532')
     div.actions
-        input(type="submit", value="Создать")
+        input(type='submit', value='Создать')

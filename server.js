@@ -21,10 +21,7 @@ app.get('/', homeControler);
 app.get('/services', servicesController);
 app.get('/services/:id', serviceController);
 app.get('/hello', helloController);
-app.use('/serviceChoose', bodyParser.urlencoded({
-    extended: true
-}));
-app.post('/serviceChoose', function(req, res, next){
+app.post('/serviceChoose', function(req, res){
     console.log(req.body);
 });
 //already last(error processing)
