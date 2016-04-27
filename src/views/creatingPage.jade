@@ -1,10 +1,21 @@
+
 extends layout/layout
-include ../blocks/header/header
 
 block title
     title creating
 block link
-    link(rel="stylesheet" href="/index.css")
+    link(rel="stylesheet" href="css/creating.css")
 block content
-    +header()
-    include main
+    ul
+        each service in services
+            li=service
+                a(href = service.link) ссылка
+    form(name="add-estimation", method="post")
+    div.input
+        span.label ServiceId
+        input(type="text", name="title")
+    div.input
+        span.label Time
+        input(type="text", name="title")
+    div.actions
+        input(type="submit", value="Создать")

@@ -1,5 +1,6 @@
 extends layout/layout
 include ../blocks/header/header
+include ../blocks/button/button
 
 block title
     title index
@@ -8,3 +9,9 @@ block content
     .main
         include ../blocks/button/button
         include main
+
+    a(href='/services')
+        +button("Создать новый заказ", ['button_new-order'])
+    ul
+        each order in orders
+            li= order
