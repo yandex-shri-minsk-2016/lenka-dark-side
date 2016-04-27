@@ -2,12 +2,11 @@ include ../order/order
 
 mixin basket(orders)
     .basket
-
         .basket__title Корзина
         form.basket__form(action="#" method="post")
             .orders
                 each item in orders
-                    +order(item, 123)
+                    +order(item.title, item.price)
         hr.basket__hr
         .basket__allcost
             span Общая стоимость: 1000$
