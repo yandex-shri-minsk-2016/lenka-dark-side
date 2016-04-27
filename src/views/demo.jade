@@ -5,7 +5,11 @@ include ../blocks/basket/basket
 include ../blocks/order/order
 include ../blocks/session/session
 include ../blocks/menuitem/menuitem
+<<<<<<< c3d085c70b72fc41cccbc1a9827ec16ff7378083
 include ../blocks/group/group
+=======
+include ../blocks/offers/offers
+>>>>>>> create new block - offers
 
 
 block title
@@ -42,3 +46,9 @@ block content
         {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3',  price: '170'}]
     )
     hr
+    hr
+    +offers("/images/logo-pizza.png","Бульбаш", " Древняя/народная", "250000руб", "Бесплатно", "30мин", "Доставка круглосуточно")
+    +offers("/images/macd.png","Macdonald's", " Американская/fastfood", "300000руб", "Бесплатно", "50мин", "Доставка до 21.00")
+    +offers("/images/bkl.svg","Burger King", " Американская/fastfood", "500000руб", "20000руб", "60мин", "Доставка круглосуточно")
+    +offers("/images/kfc.svg","KFC", " Американская/fastfood", "100000руб", "10% от заказа", "90мин", "Доставка круглосуточно")
+

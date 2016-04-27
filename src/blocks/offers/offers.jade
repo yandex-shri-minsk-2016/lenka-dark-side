@@ -1,0 +1,30 @@
+include ../company/company
+
+mixin offers(logo, title, categories, mincost, derpature, timework, downtext)
+    .offers
+        +company(logo, "#")
+        .offers__info
+            .offers_title= title
+            .sub-info
+                .sub-info__first
+                    span.cook Кухня:
+                    span.categories= categories
+                .sub-info__second
+                    .tab_cost= mincost
+                        .cost_info мин-сумма заказа
+                    .tab_dep= derpature
+                        .dep_info стоимость доставки
+                    .tab_time= timework
+                        .time_info гарантированное время доставки
+            .offers-down_text
+                .text= downtext
+
+
+
+
+
+
+mixin company(logo, link)
+    .company
+        a.company__link(href=link)
+            img.company__image(src=logo)
