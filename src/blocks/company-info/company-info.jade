@@ -1,12 +1,7 @@
+include ../cook-info/cook-info
+include ../another-info/another-info
+
 mixin company-info(categories, mincost, derpature, timework)
     .company-info
-        .company-info__first
-            span.company-info__cook Кухня:
-            span.company-info__categories= categories
-        .company-info__second
-            .company-info__cost= mincost
-                .company-info__text мин-сумма заказа
-            .company-info__dep= derpature
-                .company-info__text стоимость доставки
-            .company-info__time= timework
-                .company-info__text гарантированное время доставки
+        +cook-info(categories)
+        +another-info(mincost, derpature, timework)
