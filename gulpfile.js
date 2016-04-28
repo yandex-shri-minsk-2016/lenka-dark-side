@@ -17,7 +17,7 @@ gulp.task('img', function () {
 
 });
 
-gulp.task('stylus', function() {
+gulp.task('stylus', function () {
     return gulp.src('./src/index.styl')
         .pipe(stylus())
         .pipe(autoprefixer({
@@ -28,7 +28,7 @@ gulp.task('stylus', function() {
 });
 
 gulp.task('jscs', function () {
-    return gulp.src(['./public/**/*.js','gulpfile.js', 'server.js'])
+    return gulp.src(['./public/**/*.js', 'gulpfile.js', 'server.js'])
         .pipe(jscs())
         .pipe(jscs.reporter());
 });
@@ -41,16 +41,16 @@ gulp.task('jade', function () {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('minify', function() {
+gulp.task('minify', function () {
     return gulp.src('./public/*.html')
-    .pipe(gulpif(argv.production, htmlmin({collapseWhitespace: true})))
-    .pipe(gulp.dest('./public'));
+        .pipe(gulpif(argv.production, htmlmin({collapseWhitespace: true})))
+        .pipe(gulp.dest('./public'));
 });
 
-gulp.task('uglify', function() {
-  return gulp.src('./public/js/*.js')
-    .pipe(gulpif(argv.production, uglify()))
-    .pipe(gulp.dest('./public/js'));
+gulp.task('uglify', function () {
+    return gulp.src('./public/js/*.js')
+        .pipe(gulpif(argv.production, uglify()))
+        .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('watch', function () {
@@ -75,5 +75,4 @@ gulp.task('fillDB', function () {
     //FIXME: Сделать так чтобы задача завершалась без CTRL+C
 });
 
-gulp.task('default', ['stylus','jade','watch', 'webserver', 'img']);
-
+gulp.task('default', ['stylus', 'jade', 'watch', 'webserver', 'img']);

@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var dishSchema = new Schema({
-    name:  String,
+    name: String,
     price: String,
     url: String,
     picture: String

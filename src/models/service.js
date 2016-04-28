@@ -4,7 +4,7 @@ var dishSchema = require('./dish').schema;
 var Schema = mongoose.Schema;
 
 var serviceSchema = new Schema({
-    title:  String,
+    title: String,
     logo: String,
     description: String,
     dishes: [dishSchema]

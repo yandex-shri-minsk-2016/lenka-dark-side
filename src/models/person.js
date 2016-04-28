@@ -3,9 +3,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var personSchema = new Schema({
-    name:  {type: String, require: true},
+    name: {type: String, require: true},
     avatar: String,
-    telephon: String
+    telephone: String
 });
 
 module.exports = {
