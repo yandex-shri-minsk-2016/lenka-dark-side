@@ -1,0 +1,12 @@
+include ../company/company
+include ../company-info/company-info
+
+mixin offers(logo, title, categories, mincost, derpature, timework,downtext)
+    .offers
+        +company(logo, "#")
+        .offers__info
+            .offers__title= title
+            +company-info(categories, mincost, derpature, timework)
+            .offers__down-text
+                .offers__text= downtext
+
