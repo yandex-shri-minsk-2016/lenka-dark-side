@@ -13,6 +13,10 @@ app.set('views', './src/views');
 app.get('/', homeControler);
 app.get('/services/:id', serviceController);
 app.get('/hello', helloController);
+//already last(error processing)
+app.use(function(req, res) {
+  res.render('404.jade');
+});
 
 var server = app.listen(3000, function() {
 	console.log('Working 3000');
