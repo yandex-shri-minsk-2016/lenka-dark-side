@@ -6,7 +6,7 @@ var express = require('express'),
     config = require('config'),
     mongoose = require('mongoose');
 
-    mongoose.connect(config.get('mongoose.uri'));
+mongoose.connect(config.get('mongoose.uri'));
 
 // app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'jade');
