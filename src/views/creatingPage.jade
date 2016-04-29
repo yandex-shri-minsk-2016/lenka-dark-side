@@ -6,17 +6,16 @@ block title
 block link
     link(rel='stylesheet' href='css/creating.css')
 block content
-    //ul
+    ul
         each service in services
             li=service
                 a(href = service.link) ссылка
 
-    form(action='/serviceChoose' method='POST')
-    div.input
-        span.label ServiceId
-        input(type='text', name='serviceId', value='571b8aea4f6319ce591479db')
-    div.input
-        span.label Time
-        input(type='text', name='time', value='154532')
-    div.actions
-        input(type='submit', value='Создать')
+    form(action="services/:id" method="post")
+        div
+            span.label time
+            input(type="text" id="orderTime" name="orderTime")
+        div
+            span.label id
+            input(type="serviceId" id="serviceId" name="serviceId" value="571b8aea4f6319ce591479db")
+        input(type="submit" value="Submit")

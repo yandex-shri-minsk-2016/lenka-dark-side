@@ -7,5 +7,7 @@ block content
     +header
     .main
         ul
-            each dish in dishes
+            each dish in orderInfo.service.dishes
                 li= dish
+
+        div= orderInfo.time
