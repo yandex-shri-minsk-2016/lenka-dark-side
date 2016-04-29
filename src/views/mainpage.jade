@@ -5,6 +5,7 @@ include ../blocks/basket/basket
 include ../blocks/order/order
 include ../blocks/session/session
 include ../blocks/menuitem/menuitem
+include ../blocks/footer/footer
 
 block title
     title Главная страница
@@ -16,6 +17,5 @@ block content
         +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
         +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
         +session("Константин Константинопольский", "14:37", "/images/logo-pizza.png")
-    footer.footer_main
-        .main-footer__text Этот божий проект работает при поддержке LDS developers. 
+        +footer("Этот божий проект работает при поддержке LDS developers. ")
 

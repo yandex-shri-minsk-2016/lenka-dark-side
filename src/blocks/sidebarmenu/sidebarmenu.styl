@@ -1,0 +1,49 @@
+@import '../../stylus/vars.styl'
+
+.sidebar-menu
+    width 250px
+    height 350px
+    overflow hidden
+    margin 0 auto
+    background #fff
+    border-radius 10px
+    box-shadow: inset (0 0 3px 0 rgba(229,229,229,1))
+    overflow hidden
+    float left
+
+.sidebar-menu__title
+    font-size 20px
+    width 230px
+    height 30px
+    margin 8px 0 6px 5px
+    display block
+    border-bottom 1px solid offers-grey
+
+
+.sidebar-menu__list
+    list-style none
+    margin-left 5px
+
+.sidebar-menu__elem
+    float left
+    width 245px
+
+.sidebar-menu__elem + .sidebar-menu__elem
+    margin-top 5px
+
+.sidebar-menu__filter
+    float left
+    width 25px
+    height 20px
+    cursor pointer
+
+.sidebar-menu__filter + .sidebar-menu_name
+    cursor pointer
+
+.sidebar-menu_name
+    font-size 14px
+    margin-top 10px
+
+.sidebar-menu__filter:checked + .sidebar-menu_name
+    font-size 14px
+    color buttons

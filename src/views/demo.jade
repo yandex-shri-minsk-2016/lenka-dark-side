@@ -8,6 +8,7 @@ include ../blocks/menuitem/menuitem
 include ../blocks/group/group
 include ../blocks/offers/offers
 include ../blocks/auth/auth
+include ../blocks/sidebarmenu/sidebarmenu
 
 block title
     title Demo
@@ -52,3 +53,4 @@ block content
     hr
     +auth({name: "Вася", logout:"#"})
     +auth()
+    +sidebarmenu("Кухни/Блюда")

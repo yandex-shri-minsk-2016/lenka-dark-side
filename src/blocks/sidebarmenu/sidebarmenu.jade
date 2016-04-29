@@ -1,0 +1,9 @@
+mixin sidebarmenu(title)
+    .sidebar-menu
+        span.sidebar-menu__title= title
+        ul.sidebar-menu__list
+            each val, index in ["Пицца","Суши","Бургеры","Шашлыки","Пироги","Китайская еда","Итальянская/Европейская","Японская/Китайская","Кавказкая/Узбекская","Американская/fastfood","Мексиканская","Экзотическая"]
+                li.sidebar-menu__elem
+                    input(id=index).sidebar-menu__filter(type="checkbox")
+                    label(for=index).sidebar-menu_name= val
+
