@@ -9,10 +9,10 @@ var orderSchema = new Schema({
     owner: personSchema,
     service: serviceSchema,
     time: String,
-    subscriber: [{ person: personSchema, dish: dishSchema, paid: Boolean }]
+    subscriber: [{person: personSchema, dish: dishSchema, paid: Boolean}]
 });
 
 module.exports = {
     model: mongoose.model('Order', orderSchema),
     schema: orderSchema
-};;
+};
