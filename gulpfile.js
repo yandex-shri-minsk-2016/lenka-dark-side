@@ -34,7 +34,7 @@ gulp.task('jscs', function () {
 });
 
 gulp.task('jade', function () {
-    gulp.src('./src/views/demo.jade')
+    gulp.src('./src/views/**/*.jade')
         .pipe(jade({
             pretty: true
         }).on('error', gutil.log))
