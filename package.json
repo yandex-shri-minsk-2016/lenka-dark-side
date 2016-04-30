@@ -18,7 +18,10 @@
     "gulp-webserver": "^0.9.1",
     "jade": "^1.11.0",
     "minimist": "^1.2.0",
-    "mongoose": "~4.4.13"
+    "mongoose": "~4.4.13",
+    "passport": "*",
+    "passport-facebook": "*",
+    "passport-vkontakte": "*"
   },
   "devDependencies": {},
   "scripts": {
