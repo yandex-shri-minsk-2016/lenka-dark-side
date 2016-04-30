@@ -5,7 +5,6 @@ module.exports = function ServicesController(req, res) {
         if (err) {
             return next(err);
         }
-        
         res.render('creatingPage', {services: services});
     });
 };
