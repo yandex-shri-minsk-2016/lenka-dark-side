@@ -7,12 +7,12 @@ var Person = require('./../models/person').model;
 //var configAuth = require('./auth');
 module.exports = function () {
     passport.serializeUser(function (user, done) {
-        done(null, user.id);
+        done(null, user._id);
     });
 
     // used to deserialize the user
     passport.deserializeUser(function (id, done) {
-        Person.findOne({facebookId: id}, function(err, user) {
+        Person.findOne({_id: id}, function(err, user) {
            done(err, user);
         });
     });
@@ -48,7 +48,6 @@ module.exports = function () {
                         var newPerson = new Person();
                         newPerson.facebookId = profile.id;
                         newPerson.name = profile.displayName;
-                        // save our user to the database
                         newPerson.save(function (err) {
                             if (err)
                                 throw err;
@@ -63,5 +62,5 @@ module.exports = function () {
             });
         })
     );
-    return passport.authenticate('facebook', {scope: 'email', successRedirect: '/' });
+    return passport.authenticate('facebook', {scope: 'email', successRedirect: '/', session: true });
 };

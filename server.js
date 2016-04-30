@@ -7,30 +7,49 @@ var express = require('express'),
     mongoose = require('mongoose'),
     auth = require('./src/controllers/auth.js'),
     passport = require('passport'),
+    session = require('express-session'),
+    cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser');
 	errorHandler = require('./src/errors/errorHandler.js');
 	errorLogger = require('./src/errors/errorLogger.js');
 
 //TODO: Избавиться от хардкода(сделать конфиг) 
 mongoose.connect('mongodb://localhost/lenka');
+
+app.use(session({
+    secret: 'appsecret',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        secure: false,
+        maxAge: new Date(Date.now() + 3600000)
+    }
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(function(req, res, next) {
+    console.log(req.user)
+    next();
+});
+
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-app.use(passport.initialize());
-// app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'jade');
 app.set('views', './src/pages');
 app.get('/', homeControler);
 app.get('/services', servicesController);
 app.get('/hello', helloController);
-app.get('/auth/fb', auth());
 app.post('/services/:id', serviceController);
 
 app.use(errorLogger);
 app.use(errorHandler);
 app.use(express.static(__dirname + '/dist'));
+
+app.get('/auth/fb', auth());
 
 //already last(error processing)
 app.use(function(req, res) {
