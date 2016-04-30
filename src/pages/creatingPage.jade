@@ -1,15 +1,26 @@
 extends ../views/layout/layout
+include ../blocks/button/button
+include ../blocks/header/header
+include ../blocks/session/session
+include ../blocks/menuitem/menuitem
+include ../blocks/group/group
+include ../blocks/offers/offers
+include ../blocks/sidebarmenu/sidebarmenu
+include ../blocks/footer/footer
 
 block title
-    title creating
-block link
-    link(rel='stylesheet' href='css/creating.css')
+    title Выбор места заказа
 block content
-    ul
-        each service in services
-            li=service
-                a(href = service.link) ссылка
+    +header()
+    .main-wrapper
+        .main-wrapper__carry
+            +sidebarmenu("Кухни/Блюда")
+            each service in services
+                +offers(service.logo, service.title, service.categories, service.mincost, service.derpature, service.timework, service.downtext)
+        +footer("Заказывайте еду на нашей стороне, на темной стороне...")
 
+
+//!--
     form(action="services/:id" method="post")
         div
             span.label time

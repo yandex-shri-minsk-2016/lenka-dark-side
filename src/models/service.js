@@ -4,8 +4,13 @@ var dishSchema = require('./dish').schema;
 var Schema = mongoose.Schema;
 
 var serviceSchema = new Schema({
-    title:  String,
     logo: String,
+    title:  String,
+    categories: String,
+    mincost: String,
+    derpature: String,
+    timework: String,
+    downtext: String,
     description: String,
     dishes: [dishSchema]
 });
