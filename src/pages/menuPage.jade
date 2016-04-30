@@ -1,0 +1,13 @@
+extends ../views/layout/layout
+include ../blocks/header/header
+
+block title
+    title index
+block content
+    +header
+    .main
+        ul
+            each dish in orderInfo.service.dishes
+                li= dish
+
+        div= orderInfo.time

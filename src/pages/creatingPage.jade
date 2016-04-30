@@ -1,0 +1,20 @@
+extends ../views/layout/layout
+
+block title
+    title creating
+block link
+    link(rel='stylesheet' href='css/creating.css')
+block content
+    ul
+        each service in services
+            li=service
+                a(href = service.link) ссылка
+
+    form(action="services/:id" method="post")
+        div
+            span.label time
+            input(type="text" id="orderTime" name="orderTime")
+        div
+            span.label id
+            input(type="hidden" id="serviceId" name="serviceId" value="571b8aea4f6319ce591479db")
+        input(type="submit" value="Submit")
