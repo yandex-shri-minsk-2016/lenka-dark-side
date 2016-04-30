@@ -1,8 +1,8 @@
 include ../company/company
 include ../company-info/company-info
 
-mixin offers(logo, title, categories, mincost, derpature, timework,downtext)
-    .offers
+mixin offers(logo, title, categories, mincost, derpature, timework,downtext, mod)
+    .offers(class= mod)
         +company(logo, "#")
         .offers__info
             .offers__title= title
