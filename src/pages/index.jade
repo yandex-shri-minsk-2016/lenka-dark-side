@@ -1,0 +1,12 @@
+extends ../views/layout/layout
+include ../blocks/header/header
+include ../blocks/button/button
+
+block title
+    title index
+block content
+    +header
+    a.link(href='/services') Создать новый заказ
+    ul
+        each order in orders
+            li= order
