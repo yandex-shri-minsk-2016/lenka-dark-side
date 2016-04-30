@@ -21,9 +21,9 @@
     "jade": "^1.11.0",
     "minimist": "^1.2.0",
     "mongoose": "~4.4.13",
-    "passport": "*",
-    "passport-facebook": "*",
-    "passport-vkontakte": "*"
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.0",
+    "passport-vkontakte": "^0.4.0"
   },
   "devDependencies": {},
   "scripts": {

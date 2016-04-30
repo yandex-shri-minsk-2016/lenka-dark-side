@@ -10,8 +10,8 @@ var express = require('express'),
     session = require('express-session'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser');
-	errorHandler = require('./src/errors/errorHandler.js');
-	errorLogger = require('./src/errors/errorLogger.js');
+    errorHandler = require('./src/errors/errorHandler.js');
+    errorLogger = require('./src/errors/errorLogger.js');
 
 //TODO: Избавиться от хардкода(сделать конфиг) 
 mongoose.connect('mongodb://localhost/lenka');

@@ -10,17 +10,9 @@ block content
     ul
         each order in orders
             li= order
-    #user
-        if(user)
-            div(class="user-card")
-               img(src="#{user.photoUrl}", alt="")
-            div(class="user-data")
-                span Имя: #{user.username}
-                br
-                span Профиль: <a href="#{user.profileUrl}">page</a>
-                br
-                div(class="clear")
-            a(href="/sign-out", class="sign-out") Выйти ←
-        else
-          p Вы не авторизованы!
-          a(href="/auth/fb") Авторизоваться →
+
+    if user
+        =user
+    else
+      p Вы не авторизованы!
+      a(href="/auth/fb") Авторизоваться →
