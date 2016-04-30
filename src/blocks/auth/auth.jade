@@ -1,0 +1,9 @@
+mixin auth(person)
+    if person
+        .auth
+            .auth__name= person.name
+            a.auth__logout(href=person.logout) выйти
+    else
+        .auth
+            a.auth__social.auth__social_vk
+            a.auth__social.auth__social_fb
