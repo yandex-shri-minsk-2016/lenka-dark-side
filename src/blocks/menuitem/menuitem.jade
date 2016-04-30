@@ -1,10 +1,10 @@
 include ../button/button
 
-mixin menuitem(text, price, imgurl)
+mixin menuitem(dish)
     .menu-item
-        img.menu-item__image(src= imgurl)
+        img.menu-item__image(src= dish.picture)
         .menu-item__info
-            .menu-item__title= text
+            .menu-item__title= dish.name
             .menu-item__other-info
-                .menu_item__price= price
+                .menu_item__price= dish.price
                 +button("В заказ!", ["button_size-s"])
