@@ -14,13 +14,15 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
-// app.use(express.static(__dirname + '/public'));
+
 app.set('view engine', 'jade');
 app.set('views', './src/pages');
 app.get('/', homeControler);
 app.get('/services', servicesController);
 app.get('/hello', helloController);
 app.post('/services/:id', serviceController);
+
+app.use(express.static(__dirname + '/dist'));
 
 //already last(error processing)
 app.use(function(req, res) {
