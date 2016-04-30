@@ -5,7 +5,9 @@ var express = require('express'),
 	servicesController = require('./src/controllers/services.js'),
 	serviceController = require('./src/controllers/service.js'),
 	mongoose = require('mongoose'),
-	bodyParser = require('body-parser');
+	bodyParser = require('body-parser'),
+	errorHandler = require('./src/errors/errorHandler.js');
+	errorLogger = require('./src/errors/errorLogger.js');
 
 //TODO: Избавиться от хардкода(сделать конфиг) 
 mongoose.connect('mongodb://localhost/lenka');
@@ -22,6 +24,8 @@ app.get('/services', servicesController);
 app.get('/hello', helloController);
 app.post('/services/:id', serviceController);
 
+app.use(errorLogger);
+app.use(errorHandler);
 app.use(express.static(__dirname + '/dist'));
 
 //already last(error processing)
