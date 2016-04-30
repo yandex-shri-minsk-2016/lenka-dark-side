@@ -1,8 +1,9 @@
 include ../button/button
+include ../auth/auth
 
 mixin header()
     .header
         h1.header__title Lenka
         .header__logo(alt="logo")
         .header__slogan Не кушайте в одиночку!
-        +button("Сделать заказ!", ['button', 'button_new-order'])
+        +auth()
