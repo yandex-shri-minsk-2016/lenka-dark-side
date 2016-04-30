@@ -43,7 +43,7 @@ app.set('views', './src/pages');
 app.get('/', homeControler);
 app.get('/services', servicesController);
 app.get('/hello', helloController);
-app.post('/services/:id', serviceController);
+app.get('/services/:id', serviceController);
 
 app.use(errorLogger);
 app.use(errorHandler);
