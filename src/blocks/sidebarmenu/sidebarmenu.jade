@@ -1,5 +1,5 @@
-mixin sidebarmenu(title)
-    .sidebar-menu
+mixin sidebarmenu(title, mod)
+    .sidebar-menu(class= mod)
         span.sidebar-menu__title= title
         ul.sidebar-menu__list
             each val, index in ["Пицца","Суши","Бургеры","Шашлыки","Пироги","Китайская еда","Итальянская/Европейская","Японская/Китайская","Кавказкая/Узбекская","Американская/fastfood","Мексиканская","Экзотическая"]
