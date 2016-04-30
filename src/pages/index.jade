@@ -10,3 +10,9 @@ block content
     ul
         each order in orders
             li= order
+
+    if user
+        =user
+    else
+      p Вы не авторизованы!
+      a(href="/auth/fb") Авторизоваться →

@@ -6,6 +6,6 @@ module.exports = function HomeController(req, res, next) {
             return next(err);
         }
 
-        res.render('index', {orders: orders});
+        res.render('index', {orders: orders, user: req.user});
     });
 };
