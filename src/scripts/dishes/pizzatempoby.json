@@ -1,12 +1,68 @@
-//nastya
 [{
-  "name": "",
-  "price": "",
-  "url": "",
-  "picture": ""
+	"name": "Салат Цезарь",
+	"price": "56000",
+	"url": "http://www.pizzatempo.by/menu/salad.html",
+	"category": "Салаты/закуски",
+	"picture": ""
 }, {
-  "name": "",
-  "price": "",
-  "url": "",
-  "picture": ""
-}]
+	"name": "Салат с курицей и сыром Моцарелла",
+	"price": "54000",
+	"url": "http://www.pizzatempo.by/menu/salad.html",
+	"category": "Салаты/закуски",
+	"picture": ""
+}, {
+	"name": "Солянка",
+	"price": "44000",
+	"url": "http://www.pizzatempo.by/menu/obed.html",
+	"category": "Супы",
+	"picture": ""
+}, {
+	"name": "Суп Чили (Острый)",
+	"price": "60000",
+	"url": "http://www.pizzatempo.by/menu/obed.html",
+	"category": "Супы",
+	"picture": ""
+}, {
+	"name": "Суп Чили (Острый)",
+	"price": "60000",
+	"url": "http://www.pizzatempo.by/menu/obed.html",
+	"category": "Супы",
+	"picture": ""
+}, {
+	"name": "Спагетти Карбонара",
+	"price": "69000",
+	"url": "http://www.pizzatempo.by/menu/pasta.html",
+	"category": "Паста",
+	"picture": ""
+}, {
+	"name": "Тальятелле с лососем и креветками",
+	"price": "79000",
+	"url": "http://www.pizzatempo.by/menu/pasta.html",
+	"category": "Паста",
+	"picture": ""
+}, {
+	"name": "Медальоны из свинины с хрустящими драниками",
+	"price": "125000",
+	"url": "http://www.pizzatempo.by/menu/goryachee.html",
+	"category": "Горячее",
+	"picture": ""
+}, {
+	"name": "Свинина с баклажанами и помидорами в бальзамическом соусе",
+	"price": "97000",
+	"url": "http://www.pizzatempo.by/menu/goryachee.html",
+	"category": "Горячее",
+	"picture": ""
+}, {
+	"name": "Тирамису",
+	"price": "55000",
+	"url": "http://www.pizzatempo.by/menu/dessert.html",
+	"category": "Десерты",
+	"picture": ""
+}, {
+	"name": "Блинчики 'Особые'",
+	"price": "47000",
+	"url": "http://www.pizzatempo.by/menu/dessert.html",
+	"category": "Десерты",
+	"picture": ""
+},
+]
