@@ -1,12 +1,98 @@
 //ghenya
 [{
-  "name": "",
-  "price": "",
-  "url": "",
-  "picture": ""
+  "name": "Арабика",
+  "price": "127500",
+  "url": "http://nakormim.by/pizza/pitstsa-arabika.html",
+  "category": "Пицца",
+  "picture": "../../images/nakormimby/dishes/arabika-pizza.jpg"
 }, {
-  "name": "",
-  "price": "",
-  "url": "",
-  "picture": ""
+  "name": "Баварская",
+  "price": "126200",
+  "url": "http://nakormim.by/pizza/pitstsa-bavarskaja.html",
+  "category": "Пицца",
+  "picture": "../../images/nakormimby/dishes/bavarskaja-pizza.jpg"
+}, {
+  "name": "Барбекю",
+  "price": "149800",
+  "url": "http://nakormim.by/pizza/pitstsa-barbekju.html",
+  "category": "Пицца",
+  "picture": "../../images/nakormimby/dishes/barb-pizza.jpg"
+}, {
+  "name": "Агуро Маки",
+  "price": "55500",
+  "url": "http://nakormim.by/sushi/sushi-aguro-maki.html",
+  "category": "Суши",
+  "picture": "../../images/nakormimby/dishes/aguro-maki-.jpg"
+}, {
+  "name": "Бонито маки",
+  "price": "102000",
+  "url": "http://nakormim.by/sushi/maki/bonito-maki.html",
+  "category": "Суши",
+  "picture": "../../images/nakormimby/dishes/bonito.jpg"
+}, {
+  "name": "Икуро",
+  "price": "31500",
+  "url": "http://nakormim.by/sushi/gunkan/iguro.html",
+  "category": "Суши",
+  "picture": "../../images/nakormimby/dishes/ikura.jpg"
+}, {
+  "name": "Баварский бургер",
+  "price": "90100",
+  "url": "http://nakormim.by/burgers/bavarskij-burger.html",
+  "category": "Бургеры",
+  "picture": "../../images/nakormimby/dishes/bar-burg.jpg"
+}, {
+  "name": "Бекон чизбургер",
+  "price": "89400",
+  "url": "http://nakormim.by/burgers/bekon-chizburger.html",
+  "category": "Бургеры",
+  "picture": "../../images/nakormimby/dishes/cheese-burg.jpg"
+}, {
+  "name": "Индиана бургер",
+  "price": "73900",
+  "url": "http://nakormim.by/burgers/indiana-burger.html",
+  "category": "Бургеры",
+  "picture": "../../images/nakormimby/dishes/indiano-burg.jpg"
+}, {
+  "name": "Блины с ветчиной и сыром",
+  "price": "61300",
+  "url": "http://nakormim.by/home-cooking/bliny-s-vetchinoj-i-syrom.html",
+  "category": "Горячее",
+  "picture": "../../images/nakormimby/dishes/blin.jpg"
+}, {
+  "name": "Блины с овощами",
+  "price": "52200",
+  "url": "http://nakormim.by/postnoe-menju/bliny-s-ovoschami.html",
+  "category": "Горячее",
+  "picture": "../../images/nakormimby/dishes/blin2.jpg"
+}, {
+  "name": "Блины с птицей и шампиньонами",
+  "price": "53000",
+  "url": "http://nakormim.by/home-cooking/bliny-s-ptitsej-i-shampinjonami.html",
+  "category": "Горячее",
+  "picture": "../../images/nakormimby/dishes/blin3.jpg"
+}, {
+  "name": "Чикен бургер",
+  "price": "84100",
+  "url": "http://nakormim.by/burgers/chiken-burger.html",
+  "category": "Бургеры",
+  "picture": "../../images/nakormimby/dishes/burg-chick.jpg"
+}, {
+  "name": "Фиш бургер",
+  "price": "101300",
+  "url": "http://nakormim.by/burgers/fish-burger.html",
+  "category": "Бургеры",
+  "picture": "../../images/nakormimby/dishes/fish-burg.jpg"
+}, {
+  "name": "Чикен чизбургер",
+  "price": "81000",
+  "url": "http://nakormim.by/burgers/chiken-chizburger.html",
+  "category": "Бургеры",
+  "picture": "../../images/nakormimby/dishes/ches-chick.jpg"
+}, {
+  "name": "Пицца по-милански",
+  "price": "123500",
+  "url": "http://nakormim.by/pizza/pitstsa-po-milanski.html",
+  "category": "Пицца",
+  "picture": "../../images/nakormimby/dishes/pizza-lst.jpg"
 }]
