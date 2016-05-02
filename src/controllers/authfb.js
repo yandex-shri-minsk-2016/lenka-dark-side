@@ -1,6 +1,5 @@
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
-var VKStrategy = require('passport-vkontakte').Strategy;
 
 var Person = require('./../models/person').model;
 

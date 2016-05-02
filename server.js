@@ -5,7 +5,8 @@ var express = require('express'),
     servicesController = require('./src/controllers/services.js'),
     serviceController = require('./src/controllers/service.js'),
     mongoose = require('mongoose'),
-    auth = require('./src/controllers/auth.js'),
+    authfb = require('./src/controllers/authfb.js'),
+    authvk = require('./src/controllers/authvk.js'),
     passport = require('passport'),
     session = require('express-session'),
     cookieParser = require('cookie-parser'),
@@ -49,7 +50,8 @@ app.use(errorLogger);
 app.use(errorHandler);
 app.use(express.static(__dirname + '/dist'));
 
-app.get('/auth/fb', auth());
+app.get('/auth/fb', authfb());
+app.get('/auth/vk', authvk());
 
 //already last(error processing)
 app.use(function(req, res) {

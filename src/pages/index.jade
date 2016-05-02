@@ -14,5 +14,9 @@ block content
     if user
         =user
     else
-      p Вы не авторизованы!
-      a(href="/auth/fb") Авторизоваться →
+      div
+        p Вы не авторизованы!
+      div
+        a(href="/auth/fb") Авторизоваться Facebook →
+      div
+        a(href="/auth/vk") Авторизоваться Vk →

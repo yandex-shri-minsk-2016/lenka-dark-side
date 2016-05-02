@@ -6,7 +6,8 @@ var personSchema = new Schema({
     name:  {type: String, require: true},
     avatar: String,
     phone: String,
-    facebookId: String
+    facebookId: String,
+    vkID: String
 });
 
 module.exports = {
