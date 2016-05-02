@@ -1,6 +1,6 @@
 //ghenya
 {
-  "logo": "images/nakormimby/narormim-logo.png",
+  "logo": "../images/nakormimby/narormim-logo.png",
   "title": "Nakormim.by",
   "kitchen": ["Итальянаская/Европейская"],
   "mincost": "100 000 руб",
