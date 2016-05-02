@@ -1,11 +1,10 @@
-//kostya
 {
-  "logo": "/images/logo-pizza.png",
-  "title": "",
-  "categories": "",
-  "mincost": "",
-  "derpature": "",
-  "timework": "",
-  "downtext": "",
-  "description": ""
+  "logo": "/images/cityFoodLogo.png",
+  "title": "City food",
+  "kitchen": "Итальянаская/Европейская",
+  "mincost": "100000",
+  "costDelivery": "При заказе менее 100 000 р. доставка 50 000 р.",
+  "departureTime": "1ч",
+  "workTime": "пн-чт 10:00-23:00,  пт 10:00-2:00, сб 10:00-2:00, вс 10:00-24:00",
+  "phone": ["+375 (17) 256-67-45", "+375 (29) 352-01-01", "+375 (33) 352-11-99"]
 }

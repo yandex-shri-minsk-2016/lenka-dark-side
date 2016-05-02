@@ -1,12 +1,85 @@
-//kostya
 [{
-    "name": "",
-    "price": "",
-    "url": "",
-    "picture": ""
+    "name": "Салат Цезарь с креветками 220 гр",
+    "price": "57900",
+    "url": "http://city-food.by/dostavka-holodnye-zakuski-i-sa/cezar-s-krevetkami-220-gr",
+    "category": "Салаты/закуски",
+    "picture": "../../images/cityFood/caesar_salad_with_shrimp.jpg"
 }, {
-    "name": "",
-    "price": "",
-    "url": "",
-    "picture": ""
+    "name": "Салат Океан 200 гр",
+    "price": "36000",
+    "url": "http://city-food.by/dostavka-holodnye-zakuski-i-sa/okean-200-gr",
+    "category": "Салаты/закуски",
+    "picture": "../../images/cityFood/salad_ocean.jpg"
+}, {
+    "name": "Борщ 300 гр",
+    "price": "28000",
+    "url": "http://city-food.by/dostavka-pervye-blyuda/borshch-300-gr",
+    "category": "Супы",
+    "picture": "../../images/cityFood/soup.jpg"
+}, {
+    "name": "Мисо-суп 300 гр",
+    "price": "34500",
+    "url": "http://city-food.by/dostavka-pervye-blyuda/miso-sup-300-gr",
+    "category": "Супы",
+    "picture": "../../images/cityFood/miso_soup.jpg"
+}, {
+    "name": "Карбонара 300 гр",
+    "price": "73000",
+    "url": "http://city-food.by/dostavka-vtorye-blyuda/karbonara-300-gr",
+    "category": "Паста",
+    "picture": "../../images/cityFood/karbanara.png"
+}, {
+    "name": "Тальятелле с лососем и морепродуктами 250 гр",
+    "price": "109000",
+    "url": "http://city-food.by/dostavka-vtorye-blyuda/talyatelle-s-lososem-i-moreproduktami-250-gr",
+    "category": "Паста",
+    "picture": "../../images/cityFood/taliatelle.png"
+}, {
+    "name": "Говядина с рисом и овощами 250 гр",
+    "price": "78900",
+    "url": "http://city-food.by/dostavka-vtorye-blyuda/govyadina-s-risom-i-ovoshchami-250-gr",
+    "category": "Горячее",
+    "picture": "../../images/cityFood/beef_with_rice_and_vegetables.png"
+}, {
+    "name": "Куриные крылышки в соусе лечо 250 гр",
+    "price": "53800",
+    "url": "http://city-food.by/dostavka-vtorye-blyuda/kurinye-krylyshki-v-souse-lecho-250-gr",
+    "category": "Горячее",
+    "picture": "../../images/cityFood/chicken_wings_in_sauce_lecho.jpg"
+}, {
+    "name": "Штрудель яблочный 150 гр",
+    "price": "38000",
+    "url": "http://city-food.by/dostavka-deserty/shtrudel-yablochnyy-150-gr",
+    "category": "Десерты",
+    "picture": "../../images/cityFood/apple_strudel.png"
+}, {
+    "name": "Торт Наполеон 150 гр",
+    "price": "35000",
+    "url": "http://city-food.by/dostavka-deserty/tort-napoleon-150-gr",
+    "category": "Десерты",
+    "picture": "../../images/cityFood/cake_napaleon.png"
+}, {
+    "name": "Аризона 270 гр",
+    "price": "58000",
+    "url": "http://city-food.by/dostavka-burgery/arizona-270-gr",
+    "category": "Бургеры",
+    "picture": "../../images/cityFood/arizona.jpg"
+}, {
+    "name": "Дабл Биф 320 гр",
+    "price": "69000",
+    "url": "http://city-food.by/dostavka-burgery/dabl-bif-320-gr",
+    "category": "Бургеры",
+    "picture": "../../images/cityFood/double_bif.jpg"
+}, {
+    "name": "Дабл Чиз 320 гр",
+    "price": "53400",
+    "url": "http://city-food.by/dostavka-burgery/dabl-chiz-320-gr",
+    "category": "Бургеры",
+    "picture": "../../images/cityFood/double_chiz.jpg"
+}, {
+    "name": "Родео Биф 270 гр",
+    "price": "58000",
+    "url": "http://city-food.by/dostavka-burgery/rodeo-bif-270-gr",
+    "category": "Бургеры",
+    "picture": "../../images/cityFood/rodeo_bif.jpg"
 }]
