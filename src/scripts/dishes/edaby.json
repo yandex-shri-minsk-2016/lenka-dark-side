@@ -1,12 +1,157 @@
-//lesha
 [{
-  "name": "",
-  "price": "",
-  "url": "",
-  "picture": ""
+  "name": "Пицца 4 сыра с рукколой",
+  "price": "119700",
+  "url": "http://www.eda.by/catalog/pizza/1/",
+  "category": "Пицца",
+  "picture": "../../images/edaby/pizza_4_cheese_with_arugula.png"
 }, {
-  "name": "",
-  "price": "",
-  "url": "",
-  "picture": ""
+  "name": "Пицца с бастурмой, томатами черри и рукколой",
+  "price": "119700",
+  "url": "http://www.eda.by/catalog/pizza/1/",
+  "category": "Пицца",
+  "picture": "../../images/edaby/pizza_with_basturma_cherry_tomatoes_and_arugula.png"
+}, {
+  "name": "Пицца Деревенская",
+  "price": "123000",
+  "url": "http://www.eda.by/catalog/pizza/1/",
+  "category": "Пицца",
+  "picture": "../../images/edaby/pizza_country.png"
+}, {
+  "name": "Суп-крем из порея с чипсами бекона",
+  "price": "45600",
+  "url": "http://www.eda.by/catalog/soup/",
+  "category": "Супы",
+  "picture": "../../images/edaby/cream_of_leek_with_bacon_chips.png"
+}, {
+  "name": "Солянка Гаражная",
+  "price": "49000",
+  "url": "http://www.eda.by/catalog/soup/",
+  "category": "Супы",
+  "picture": "../../images/edaby/solyanka_garage.png"
+}, {
+  "name": "Грибной суп с перловкой",
+  "price": "45600",
+  "url": "http://www.eda.by/catalog/soup/",
+  "category": "Супы",
+  "picture": "../../images/edaby/mushroom_soup_with_pearl_barley.png"
+}, {
+  "name": "Стейк-бабочка из лосося с овощами в сливочном соусе и рисом",
+  "price": "169000",
+  "url": "http://www.eda.by/catalog/hotdish/",
+  "category": "Горячее",
+  "picture": "../../images/edaby/grilled_butterfly_salmon_with_vegetables_in_cream_sauce_and_rice.png"
+}, {
+  "name": "Филе куриное с ньокками и грибным соусом",
+  "price": "92300",
+  "url": "http://www.eda.by/catalog/hotdish/",
+  "category": "Горячее",
+  "picture": "../../images/edaby/chicken_fillet_with_mushroom_sauce_and_gnocchi.png"
+}, {
+  "name": "Драники с мачанкой",
+  "price": "103900",
+  "url": "http://www.eda.by/catalog/hotdish/",
+  "category": "Горячее",
+  "picture": "../../images/edaby/pancakes_with_machanka.png"
+}, {
+    "name": "Салат греческий",
+    "price": "60500",
+    "url": "http://www.eda.by/catalog/salad/",
+    "category": "Салаты/закуски",
+    "picture": "../../images/edaby/greek_salad.png"
+}, {
+  "name": "Салат Цезарь с курицей",
+  "price": "72900",
+  "url": "http://www.eda.by/catalog/salad/",
+  "category": "Салаты/закуски",
+  "picture": "../../images/edaby/caesar_salad_with_chicken.png"
+}, {
+  "name": "Салат с курицей, сладким перцем и сыром",
+  "price": "59900",
+  "url": "http://www.eda.by/catalog/salad/",
+  "category": "Салаты/закуски",
+  "picture": "../../images/edaby/salad_with_chicken_peppers_and_cheese.png"
+}, {
+  "name": "Чизкейк",
+  "price": "48000",
+  "url": "http://www.eda.by/catalog/dessert/",
+  "category": "Десерты",
+  "picture": "../../images/edaby/cheesecake.png"
+}, {
+  "name": "Штрудель яблочный",
+  "price": "43700",
+  "url": "http://www.eda.by/catalog/dessert/",
+  "category": "Десерты",
+  "picture": "../../images/edaby/apple_strudel.png"
+}, {
+  "name": "Десерт шоколадный с малиновым джемом",
+  "price": "43700",
+  "url": "http://www.eda.by/catalog/dessert/",
+  "category": "Десерты",
+  "picture": "../../images/edaby/dessert_chocolate_with_raspberry_jam.png"
+}, {
+  "name": "Американо",
+  "price": "16000",
+  "url": "http://www.eda.by/catalog/beverage/other_beverage/",
+  "category": "Напитки",
+  "picture": "../../images/edaby/americano.png"
+}, {
+  "name": "Эспрессо",
+  "price": "16000",
+  "url": "http://www.eda.by/catalog/beverage/other_beverage/",
+  "category": "Напитки",
+  "picture": "../../images/edaby/espresso.png"
+}, {
+  "name": "Капучино",
+  "price": "21000",
+  "url": "http://www.eda.by/catalog/beverage/other_beverage/",
+  "category": "Напитки",
+  "picture": "../../images/edaby/cappuccino.png"
+}, {
+  "name": "Буррито со свининой",
+  "price": "84100",
+  "url": "http://www.eda.by/catalog/buritos/",
+  "category": "Буррито",
+  "picture": "../../images/edaby/burrito_with_pork.png"
+}, {
+  "name": "Буррито со курицей",
+  "price": "79300",
+  "url": "http://www.eda.by/catalog/buritos/",
+  "category": "Буррито",
+  "picture": "../../images/edaby/burrito_with_chicken.png"
+}, {
+  "name": "Блинчики с ветчиной, курицей и грибами",
+  "price": "36500",
+  "url": "http://www.eda.by/catalog/zavtraki/",
+  "category": "Завтраки",
+  "picture": "../../images/edaby/pancakes_with_ham_chicken_and_mushrooms.png"
+}, {
+  "name": "Блинчики с вишнево-черничным соусом",
+  "price": "29400",
+  "url": "http://www.eda.by/catalog/zavtraki/",
+  "category": "Завтраки",
+  "picture": "../../images/edaby/pancakes_with_cherry_blueberry_sauce.png"
+}, {
+  "name": "Творожные батончики с вишнево-черничным соусом",
+  "price": "26400",
+  "url": "http://www.eda.by/catalog/zavtraki/",
+  "category": "Завтраки",
+  "picture": "../../images/edaby/curd_bars_with_cherry_blueberry_sauce.png"
+}, {
+  "name": "Сяке Терияки маки",
+  "price": "80200",
+  "url": "http://www.eda.by/catalog/sushi/1/",
+  "category": "Суши",
+  "picture": "../../images/edaby/syake_teriyaki_maki.png"
+}, {
+  "name": "Калифорния",
+  "price": "86800",
+  "url": "http://www.eda.by/catalog/sushi/1/",
+  "category": "Суши",
+  "picture": "../../images/edaby/california.png"
+}, {
+  "name": "Сяке авокадо маки",
+  "price": "80200",
+  "url": "http://www.eda.by/catalog/sushi/1/",
+  "category": "Суши",
+  "picture": "../../images/edaby/syake_avocado_maki.png"
 }]
