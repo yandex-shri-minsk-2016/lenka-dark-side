@@ -1,8 +1,8 @@
 {
-  "logo": "/images/logo-pizza.png",
+  "logo": "/images/pizzatempo/logo-pizza.png",
   "title": "Пицца Темпо",
   "kitchen": "Итальянская/Европейская",
-  "mincost": "120 000 рубо",
+  "mincost": "120000",
   "costDelivery": "Не указано",
   "departureTime": "1ч",
   "workTime": "вс-чт 10:00-22:00, пт-сб 10:00-02:00 (меню обеденных комплексов: пн-пт 12:00-16:00)",
