@@ -1,7 +1,6 @@
 var express = require('express'),
     app = express(),
     homeControler = require('./src/controllers/home.js'),
-    helloController = require('./src/controllers/hello.js'),
     servicesController = require('./src/controllers/services.js'),
     serviceController = require('./src/controllers/service.js'),
     mongoose = require('mongoose'),
@@ -43,7 +42,6 @@ app.set('view engine', 'jade');
 app.set('views', './src/pages');
 app.get('/', homeControler);
 app.get('/services', servicesController);
-app.get('/hello', helloController);
 app.get('/services/:id', serviceController);
 
 app.use(errorLogger);
