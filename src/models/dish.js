@@ -6,6 +6,7 @@ var dishSchema = new Schema({
     name:  String,
     price: String,
     url: String,
+    category: String,
     picture: String
 });
 
