@@ -1,11 +1,10 @@
-//nastya
 {
-  "logo": "/images/logo-pizza.png",
-  "title": "",
-  "categories": "",
-  "mincost": "",
-  "derpature": "",
-  "timework": "",
-  "downtext": "",
-  "description": ""
+  "logo": "/images/pizzatempo/logo-pizza.png",
+  "title": "Пицца Темпо",
+  "kitchen": "Итальянская/Европейская",
+  "mincost": "120000",
+  "costDelivery": "Не указано",
+  "departureTime": "1ч",
+  "workTime": "вс-чт 10:00-22:00, пт-сб 10:00-02:00 (меню обеденных комплексов: пн-пт 12:00-16:00)",
+  "phone": ["(017) 292-11-11", "(029) 862-11-11", "(029) 192-11-11", "(025) 792-11-11"]
 }
