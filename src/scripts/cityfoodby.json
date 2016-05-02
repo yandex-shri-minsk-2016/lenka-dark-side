@@ -1,11 +1,11 @@
 //kostya
 {
-  "logo": "/images/logo-pizza.png",
-  "title": "",
-  "categories": "",
+  "logo": "/images/cityFoodLogo.png",
+  "title": "City food",
+  "kitchen": "",
   "mincost": "",
-  "derpature": "",
-  "timework": "",
-  "downtext": "",
-  "description": ""
+  "costDelivery": "Не указано",
+  "departureTime": "60 минут",
+  "workTime": "пн-чт 10:00 - 23:00,  пт 10:00 - 2:00, сб 10:00 - 2:00, вс 10:00 - 24:00",
+  "phone": ["(017) 256-67-45", "(029) 352-01-01", "(033) 352-11-99"]
 }
