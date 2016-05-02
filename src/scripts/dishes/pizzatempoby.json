@@ -3,66 +3,84 @@
 	"price": "56000",
 	"url": "http://www.pizzatempo.by/menu/salad.html",
 	"category": "Салаты/закуски",
-	"picture": ""
+	"picture": "../images/pizzatempo/salad_cezar.jpg"
 }, {
 	"name": "Салат с курицей и сыром Моцарелла",
 	"price": "54000",
 	"url": "http://www.pizzatempo.by/menu/salad.html",
 	"category": "Салаты/закуски",
-	"picture": ""
+	"picture": "../images/pizzatempo/salad_with_chicken_and_mocarella.jpg"
 }, {
 	"name": "Солянка",
 	"price": "44000",
 	"url": "http://www.pizzatempo.by/menu/obed.html",
 	"category": "Супы",
-	"picture": ""
+	"picture": "../images/pizzatempo/solyanka.jpg"
 }, {
 	"name": "Суп Чили (Острый)",
 	"price": "60000",
 	"url": "http://www.pizzatempo.by/menu/obed.html",
 	"category": "Супы",
-	"picture": ""
-}, {
-	"name": "Суп Чили (Острый)",
-	"price": "60000",
-	"url": "http://www.pizzatempo.by/menu/obed.html",
-	"category": "Супы",
-	"picture": ""
+	"picture": "../images/pizzatempo/soup_chili.jpg"
 }, {
 	"name": "Спагетти Карбонара",
 	"price": "69000",
 	"url": "http://www.pizzatempo.by/menu/pasta.html",
 	"category": "Паста",
-	"picture": ""
+	"picture": "../images/pizzatempo/pasta_carbonara.jpg"
 }, {
 	"name": "Тальятелле с лососем и креветками",
 	"price": "79000",
 	"url": "http://www.pizzatempo.by/menu/pasta.html",
 	"category": "Паста",
-	"picture": ""
+	"picture": "../images/pizzatempo/pasta_talyatelle_with_shrimps.jpg"
 }, {
 	"name": "Медальоны из свинины с хрустящими драниками",
 	"price": "125000",
 	"url": "http://www.pizzatempo.by/menu/goryachee.html",
 	"category": "Горячее",
-	"picture": ""
+	"picture": "../images/pizzatempo/goryachee_medalyoni.jpg"
 }, {
 	"name": "Свинина с баклажанами и помидорами в бальзамическом соусе",
 	"price": "97000",
 	"url": "http://www.pizzatempo.by/menu/goryachee.html",
 	"category": "Горячее",
-	"picture": ""
+	"picture": "../images/pizzatempo/goryachee_pig_with_balzamic_source.jpg"
 }, {
-	"name": "Тирамису",
-	"price": "55000",
+	"name": "Десерт с грушей и карамелью",
+	"price": "39000",
 	"url": "http://www.pizzatempo.by/menu/dessert.html",
 	"category": "Десерты",
-	"picture": ""
+	"picture": "../images/pizzatempo/dessert_with_pineapple.jpg"
 }, {
 	"name": "Блинчики 'Особые'",
 	"price": "47000",
 	"url": "http://www.pizzatempo.by/menu/dessert.html",
 	"category": "Десерты",
-	"picture": ""
+	"picture": "../images/pizzatempo/dessert_panecakes_osobie.jpg"
+},{
+	"name": "Пицца 'Охотничья'(Острая)",
+	"price": "138500",
+	"url": "http://www.pizzatempo.by/menu/pizza.html?paging=true&page=1",
+	"category": "Пицца",
+	"picture": "../images/pizzatempo/pizza_ohotnichya.jpg"
+}, {
+	"name": "Пицца 'Морская'",
+	"price": "121000",
+	"url": "http://www.pizzatempo.by/menu/pizza.html?paging=true&page=1",
+	"category": "Пицца",
+	"picture": "../images/pizzatempo/pizza_morskaya.jpg"
+}, {
+	"name": "Пицца 'Греческая'",
+	"price": "82500",
+	"url": "http://www.pizzatempo.by/menu/pizza.html?paging=true&page=1",
+	"category": "Пицца",
+	"picture": "../images/pizzatempo/pizza_grecheskaya.jpg"
+}, {
+	"name": "Пицца 'Сытная'",
+	"price": "140600",
+	"url": "http://www.pizzatempo.by/menu/pizza.html?paging=true&page=1",
+	"category": "Пицца",
+	"picture": "../images/pizzatempo/pizza_sytnaya.jpg"
 },
 ]
