@@ -1,11 +1,11 @@
 //ghenya
 {
-  "logo": "/images/logo-pizza.png",
-  "title": "",
-  "categories": "",
-  "mincost": "",
-  "derpature": "",
-  "timework": "",
-  "downtext": "",
-  "description": ""
+  "logo": "images/nakormimby/narormim-logo.png",
+  "title": "Nakormim.by",
+  "kitchen": ["Итальянаская/Европейская", "Американская/fastfood"],
+  "mincost": "100 000 руб",
+  "costDelivery": "Бесплатно",
+  "departureTime": "70 мин",
+  "workTime": "9.00 - 3.00",
+  "phone": ["+375(29)249-93-39","+375(44)549-93-39"]
 }
