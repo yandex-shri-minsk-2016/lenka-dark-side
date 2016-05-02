@@ -1,11 +1,11 @@
-mixin auth(person, mod)
+mixin auth(person)
     if person
-        .auth(class= mod)
+        .auth()
             span.auth__post Авторизируйтесь через:
             .auth__name= person.name
             a.auth__logout(href=person.logout) выйти
     else
-        .auth(class= mod)
+        .auth()
             span.auth__post Авторизируйтесь через:
-            a.auth__social.auth__social_vk
-            a.auth__social.auth__social_fb
+            a.auth__social.auth__social_vk(href="/auth/vk")
+            a.auth__social.auth__social_fb(href="/auth/fb")
