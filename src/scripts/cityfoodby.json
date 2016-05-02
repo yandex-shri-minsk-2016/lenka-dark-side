@@ -1,5 +1,5 @@
 {
-  "logo": "/images/cityFoodLogo.png",
+  "logo": "../images/cityFood/cityFoodLogo.png",
   "title": "City food",
   "kitchen": "Итальянаская/Европейская",
   "mincost": "100000",
