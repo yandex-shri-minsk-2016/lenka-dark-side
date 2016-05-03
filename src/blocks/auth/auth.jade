@@ -6,6 +6,5 @@ mixin auth(person)
             a.auth__logout(href="/logout") Выйти
     else
         .auth()
-            span.auth__post Авторизируйтесь через:
             a.auth__social.auth__social_vk(href="/auth/vk")
             a.auth__social.auth__social_fb(href="/auth/fb")
