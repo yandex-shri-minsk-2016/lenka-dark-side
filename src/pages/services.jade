@@ -16,7 +16,8 @@ block content
         .main-wrapper__carry
             +sidebarmenu("Кухни/Блюда")
             each service in services
-                +offers(service.logo, service.title, service.categories, service.mincost, service.derpature, service.timework, service.downtext)
+                +offers(service.logo, service.title, service.kitchen, service.mincost,
+                service.costDelivery, service.departureTime)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
 
 //!--

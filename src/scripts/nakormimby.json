@@ -1,9 +1,8 @@
-//ghenya
 {
-  "logo": "../images/nakormimby/narormim-logo.png",
+  "logo": "../../images/nakormimby/nakormim-logo.png",
   "title": "Nakormim.by",
-  "kitchen": ["Итальянаская/Европейская"],
-  "mincost": "100 000 руб",
+  "kitchen": "Итальянаская/Европейская",
+  "mincost": 100000,
   "costDelivery": "Бесплатно",
   "departureTime": "70 мин",
   "workTime": "9.00 - 3.00",

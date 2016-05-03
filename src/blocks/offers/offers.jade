@@ -1,12 +1,12 @@
 include ../company/company
 include ../company-info/company-info
 
-mixin offers(logo, title, categories, mincost, derpature, timework,downtext, mod)
+mixin offers(logo, title, kitchen, mincost, costDelivery, departureTime, mod)
     .offers(class= mod)
         +company(logo, "#")
         .offers__info
             .offers__title= title
-            +company-info(categories, mincost, derpature, timework)
+            +company-info(kitchen, mincost, costDelivery, departureTime)
             .offers__down-text
                 .offers__text= downtext
             if block
