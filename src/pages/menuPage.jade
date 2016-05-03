@@ -27,3 +27,11 @@ block content
                     +menuitem(dish)
 
         div= orderInfo.time
+
+        each product in products 
+            = products[i].item
+            = products[i].price
+            
+            form(action="/services/:id", method="post")
+                input(type="hidden", name="itemId" value="#{products[i].id}")
+                input(type="submit", name="action", value="Add to Cart")
