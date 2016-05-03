@@ -3,7 +3,7 @@ mixin auth(person)
         .auth()
             span.auth__post Авторизируйтесь через:
             .auth__name= person.name
-            a.auth__logout(href=person.logout) выйти
+            a.auth__logout(href="/logout") Выйти
     else
         .auth()
             span.auth__post Авторизируйтесь через:

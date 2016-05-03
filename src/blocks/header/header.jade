@@ -1,9 +1,9 @@
 include ../button/button
 include ../auth/auth
 
-mixin header()
+mixin header(person)
     .header
         h1.header__title Lenka
         .header__logo(alt="logo")
         .header__slogan Не кушайте в одиночку!
-        +auth()
+        +auth(person)
