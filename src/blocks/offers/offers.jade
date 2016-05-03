@@ -7,8 +7,8 @@ mixin offers(logo, title, categories, mincost, derpature, timework,downtext, mod
         .offers__info
             .offers__title= title
             +company-info(categories, mincost, derpature, timework)
-            if block
-                block
             .offers__down-text
                 .offers__text= downtext
+            if block
+                block
 
