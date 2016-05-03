@@ -50,6 +50,10 @@ app.use(express.static(__dirname + '/dist'));
 
 app.get('/auth/fb', authfb());
 app.get('/auth/vk', authvk());
+app.get('/logout', function(req, res){
+    req.logout();
+    res.redirect('/');
+});
 
 //already last(error processing)
 app.use(function(req, res) {

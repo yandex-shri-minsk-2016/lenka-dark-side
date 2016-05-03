@@ -1,22 +1,24 @@
 extends ../views/layout/layout
 include ../blocks/header/header
 include ../blocks/button/button
+include ../blocks/basket/basket
+include ../blocks/order/order
+include ../blocks/session/session
+include ../blocks/menuitem/menuitem
+include ../blocks/footer/footer
 
 block title
-    title index
+    title Главная страница
 block content
-    +header
-    a.link(href='/services') Создать новый заказ
-    ul
-        each order in orders
-            li= order
-
     if user
         =user
+        +header(user)
     else
-      div
-        p Вы не авторизованы!
-      div
-        a(href="/auth/fb") Авторизоваться Facebook →
-      div
-        a(href="/auth/vk") Авторизоваться Vk →
+        +header()
+
+    a.link(href='/services') Создать новый заказ
+    .main-wrapper
+        .main-page
+            each order in orders
+                +session(order.owner.name, order.time, order.service.logo)
+        +footer("Заказывайте еду на нашей стороне, на темной стороне...")
