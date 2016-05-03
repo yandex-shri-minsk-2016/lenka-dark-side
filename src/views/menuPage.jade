@@ -7,6 +7,7 @@ include ../blocks/group/group
 include ../blocks/offers/offers
 include ../blocks/sidebarmenu/sidebarmenu
 include ../blocks/footer/footer
+include ../blocks/offers-plugin/offers-plugin
 
 block title
     title Выбор места заказа
@@ -16,10 +17,7 @@ block content
         .main-wrapper__carry
             +sidebarmenu("Кухни/Блюда")
             +offers("/images/logo-pizza.png","Бульбаш", " Древняя/народная", "250000руб", "Бесплатно", "30мин", "Доставка круглосуточно")
-                form.offers__form
-                    span.offers__text-form Введите время заказа:
-                    input(type="text" value="прим: 14:00").offers__input-time
-                    +button("Сделать заказ", "button__offers")
+                +offers-plugin()
             +offers("/images/macd.png","Macdonald's", " Американская/fastfood", "300000руб", "Бесплатно", "50мин", "Доставка до 21.00")
             +offers("/images/bkl.svg","Burger King", " Американская/fastfood", "500000руб", "20000руб", "60мин", "Доставка круглосуточно")
             +offers("/images/kfc.svg","KFC", " Американская/fastfood", "100000руб", "10% от заказа", "90мин", "Доставка круглосуточно")

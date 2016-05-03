@@ -1,0 +1,15 @@
+include ../button/button
+
+mixin offers-plugin()
+    form.offers-plugin
+        input#hd-1(type="checkbox").offers-pluign__hide
+        label(for="hd-1") Нажмите, чтобы сделать заказ
+        .offers-hide
+            .offers-hide__timepicker
+                p.offer-hide__title Введите время:
+                a.offers-hide__more
+                input.offers-hide__time-hrs
+                span.offers-hide__dtt :
+                input.offers-hide__time-mnts
+                a.offers-hide__less
+                +button("Сделать заказ", "offers-plugin__button")
