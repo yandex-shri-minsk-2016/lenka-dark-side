@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var dishSchema = new Schema({
     name:  String,
-    price: String,
+    price: Number,
     url: String,
     category: String,
     picture: String
