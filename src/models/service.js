@@ -8,7 +8,7 @@ var serviceSchema = new Schema({
     title:  String,
     kitchen: String,
     mincost: Number,
-    costDelivery: Number,
+    costDelivery: String,
     departureTime: String,
     workTime: String,
     phone: [String],
