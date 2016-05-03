@@ -10,8 +10,8 @@ var express = require('express'),
     passport = require('passport'),
     session = require('express-session'),
     cookieParser = require('cookie-parser'),
-    bodyParser = require('body-parser');
-    errorHandler = require('./src/errors/errorHandler.js');
+    bodyParser = require('body-parser'),
+    errorHandler = require('./src/errors/errorHandler.js'),
     errorLogger = require('./src/errors/errorLogger.js');
 
 //TODO: Избавиться от хардкода(сделать конфиг) 
@@ -53,6 +53,24 @@ app.use(express.static(__dirname + '/dist'));
 app.get('/auth/fb', authfb());
 app.get('/auth/vk', authvk());
 
+app.get('/services/:id', function(req, res) {
+    if (req.session.cart) {
+        console.log(req.session.cart);
+        var itemsInCart = req.session.cart.length;
+    } else {
+        console.log("here");
+        req.session.cart = [];
+    }
+    res.render('menuPage', {
+        products: itemsInCart
+    });
+});
+app.post('/services/:id', function(req, res) {
+    if (req.body.action == 'Add to Cart') {
+        req.session.cart.push(req.body.itemId);
+        res.redirect('/services/:id');
+    }
+});
 //already last(error processing)
 app.use(function(req, res) {
   res.render('404.jade');
