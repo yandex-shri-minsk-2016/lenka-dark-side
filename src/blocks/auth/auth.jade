@@ -1,10 +1,10 @@
 mixin auth(person)
     if person
         .auth()
-            span.auth__post Авторизируйтесь через:
             .auth__name= person.name
             a.auth__logout(href="/logout") Выйти
     else
         .auth()
+            span.auth__post Авторизируйтесь через:
             a.auth__social.auth__social_vk(href="/auth/vk")
             a.auth__social.auth__social_fb(href="/auth/fb")
