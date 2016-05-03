@@ -6,12 +6,12 @@ var Schema = mongoose.Schema;
 var serviceSchema = new Schema({
     logo: String,
     title:  String,
-    categories: String,
-    mincost: String,
-    derpature: String,
-    timework: String,
-    downtext: String,
-    description: String,
+    kitchen: String,
+    mincost: Number,
+    costDelivery: String,
+    departureTime: String,
+    workTime: String,
+    phone: [String],
     dishes: [dishSchema]
 });
 
