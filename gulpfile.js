@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     autoprefixer = require('gulp-autoprefixer'),
     htmlmin = require('gulp-htmlmin'),
-    fillDB = require('./src/scripts/fillDB');
+    fillDB = require('./src/scripts/seed');
 
 gulp.task('img', function () {
     return gulp.src('./src/images/**')
