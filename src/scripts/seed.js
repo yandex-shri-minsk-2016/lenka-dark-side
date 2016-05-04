@@ -31,21 +31,20 @@ var insertSeed = function (serviceData, dishesData) {
     });
 };
 
-module.exports = function fillDB() {
+module.exports = function seed() {
+    console.log('seed loading start');
     ServiceModel.remove({}, function () {
         DishModel.remove({}, function () {
             // Вставляем все службы
-            var promise = Promise.all([
+            return Promise.all([
                 insertSeed(cityFoodBy, cityFoodByDishes),
                 insertSeed(nakormimBy, nakormimByDishes),
                 insertSeed(pizzatempoBy, pizzatempoByDishes),
                 insertSeed(edaBy, edaByDishes)
-            ]);
-
-            // Дожидаемся окончния и если где-то будет ошибка - 
-            // рисуем ее в консоль
-            promise.catch(function(err) {
-                console.error(err);
+            ]).then(function() {
+                console.log('seed loading finished');
+            }).catch(function(err) {
+                console.log('seed error %s', err);
             });
         });
     });
