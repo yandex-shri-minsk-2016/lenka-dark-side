@@ -45,7 +45,7 @@
 	"price": "97000",
 	"url": "http://www.pizzatempo.by/menu/goryachee.html",
 	"category": "Горячее",
-	"picture": "../../images/pizzatempo/goryachee_pig_with_balzamic_source.jpg"
+	"picture": "../../images/pizzatempo/goryachee_pigh_in_balzamic_source.jpg"
 }, {
 	"name": "Десерт с грушей и карамелью",
 	"price": "39000",
@@ -57,7 +57,7 @@
 	"price": "47000",
 	"url": "http://www.pizzatempo.by/menu/dessert.html",
 	"category": "Десерты",
-	"picture": "../../images/pizzatempo/dessert_panecakes_osobie.jpg"
+	"picture": "../../images/pizzatempo/dessert_pancakes_osobie.jpg"
 },{
 	"name": "Пицца 'Охотничья'(Острая)",
 	"price": "138500",

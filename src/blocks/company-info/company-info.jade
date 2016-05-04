@@ -1,7 +1,7 @@
 include ../cook-info/cook-info
 include ../another-info/another-info
 
-mixin company-info(kitchen, mincost, costDelivery, departureTime)
+mixin company-info(service)
     .company-info
-        +cook-info(kitchen)
-        +another-info(mincost, costDelivery, departureTime)
+        +cook-info(service.kitchen)
+        +another-info(service)
