@@ -14,9 +14,15 @@ block content
     +header()
     .main-wrapper
         .main-wrapper__company
+            .feels
+                span.feels__voices Всего голосов: 1234
+                .feels__like
+                    span.like__pcnt 88%
+                .feels__dislike
+                    span.dislike__pcnt 12%
             +sidebarmenu("Блюда", "sidebar-menu_comppage")
             .main-wrapper__menu
 
                     div= service
-                    //+menuitem(dish)
+                    menuitem(dish)
 
