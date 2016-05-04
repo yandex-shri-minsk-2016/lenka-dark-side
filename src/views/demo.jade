@@ -9,6 +9,7 @@ include ../blocks/group/group
 include ../blocks/offers/offers
 include ../blocks/auth/auth
 include ../blocks/sidebarmenu/sidebarmenu
+include ../blocks/subscriber/subscriber
 
 block title
     title Demo
@@ -45,7 +46,6 @@ block content
         {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3',  price: '170'}]
     )
     hr
-    hr
     +offers("/images/logo-pizza.png","Бульбаш", " Древняя/народная", "250000руб", "Бесплатно", "30мин", "Доставка круглосуточно")
     +offers("/images/macd.png","Macdonald's", " Американская/fastfood", "300000руб", "Бесплатно", "50мин", "Доставка до 21.00")
     +offers("/images/bkl.svg","Burger King", " Американская/fastfood", "500000руб", "20000руб", "60мин", "Доставка круглосуточно")
@@ -54,3 +54,15 @@ block content
     +auth({name: "Вася", logout:"#"})
     +auth()
     +sidebarmenu("Кухни/Блюда")
+    hr
+    +subscriber("Вася", [
+        {title: 'Блюдо 1', price: '170'},
+        {title: 'Блюдо 2', price: '130'},
+        {title: 'Блюдо 3', price: '270'}
+    ])
+    +subscriber("Вася", [
+        {title: 'Блюдо 1', price: '170'},
+        {title: 'Блюдо 2', price: '130'},
+        {title: 'Блюдо 3', price: '270'}
+    ])
+    hr

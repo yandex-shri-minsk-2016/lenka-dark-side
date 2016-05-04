@@ -1,0 +1,12 @@
+mixin subscriber(name, dishes)
+    .subscriber
+        .subscriber__name= name
+        ol.subscriber__dishes
+            each dish in dishes
+                li.subscriber__dish
+                    .dish__name= dish.title
+                    .dish__hyphen -
+                    .dish__price= dish.price
+        .subscriber__checkbox
+            input.subscriber__check-money(type="checkbox")
+        hr
