@@ -67,7 +67,7 @@ gulp.task('webserver', function () {
         }));
 });
 
-gulp.task('fillDB', function () {
+gulp.task('seed', function () {
     var mongoose = require('mongoose');
     mongoose.connect('mongodb://localhost/lenka');
     //FIXME: Clear DB
