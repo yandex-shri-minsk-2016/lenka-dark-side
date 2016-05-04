@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
-var dishSchema = require('./dish').schema;
-
 var Schema = mongoose.Schema;
+
+var Dish = require('./dish').model;
 
 var serviceSchema = new Schema({
     logo: String,
@@ -12,7 +12,7 @@ var serviceSchema = new Schema({
     departureTime: String,
     workTime: String,
     phone: [String],
-    dishes: [dishSchema]
+    dishes: [{ type: Schema.Types.ObjectId, ref: 'Dish' }]
 });
 
 module.exports = {
