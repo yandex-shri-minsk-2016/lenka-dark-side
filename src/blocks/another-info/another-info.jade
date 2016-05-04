@@ -1,9 +1,9 @@
-mixin another-info(mincost, costDelivery, departureTime)
+mixin another-info(service)
         .another-info
-            .another-info__cost= mincost
+            .another-info__cost= service.mincost
                 .another-info__text мин-сумма заказа
-            .another-info__dep= costDelivery
+            .another-info__dep= service.costDelivery
                 .another-info__text стоимость доставки
-            .another-info__time= departureTime
+            .another-info__time= service.departureTime
                 .another-info__text гарантированное время доставки
 
