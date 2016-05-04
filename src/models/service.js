@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
-var Dish = require('../models/dish').model;
 var Schema = mongoose.Schema;
+
+var Dish = require('./dish').model;
 
 var serviceSchema = new Schema({
     logo: String,

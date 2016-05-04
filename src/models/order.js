@@ -1,18 +1,19 @@
 var mongoose = require('mongoose');
-var serviceSchema = require('./service').schema;
-var dishSchema = require('./dish').schema;
-var personSchema = require('./person').schema;
+
+var Service = require('./service').model;
+var Dish = require('./dish').model;
+var Person = require('./person').model;
 
 var Schema = mongoose.Schema;
 
 var orderSchema = new Schema({
-    owner: personSchema,
-    service: serviceSchema,
+    owner: { type: Schema.Types.ObjectId, ref: 'Person' },
+    service: { type: Schema.Types.ObjectId, ref: 'Service' },
     time: String,
-    subscriber: [{ person: personSchema, dish: dishSchema, paid: Boolean }]
+    subscriber: [{ person: { type: Schema.Types.ObjectId, ref: 'Person' }, dish: { type: Schema.Types.ObjectId, ref: 'Dish' }, paid: Boolean }]
 });
 
 module.exports = {
     model: mongoose.model('Order', orderSchema),
     schema: orderSchema
-};;
+};
