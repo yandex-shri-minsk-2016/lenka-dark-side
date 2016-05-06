@@ -14,7 +14,7 @@ block content
     +header()
     .main-wrapper
         .main-wrapper__company
-            +offers(service)
+            +offers(service, "offers_company")
                 .feels
                     span.feels__voices Всего голосов: 1234
                     .feels__like
@@ -23,5 +23,7 @@ block content
                         span.dislike__pcnt 12%
             +sidebarmenu("Блюда", "sidebar-menu_comppage")
             .main-wrapper__menu
+                span.main-wrapper__title Что вы хотите съесть сегодня?
                 each dish in service.dishes
                     +menuitem(dish)
+        +footer("Заказывайте еду на нашей стороне, на темной стороне...")
