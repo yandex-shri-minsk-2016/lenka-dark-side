@@ -5,12 +5,16 @@ var serviceSchema = require('./service').schema;
 var Dish = require('./dish').model;
 var personSchema = require('./person').schema;
 
+var Schema = mongoose.Schema;
+
 var orderSchema = new Schema({
     owner: personSchema,
     dishes: [{ type: Schema.Types.ObjectId, ref: 'Dish' }],
     service: serviceSchema,
     time: String,
+
     subscriber: [{ person: personSchema, dishes: [{ type: Schema.Types.ObjectId, ref: 'Dish' }], paid: Boolean }]
+
 });
 
 module.exports = {

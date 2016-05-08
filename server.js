@@ -4,6 +4,7 @@ var express = require('express'),
     authfb = require('./src/controllers/auth.js'),
     passport = require('passport'),
     session = require('express-session'),
+
     bodyParser = require('body-parser'),
     passport = require('passport'),
 
@@ -12,7 +13,9 @@ var express = require('express'),
 
     homeController = require('./src/controllers/home.js'),
     servicesController = require('./src/controllers/services.js'),
-    serviceController = require('./src/controllers/service.js');
+    serviceController = require('./src/controllers/service.js'),
+
+    cookieParser = require('cookie-parser');
 
 //TODO: Избавиться от хардкода(сделать конфиг) 
 mongoose.connect('mongodb://localhost/lenka');
@@ -39,6 +42,9 @@ app.set('views', './src/pages');
 app.get('/', homeController);
 app.get('/services', servicesController);
 app.get('/services/:id', serviceController);
+app.get('/mymenu', function(req, res){
+    res.render('menuPage', {string: ownerName, number: orderTime, number: orderId});
+});
 
 app.use(errorLogger);
 app.use(errorHandler);
