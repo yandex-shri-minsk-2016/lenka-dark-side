@@ -1,11 +1,11 @@
 include ../button/button
 include ../company/company
 
-mixin session(name, time, logo)
+mixin session(name, time, service)
     .session
         .session__name= name
         .session__time= time
-        +company(logo, '#')
+        +company(service)
 
         .session__controls
             +button("Хочу также!", [])
