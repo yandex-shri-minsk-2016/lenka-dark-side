@@ -26,6 +26,9 @@ block content
                 span.main-wrapper__title Что вы хотите съесть сегодня?
                 each dish in service.dishes
                     form(action="/orders", method="post")
-                        input(type="hidden", name="dishId" value="#{dish._id}")
+                        input(type="hidden", name="dishName" value="#{dish.name}")
+                        input(type="hidden", name="dishPrice" value="#{dish.price}")
                         +menuitem(dish)
-          +footer("Заказывайте еду на нашей стороне, на темной стороне...")
+        +footer("Заказывайте еду на нашей стороне, на темной стороне...")
+        each item in orders
+            +order(item.title, item.price)

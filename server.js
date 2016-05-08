@@ -83,21 +83,26 @@ app.get('/logout', function(req, res){
 });
 
 app.post('/orders', function(req, res) {
-    if (req.body.action == 'add'){ 
+    if (req.body.action == 'add'){
         if(!req.session.dishes){
             req.session.dishes = [];
         }
-        console.log(req.session.dishes)
-        req.session.dishes.push(req.body.dishId);
-        res.redirect('back');
+            var item = {};
+            item.title = req.body.dishName;
+            item.price = req.body.dishPrice;
+            req.session.dishes.push(item);
+            console.log(req.session.dishes);
+            res.redirect('back');
     }
 });
 app.get('/orders', function (req, res) {
-    res.render('menuPage', {number:itemsInCart, cart: req.session.dishes});
+    if (req.session.dishes) {
+        res.render('menuPage', {orders: req.session.dishes});
+    }
 });
 //already last(error processing)
 app.use(function(req, res) {
-  res.render('404.jade');
+  res.render('404');
 });
 app.listen(3000, function() {
     console.log('Working 3000');
