@@ -5,6 +5,7 @@ var express = require('express'),
     authfb = require('./src/controllers/auth.js'),
     passport = require('passport'),
     session = require('express-session'),
+<<<<<<< HEAD
 
     bodyParser = require('body-parser'),
     passport = require('passport'),
@@ -17,10 +18,18 @@ var express = require('express'),
     serviceController = require('./src/controllers/service.js'),
 
     cookieParser = require('cookie-parser');
+=======
+    cookieParser = require('cookie-parser'),
+    bodyParser = require('body-parser'),
+    errorHandler = require('./src/errors/errorHandler.js'),
+    errorLogger = require('./src/errors/errorLogger.js'),
+    redisStore = require('connect-redis');
+>>>>>>> add dish to session.dishes
 
 //TODO: Избавиться от хардкода(сделать конфиг) 
 mongoose.connect('mongodb://localhost/lenka');
 
+app.use(cookieParser());
 app.use(session({
     secret: 'appsecret',
     resave: false,
@@ -73,6 +82,21 @@ app.get('/logout', function(req, res){
     res.redirect('/');
 });
 
+app.post('/orders', function(req, res) {
+    if (req.body.action == 'add'){ 
+        req.session.dishes = [];
+        req.session.dishes.push(req.body.dishId);
+        console.log(req.session.dishes);
+        res.redirect('back');
+    }
+});
+app.get('/orders', function (req, res) {
+    pageScope.itemsInCart = req.session.cart && req.session.cart;
+    res.render('menuPage', pageScope = {
+       "cart": req.session.cart
+    });
+});
+//already last(error processing)
 app.use(function(req, res) {
   res.render('404.jade');
 });

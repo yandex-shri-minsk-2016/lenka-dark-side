@@ -25,5 +25,7 @@ block content
             .main-wrapper__menu
                 span.main-wrapper__title Что вы хотите съесть сегодня?
                 each dish in service.dishes
-                    +menuitem(dish)
+                    form(action="/orders", method="post")
+                        input(type="hidden", name="dishId" value="#{dish._id}")
+                        +menuitem(dish)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
