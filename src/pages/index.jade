@@ -25,11 +25,8 @@ block content
         .main-page
             each order in orders
                 +session(order.owner.name, order.time, order.service.logo)
-                +subscriber(order.subscriber[0].person.name, [
-                    {title: 'Блюдо 1', price: '170'},
-                    {title: 'Блюдо 2', price: '130'},
-                    {title: 'Блюдо 3', price: '270'}
-                ])
+                each subscriber in order.subscriber
+                    +subscriber(subscriber.person.name, subscriber.dishes)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
         button.total__button(onclick="document.getElementById('block').style.display='block'") Total
 
