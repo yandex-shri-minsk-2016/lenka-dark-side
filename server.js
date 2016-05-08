@@ -1,5 +1,6 @@
 var express = require('express'),
     app = express(),
+
     mongoose = require('mongoose'),
     authfb = require('./src/controllers/auth.js'),
     passport = require('passport'),
