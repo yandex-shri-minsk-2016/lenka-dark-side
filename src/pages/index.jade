@@ -21,7 +21,7 @@ block content
     .main-wrapper
         .main-page
             each order in orders
-                +session(order.owner.name, order.time, order.service.logo)
+                +session(order.owner.name, order.time, order.service)
                 each subscriber in order.subscriber
                     +subscriber(subscriber.person.name, subscriber.dishes)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
