@@ -1,17 +1,19 @@
 var express = require('express'),
     app = express(),
-    homeControler = require('./src/controllers/home.js'),
-    servicesController = require('./src/controllers/services.js'),
-    serviceController = require('./src/controllers/service.js'),
     mongoose = require('mongoose'),
-    authfb = require('./src/controllers/authfb.js'),
-    authvk = require('./src/controllers/authvk.js'),
-    passport = require('passport'),
     session = require('express-session'),
-    cookieParser = require('cookie-parser'),
-    bodyParser = require('body-parser');
-    errorHandler = require('./src/errors/errorHandler.js');
-    errorLogger = require('./src/errors/errorLogger.js');
+    bodyParser = require('body-parser'),
+    passport = require('passport'),
+
+    authFB = require('./src/controllers/authfb.js'),
+    authVK = require('./src/controllers/authvk.js'),
+
+    errorHandler = require('./src/errors/errorHandler.js'),
+    errorLogger = require('./src/errors/errorLogger.js'),
+
+    homeController = require('./src/controllers/home.js'),
+    servicesController = require('./src/controllers/services.js'),
+    serviceController = require('./src/controllers/service.js');
 
 //TODO: Избавиться от хардкода(сделать конфиг) 
 mongoose.connect('mongodb://localhost/lenka');
@@ -28,11 +30,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(function(req, res, next) {
-    console.log(req.user)
-    next();
-});
-
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
@@ -40,7 +37,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 app.set('view engine', 'jade');
 app.set('views', './src/pages');
-app.get('/', homeControler);
+app.get('/', homeController);
 app.get('/services', servicesController);
 app.get('/services/:id', serviceController);
 
@@ -48,14 +45,13 @@ app.use(errorLogger);
 app.use(errorHandler);
 app.use(express.static(__dirname + '/dist'));
 
-app.get('/auth/fb', authfb());
-app.get('/auth/vk', authvk());
+app.get('/auth/fb', authFB());
+app.get('/auth/vk', authVK());
 app.get('/logout', function(req, res){
     req.logout();
     res.redirect('/');
 });
 
-//already last(error processing)
 app.use(function(req, res) {
   res.render('404.jade');
 });
