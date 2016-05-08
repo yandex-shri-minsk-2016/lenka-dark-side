@@ -42,6 +42,20 @@ app.set('views', './src/pages');
 app.get('/', homeController);
 app.get('/services', servicesController);
 app.get('/services/:id', serviceController);
+
+app.post('/mymenu', function(req, res) {
+    if(req.body.action == 'menu'){
+        if(!req.session.orders){
+            req.session.orders = [];
+        }
+        req.session.orders.push(req.body.orderNameCustomer);
+        req.session.orders.push(req.body.orderTime);
+        req.session.orders.push(req.body.orderServiceId);
+        console.log(req.session.orders);
+        res.redirect('/services/' + req.body.orderServiceId);
+
+    }
+});
 app.get('/mymenu', function(req, res){
     res.render('menuPage', {string: ownerName, number: orderTime, number: orderId});
 });
