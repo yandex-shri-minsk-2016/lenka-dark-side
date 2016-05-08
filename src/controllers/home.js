@@ -8,6 +8,6 @@ module.exports = function HomeController(req, res, next) {
             if (err) {
                 return next(err);
             }
-            res.render('index', {orders: orders, user: req.body.user});
+            res.render('index', {orders: orders, user: req.user});
         });
 };
