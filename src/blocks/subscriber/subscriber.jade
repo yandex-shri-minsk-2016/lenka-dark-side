@@ -4,7 +4,7 @@ mixin subscriber(name, dishes)
         ol.subscriber__dishes
             each dish in dishes
                 li.subscriber__dish
-                    .dish__name= dish.title
+                    .dish__name= dish.name
                     .dish__hyphen -
                     .dish__price= dish.price
         .subscriber__checkbox

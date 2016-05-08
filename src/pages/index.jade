@@ -6,6 +6,7 @@ include ../blocks/order/order
 include ../blocks/session/session
 include ../blocks/menuitem/menuitem
 include ../blocks/footer/footer
+include ../blocks/subscriber/subscriber
 
 block title
     title Главная страница
@@ -21,4 +22,6 @@ block content
         .main-page
             each order in orders
                 +session(order.owner.name, order.time, order.service.logo)
+                each subscriber in order.subscriber
+                    +subscriber(subscriber.person.name, subscriber.dishes)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
