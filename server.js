@@ -84,17 +84,16 @@ app.get('/logout', function(req, res){
 
 app.post('/orders', function(req, res) {
     if (req.body.action == 'add'){ 
-        req.session.dishes = [];
+        if(!req.session.dishes){
+            req.session.dishes = [];
+        }
+        console.log(req.session.dishes)
         req.session.dishes.push(req.body.dishId);
-        console.log(req.session.dishes);
         res.redirect('back');
     }
 });
 app.get('/orders', function (req, res) {
-    pageScope.itemsInCart = req.session.cart && req.session.cart;
-    res.render('menuPage', pageScope = {
-       "cart": req.session.cart
-    });
+    res.render('menuPage', {number:itemsInCart, cart: req.session.dishes});
 });
 //already last(error processing)
 app.use(function(req, res) {
