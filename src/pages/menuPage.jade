@@ -7,6 +7,7 @@ include ../blocks/group/group
 include ../blocks/offers/offers
 include ../blocks/sidebarmenu/sidebarmenu
 include ../blocks/footer/footer
+include ../blocks/basket/basket
 
 block title
     title Страница компании
@@ -30,5 +31,5 @@ block content
                         input(type="hidden", name="dishPrice" value="#{dish.price}")
                         +menuitem(dish)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
-        each item in orders
-            +order(item.title, item.price)
+        +basket(orders)
+

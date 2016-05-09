@@ -91,13 +91,8 @@ app.post('/orders', function(req, res) {
             item.title = req.body.dishName;
             item.price = req.body.dishPrice;
             req.session.dishes.push(item);
-            console.log(req.session.dishes);
+            res.render('menuPage', {orders: req.session.dishes});
             res.redirect('back');
-    }
-});
-app.get('/orders', function (req, res) {
-    if (req.session.dishes) {
-        res.render('menuPage', {orders: req.session.dishes});
     }
 });
 //already last(error processing)
