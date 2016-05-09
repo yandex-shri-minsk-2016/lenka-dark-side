@@ -1,12 +1,11 @@
 var express = require('express'),
     app = express(),
     mongoose = require('mongoose'),
+    authfb = require('./src/controllers/auth.js'),
+    passport = require('passport'),
     session = require('express-session'),
     bodyParser = require('body-parser'),
     passport = require('passport'),
-
-    authFB = require('./src/controllers/authfb.js'),
-    authVK = require('./src/controllers/authvk.js'),
 
     errorHandler = require('./src/errors/errorHandler.js'),
     errorLogger = require('./src/errors/errorLogger.js'),
@@ -45,8 +44,9 @@ app.use(errorLogger);
 app.use(errorHandler);
 app.use(express.static(__dirname + '/dist'));
 
-app.get('/auth/fb', authFB());
-app.get('/auth/vk', authVK());
+app.get('/auth/fb',passport.authenticate('facebook', {successRedirect: '/', failureRedirect: '/'}));
+app.get('/auth/vk',passport.authenticate('vk', {successRedirect: '/', failureRedirect: '/'}));
+
 app.get('/logout', function(req, res){
     req.logout();
     res.redirect('/');
