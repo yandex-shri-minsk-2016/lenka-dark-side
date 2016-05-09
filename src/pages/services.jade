@@ -11,20 +11,10 @@ include ../blocks/footer/footer
 block title
     title Выбор места заказа
 block content
-    +header()
+    +header(user)
     .main-wrapper
         .main-wrapper__carry
             +sidebarmenu("Кухни/Блюда")
             each service in services
                 +offers(service)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
-
-//!--
-    form(action="services/:id" method="post")
-        div
-            span.label time
-            input(type="text" id="orderTime" name="orderTime")
-        div
-            span.label id
-            input(type="hidden" id="serviceId" name="serviceId" value="571b8aea4f6319ce591479db")
-        input(type="submit" value="Submit")

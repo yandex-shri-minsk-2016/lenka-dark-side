@@ -44,8 +44,8 @@ app.use(errorLogger);
 app.use(errorHandler);
 app.use(express.static(__dirname + '/dist'));
 
-app.get('/auth/fb',passport.authenticate('facebook', {successRedirect: '/', failureRedirect: '/'}));
-app.get('/auth/vk',passport.authenticate('vk', {successRedirect: '/', failureRedirect: '/'}));
+app.get('/auth/fb',passport.authenticate('facebook', {successRedirect: 'back', failureRedirect: '/'}));
+app.get('/auth/vk',passport.authenticate('vk', {successRedirect: 'back', failureRedirect: '/'}));
 
 app.get('/logout', function(req, res){
     req.logout();
