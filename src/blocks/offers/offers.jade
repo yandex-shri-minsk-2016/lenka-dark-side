@@ -3,7 +3,7 @@ include ../company-info/company-info
 
 mixin offers(service, mod)
     .offers(class= mod)
-        +company(service, service.logo)
+        +company(service, service.logo )
         .offers__info
             .offers__title= service.title
             +company-info(service)
