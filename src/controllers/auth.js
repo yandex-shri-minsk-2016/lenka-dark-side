@@ -20,13 +20,13 @@ passport.use('facebook',
     },
     function (token, refreshToken, profile, done) {
         process.nextTick(function () {
-
-            Person.findOne({'facebookId': profile.id}, function (err, user) {
-
+            console.log(profile);
+            Person.findOne({facebookId: profile.id}, function (err, user) {
                 if (err)
                     return done(err);
 
                 if (user) {
+                    console.log("here");
                     return done(null, user);
                 } else {
                     var newPerson = new Person();
@@ -53,7 +53,7 @@ passport.use('vk',
     function (token, refreshToken, profile, done) {
         process.nextTick(function () {
 
-            Person.findOne({'vkId': profile.id}, function (err, user) {
+            Person.findOne({vkId: profile.id}, function (err, user) {
 
                 if (err)
                     return done(err);
