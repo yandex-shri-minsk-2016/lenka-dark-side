@@ -58,7 +58,7 @@ app.post('/mymenu', function(req, res) {
     }
 });
 app.get('/mymenu', function(req, res){
-    res.render('menuPage', {string: ownerName, number: orderTime, number: orderId});
+    res.render('menuPage', {customerName: ownerName, time: orderTime, orderId: orderId});
 });
 
 app.use(errorLogger);
