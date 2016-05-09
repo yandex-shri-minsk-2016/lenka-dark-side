@@ -55,6 +55,6 @@ app.get('/logout', function(req, res){
 app.use(function(req, res) {
   res.render('404.jade');
 });
-server = app.listen(3000, function() {
+app.listen(3000, function() {
     console.log('Working 3000');
 });
