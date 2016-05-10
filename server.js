@@ -1,11 +1,14 @@
 var express = require('express'),
     app = express(),
 
+    homeControler = require('./src/controllers/home.js'),
+    servicesController = require('./src/controllers/services.js'),
+    serviceController = require('./src/controllers/service.js'),
+    addOrder = require('./src/controllers/addOrder.js'),
     mongoose = require('mongoose'),
     authfb = require('./src/controllers/auth.js'),
     passport = require('passport'),
     session = require('express-session'),
-<<<<<<< HEAD
 
     bodyParser = require('body-parser'),
     passport = require('passport'),
@@ -18,13 +21,6 @@ var express = require('express'),
     serviceController = require('./src/controllers/service.js'),
 
     cookieParser = require('cookie-parser');
-=======
-    cookieParser = require('cookie-parser'),
-    bodyParser = require('body-parser'),
-    errorHandler = require('./src/errors/errorHandler.js'),
-    errorLogger = require('./src/errors/errorLogger.js'),
-    redisStore = require('connect-redis');
->>>>>>> add dish to session.dishes
 
 //TODO: Избавиться от хардкода(сделать конфиг) 
 mongoose.connect('mongodb://localhost/lenka');
@@ -90,10 +86,9 @@ app.post('/orders', function(req, res) {
             var item = {};
             item.title = req.body.dishName;
             item.price = req.body.dishPrice;
-            var orders = req.session.dishes;
-            orders = orders.concat(item);
-            console.log(orders);
-            res.render('menuPage', {orders: orders});
+            req.session.dishes = req.session.dishes.concat(item);
+            console.log(req.session.dishes);
+            res.render('menuPage', {orders: req.session.dishes});
             res.redirect('back');
     }
 });

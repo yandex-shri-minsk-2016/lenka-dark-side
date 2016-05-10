@@ -3,13 +3,13 @@ include ../order/order
 mixin basket(orders)
     .basket
         .basket__title Корзина
-        form.basket__form(action="#" method="post")
+        form.basket__form(action="/basket" method="post")
             .orders
                 each item in orders
                     +order(item.title, item.price)
-        hr.basket__hr
-        .basket__allcost
-            span Общая стоимость: 1000$
-        .basket__button
-            +button("Заказать", ['button_icon', 'button_icon-cart'])
-        .basket__image
+            hr.basket__hr
+            .basket__allcost
+                span Общая стоимость: 1000$
+            .basket__button
+                +button("Заказать", ['button_icon', 'button_icon-cart'], {"type": "submit", "name":"action", "value": "newOrder"})
+            .basket__image
