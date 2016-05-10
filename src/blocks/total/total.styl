@@ -1,0 +1,43 @@
+.total
+  width 100%
+  min-height 100%
+  background-color rgba(0,0,0,0.5)
+  overflow hidden
+  position fixed
+  top 0
+  display none
+
+.total__close
+  width 50px
+  height 50px
+  background url(../../images/close.png) no-repeat
+  background-size cover
+  position absolute
+  right 0
+  &:active .total__title
+    display none
+
+.total__title
+  background-color header-basket
+  text-align center
+  padding 10px 0
+  color #fff
+  width 100%
+
+.total .total__content
+  margin 40px auto 0 auto
+  background-color #c5c5c5
+  border-radius 5px
+  box-shadow 0 0 10px #000
+  overflow-y scroll
+  height 500px
+  min-width 400px
+  max-width 450px
+
+.total__button
+  background-color red
+  width 100px
+  height 100px
+  &:active .total
+    display block
+
