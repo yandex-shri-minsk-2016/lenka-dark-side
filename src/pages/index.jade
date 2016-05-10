@@ -13,7 +13,6 @@ block title
     title Главная страница
 block content
     if user
-        =user
         +header(user)
     else
         +header()
@@ -24,12 +23,10 @@ block content
     .main-wrapper
         .main-page
             each order in orders
-                +session(order.owner.name, order.time, order.service.logo)
-                +subscriber(order.subscriber[0].person.name, [
-                    {title: 'Блюдо 1', price: '170'},
-                    {title: 'Блюдо 2', price: '130'},
-                    {title: 'Блюдо 3', price: '270'}
-                ])
+                +session(order.owner.name, order.time, order.service.logo, order.service._id)
+                each subscriber in order.subscriber
+                    -console.log(subscriber)
+                    +subscriber(subscriber.person.name, subscriber.dishes)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
         button.total__button(onclick="document.getElementById('block').style.display='block'") Total
 

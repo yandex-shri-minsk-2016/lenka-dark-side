@@ -4,6 +4,6 @@ mixin sidebarmenu(title, mod)
         ul.sidebar-menu__list
             each val, index in ["Пицца","Суши","Бургеры","Шашлыки","Пироги","Китайская еда","Итальянская/Европейская","Японская/Китайская","Кавказкая/Узбекская","Американская/fastfood","Мексиканская","Экзотическая"]
                 li.sidebar-menu__elem
-                    input(id=index).sidebar-menu__filter(type="checkbox")
+                    input.sidebar-menu__filter(type="checkbox" id=index)
                     label(for=index).sidebar-menu_name= val
 

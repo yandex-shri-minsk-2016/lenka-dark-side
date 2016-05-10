@@ -1,12 +1,12 @@
 include ../button/button
 include ../company/company
 
-mixin session(name, time, logo)
+mixin session(name, time, logo, id)
     .session
         .session__name= name
         .session__time= time
-        +company(logo, '#')
+        +company(id, logo)
 
         .session__controls
             +button("Хочу также!", [])
-            +button("Своё меню!", [])
+            +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})

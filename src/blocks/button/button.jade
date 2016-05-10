@@ -4,10 +4,11 @@ mixin button(content, mods, options)
             a.button__button(href=options.href)
                 span.button__icon
                 span.button__title= content
+        else if options && options.type && options.name &&options.value
+            button.button__button(type=options.type, name=options.name, value=options.value)
+                span.button__icon
+                span.button__title= content
         else
             button.button__button
                 span.button__icon
                 span.button__title= content
-
-
-
