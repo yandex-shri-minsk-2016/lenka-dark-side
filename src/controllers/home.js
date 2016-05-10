@@ -10,3 +10,4 @@ module.exports = function HomeController(req, res, next) {
             }
             res.render('index', {orders: orders, user: req.user});
         });
+};
