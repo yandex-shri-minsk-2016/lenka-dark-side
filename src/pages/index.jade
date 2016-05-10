@@ -14,12 +14,11 @@ block title
 block content
     if user
         +header(user)
+        +button("Создать новый заказ", [".button_new-order"],{'href': '/services'})
     else
         +header()
     script
         include ../blocks/total/total.js
-
-    a.link(href='/services') Создать новый заказ
     .main-wrapper
         .main-page
             each order in orders
