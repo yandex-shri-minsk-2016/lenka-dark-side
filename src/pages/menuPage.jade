@@ -31,5 +31,8 @@ block content
                         input(type="hidden", name="dishPrice" value="#{dish.price}")
                         +menuitem(dish)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
-        +basket(orders)
+        =orders
+        if (orders)
+            +basket(orders)
+
 

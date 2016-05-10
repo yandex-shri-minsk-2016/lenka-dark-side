@@ -90,8 +90,10 @@ app.post('/orders', function(req, res) {
             var item = {};
             item.title = req.body.dishName;
             item.price = req.body.dishPrice;
-            req.session.dishes.push(item);
-            res.render('menuPage', {orders: req.session.dishes});
+            var orders = req.session.dishes;
+            orders = orders.concat(item);
+            console.log(orders);
+            res.render('menuPage', {orders: orders});
             res.redirect('back');
     }
 });
