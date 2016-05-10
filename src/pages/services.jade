@@ -15,10 +15,12 @@ block content
     +header(user)
     .main-wrapper
         .main-wrapper__carry
-            +sidebarmenu("Кухни/Блюда")
+            +sidebarmenu("Кухни")
             each service in services
                 +offers(service)
                     +offers-plugin(service)  
                     //- дикий костыль, если будет время - переделать, потому что хуже костыля я еще не видел!
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
-        
+    script
+        include ../blocks/slidebarmenu/slidebarmenu.js
+

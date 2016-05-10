@@ -2,6 +2,7 @@ var timeStartHours = new Date().getHours();
 var timeStartMinutes = new Date().getMinutes();
 
 function totalDisplay() {
+	alert("here");
     document.getElementById('total').style.display='block';
 }
 function timer(time) {
