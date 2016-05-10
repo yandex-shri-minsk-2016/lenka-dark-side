@@ -24,8 +24,13 @@ block content
             each order in orders
                 +session(order.owner.name, order.time, order.service.logo, order.service._id)
                 each subscriber in order.subscriber
-                    -console.log(subscriber)
+                    console.log(subscriber)
                     +subscriber(subscriber.person.name, subscriber.dishes)
+                form(action="/mymenu", method="post")
+                    input(type="hidden", name="orderNameCustomer" value="#{order.owner.name}")
+                    input(type="hidden", name="orderTime" value="#{order.time}")
+                    input(type="hidden", name="orderServiceId" value="#{order.service._id}")
+                    +session(order.owner.name, order.time, order.service.logo, order.service._id)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
         button.total__button(onclick="document.getElementById('block').style.display='block'") Total
 

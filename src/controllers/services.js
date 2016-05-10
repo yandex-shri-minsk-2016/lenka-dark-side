@@ -6,5 +6,6 @@ module.exports = function ServicesController(req, res) {
             return next(err);
         }
         res.render('services', {services: services, user: req.user});
+
     });
 };
