@@ -1,17 +1,12 @@
 var express = require('express'),
     app = express(),
 
-    homeControler = require('./src/controllers/home.js'),
-    servicesController = require('./src/controllers/services.js'),
-    serviceController = require('./src/controllers/service.js'),
-    addOrder = require('./src/controllers/addOrder.js'),
     mongoose = require('mongoose'),
-    authfb = require('./src/controllers/auth.js'),
+    auth = require('./src/controllers/auth.js'),
     passport = require('passport'),
     session = require('express-session'),
 
     bodyParser = require('body-parser'),
-    passport = require('passport'),
 
     errorHandler = require('./src/errors/errorHandler.js'),
     errorLogger = require('./src/errors/errorLogger.js'),
