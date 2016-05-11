@@ -1,8 +1,4 @@
 mixin company(service, logo, id)
     .company
-        a.company__link(href="#")
+        a.company__link(href="/services/" + service._id)
             img.company__image(src=logo)
-
-
-        //- a.company__link(href="/services/" + service._id)
-        //-     img.company__image(src=logo)
