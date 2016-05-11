@@ -5,6 +5,6 @@ module.exports = function ServiceController(req, res, next) {
         if (err) {
             return next(err);
         }
-        res.render('menuPage', {service: service, user: req.user});
+        res.render('menuPage', {service: service, orders: [], user: req.user});
     });
 };

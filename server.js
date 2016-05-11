@@ -1,6 +1,10 @@
 var express = require('express'),
     app = express(),
 
+    homeControler = require('./src/controllers/home.js'),
+    servicesController = require('./src/controllers/services.js'),
+    serviceController = require('./src/controllers/service.js'),
+    addOrder = require('./src/controllers/addOrder.js'),
     mongoose = require('mongoose'),
     authfb = require('./src/controllers/auth.js'),
     passport = require('passport'),
@@ -21,6 +25,7 @@ var express = require('express'),
 //TODO: Избавиться от хардкода(сделать конфиг) 
 mongoose.connect('mongodb://localhost/lenka');
 
+app.use(cookieParser());
 app.use(session({
     secret: 'appsecret',
     resave: false,
@@ -73,8 +78,23 @@ app.get('/logout', function(req, res){
     res.redirect('/');
 });
 
+app.post('/orders', function(req, res) {
+    if (req.body.action == 'add'){
+        if(!req.session.dishes){
+            req.session.dishes = [];
+        }
+            var item = {};
+            item.title = req.body.dishName;
+            item.price = req.body.dishPrice;
+            req.session.dishes = req.session.dishes.concat(item);
+            console.log(req.session.dishes);
+            res.render('menuPage', {orders: req.session.dishes});
+            res.redirect('back');
+    }
+});
+//already last(error processing)
 app.use(function(req, res) {
-  res.render('404.jade');
+  res.render('404');
 });
 app.listen(3000, function() {
     console.log('Working 3000');
