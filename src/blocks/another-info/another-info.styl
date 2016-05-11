@@ -1,20 +1,36 @@
 @import '../../stylus/vars.styl'
 
+.another-info
+    width 100%
+
 .another-info__cost
-    width 120px
+    width 26.6%
     float left
     margin-top 10px
 
 .another-info__text
-    font-size 12px
+    font-size 0.75em
     margin-top 10px
     color offers-grey
 
 .another-info__dep
+    width 26.6%
     float left
     margin 10px 0 0 40px
 
 .another-info__time
-    width 120px
+    width 26.6%
     float left
     margin 10px 0 0 50px
+
+@media screen and (max-width: 1000px)
+    .another-info__cost
+        float none
+
+    .another-info__dep
+        float none
+        margin 0 0 0 0
+
+    .another-info__time
+        float none
+        margin 0 0 0 0

@@ -2,14 +2,35 @@
 
 .company
     width 120px
+    height 120px
     position absolute
     left 20px
     top 30px   
 
 .company__image 
     height 120px
-    width 130px
+    width 120px
     position absolute
     left 20px 
     border-bottom 1px solid #f5f5f5
     box-shadow 0 15px 30px rgba(0,0,0,0.1)
+
+@media screen and (max-width: 1000px)
+    .company
+        width 120px
+        position relative
+        height 120px
+        margin 0 auto
+        padding 10px 0 10px 0
+        left 0
+        right 0
+        top 0
+
+    .company__image 
+        width 120px
+        height 120px
+        position relative
+        margin 0 auto
+        left 0
+        border-bottom 1px solid #f5f5f5
+        box-shadow 0 15px 30px rgba(0,0,0,0.1)

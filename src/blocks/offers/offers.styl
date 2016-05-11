@@ -3,7 +3,7 @@
 .offers
     position relative
     float right
-    width 700px
+    width 71%
     height 250px
     border-radius 10px
     background #fffffe
@@ -22,12 +22,12 @@
     padding-top 30px
 
 .offers__title
-    font-size 20px
+    font-size 1.25em
 
 .offers__down-text
     margin-top 90px
     height 35px
-    width 450px
+    width 80%
     color #000
     background-color #f8f9fb
     border-radius 3px
@@ -35,7 +35,7 @@
     overflow hidden
 
 .offers__text
-    font-size 12px
+    font-size 0.75em
     padding 9px 0 0 9px
     text-align left
 
@@ -46,3 +46,21 @@
 .offers_company
     width 980px
     margin 0 auto
+
+@media screen and (max-width: 800px)
+    .offers
+        float none
+
+
+@media screen and (max-width: 1000px)
+    .offers__down-text
+        margin 0 auto
+        margin-top 180px
+        height 50px
+
+    .offers
+        height 55%
+
+    .offers__info
+        margin 0 0 0 10px
+        height 100%
