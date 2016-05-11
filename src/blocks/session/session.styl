@@ -1,7 +1,7 @@
 @import '../../stylus/vars.styl'
 
 .session
-    width 680px
+    width 68%
     height 200px
     // border 3px solid #ccc
     position relative
@@ -22,14 +22,14 @@
 
 
 .session__name
-    width 345px
+    width 50%
     font-size 1.2em
     margin-left 250px
     padding-top 20px
     border-bottom 1px solid border-offers
 
 .session__time
-    width 50px
+    width 7.3%
     font-size 1.6em
     margin-left 250px
     margin-bottom 10px
@@ -37,3 +37,58 @@
 .session__controls
     margin-left 245px
     padding-bottom 10px
+
+@media screen and (max-width: 1000px)
+    .session
+        height 350px
+
+    .session__name
+        width 65%
+        margin 0 auto
+        text-align center
+
+    .session__time
+        padding-top 10px
+        width 13.7%
+        margin 0 auto
+
+    .session__controls
+        width 70%
+        margin 0 auto
+        padding-top 15px
+        padding-left 70px
+
+@media screen and (max-width: 860px)
+
+    .session__name
+        width 75%
+
+    .session__controls
+        padding-left 16px
+
+@media screen and (max-width: 740px)
+    .session
+        height 400px
+
+    .session__controls
+        width 90%
+        padding-left 71px
+
+@media screen and (max-width: 650px)
+    .session__name
+        font-size 1.1em
+
+    .session__controls
+        width 60%
+        padding-left 0
+        
+    .session__time
+        width 18.7%
+
+@media screen and (max-width: 401px)
+    .session__time
+        width 30.9%
+
+    .session__controls
+        width 65%
+        padding-left 12px

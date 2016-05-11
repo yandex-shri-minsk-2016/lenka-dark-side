@@ -3,5 +3,5 @@ include ../another-info/another-info
 
 mixin company-info(service)
     .company-info
-        +cook-info(service.kitchen)
-        +another-info(service)
+        +cook-info(service.kitchen, "cook-info__mod")
+        +another-info(service, "another-info__mod", "another-info__mod-second")
