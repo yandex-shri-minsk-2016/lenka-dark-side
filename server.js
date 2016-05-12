@@ -14,7 +14,6 @@ var express = require('express'),
     homeController = require('./src/controllers/home.js'),
     servicesController = require('./src/controllers/services.js'),
     serviceController = require('./src/controllers/service.js'),
-    addOrder = require('./src/controllers/addOrder.js'),
 
     cookieParser = require('cookie-parser');
 var DishModel = require('./src/models/dish').model;
@@ -95,15 +94,6 @@ app.get('/orders', function(req, res){
 
 app.post('/basket', function(req,res,next){
     if (req.body.action == 'newOrder' && req.session.dishes){
-    //  var orderSchema = new Schema({
-    //
-    //
-    //service: serviceSchema,
-    //time: String,
-
-    //subscriber: [{ person: personSchema, dishes: [{ type: Schema.Types.ObjectId, ref: 'Dish' }], paid: Boolean }]
-
-//});
     var order = {};
     console.log(req.session.dishes);
     for (var i = 0; i < req.session.dishes; i++){
