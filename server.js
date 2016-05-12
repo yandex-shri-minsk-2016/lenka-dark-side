@@ -16,6 +16,7 @@ var express = require('express'),
     serviceController = require('./src/controllers/service.js'),
 
     cookieParser = require('cookie-parser');
+var DishModel = require('./src/models/dish').model;
 
 //TODO: Избавиться от хардкода(сделать конфиг) 
 mongoose.connect('mongodb://localhost/lenka');
@@ -33,8 +34,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use( bodyParser.json() );       // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+app.use( bodyParser.json() );
+app.use(bodyParser.urlencoded({
   extended: true
 }));
 
@@ -78,14 +79,38 @@ app.post('/orders', function(req, res) {
         if(!req.session.dishes){
             req.session.dishes = [];
         }
-            var item = {};
-            item.title = req.body.dishName;
-            item.price = req.body.dishPrice;
-            req.session.dishes = req.session.dishes.concat(item);
-            console.log(req.session.dishes);
-            res.render('menuPage', {orders: req.session.dishes});
-            res.redirect('back');
+        var item = {};
+        item._id = req.body.dishId;
+        item.title = req.body.dishTitle;
+        item.price = req.body.dishPrice;
+        req.session.dishes.push(item); 
+        res.redirect('back');
     }
+});
+
+app.get('/orders', function(req, res){
+    res.render('menuPage', {orders: req.session.dishes});
+});
+
+app.post('/basket', function(req,res,next){
+    if (req.body.action == 'newOrder' && req.session.dishes){
+    var order = {};
+    console.log(req.session.dishes);
+    for (var i = 0; i < req.session.dishes; i++){
+        console.log("time" + i);
+    }
+    order.dishes = req.session.dishes;
+    order.owner = req.user;
+    order.subscriber = [];
+    order.service = req.body.service;
+    }
+    req.session.order = order;
+    res.redirect('/');
+});
+app.get('/basket', function(req,res){
+    console.log(req.session.order);
+    res.render('/', {order: req.session.order});
+    req.session.order = {};
 });
 //already last(error processing)
 app.use(function(req, res) {

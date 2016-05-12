@@ -11,7 +11,6 @@ include ../blocks/subscriber/subscriber
 
 block title
     title Главная страница
-block content
     if user
         +header(user)
         +button("Создать новый заказ", [".button_new-order"],{'href': '/services'})
