@@ -47,30 +47,7 @@ app.use(errorLogger);
 app.use(errorHandler);
 app.use(express.static(__dirname + '/dist'));
 
-app.get('/orders', function(req, res){
-    res.render('menuPage', {orders: req.session.dishes});
-});
 
-app.post('/basket', function(req,res,next){
-    if (req.body.action == 'newOrder' && req.session.dishes){
-    var order = {};
-    console.log(req.session.dishes);
-    for (var i = 0; i < req.session.dishes; i++){
-        console.log("time" + i);
-    }
-    order.dishes = req.session.dishes;
-    order.owner = req.user;
-    order.subscriber = [];
-    order.service = req.body.service;
-    }
-    req.session.order = order;
-    res.redirect('/');
-});
-app.get('/basket', function(req,res){
-    console.log(req.session.order);
-    res.render('/', {order: req.session.order});
-    req.session.order = {};
-});
 //already last(error processing)
 app.use(function(req, res) {
     res.render('404');
