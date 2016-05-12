@@ -11,8 +11,8 @@ router.get('/services', servicesController);
 router.get('/services/:id', serviceController);
 
 router.post('/mymenu', function(req, res) {
-    if(req.body.action == 'menu'){
-        if(!req.session.orders){
+    if(req.body.action == 'menu') {
+        if(!req.session.orders) {
             req.session.orders = [];
         }
         req.session.orders.push(req.body.orderNameCustomer);
@@ -31,14 +31,14 @@ router.get('/mymenu', function(req, res){
 router.get('/auth/fb',passport.authenticate('facebook', {successRedirect: 'back', failureRedirect: '/'}));
 router.get('/auth/vk',passport.authenticate('vk', {successRedirect: 'back', failureRedirect: '/'}));
 
-router.get('/logout', function(req, res){
+router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
 });
 
 router.post('/orders', function(req, res) {
-    if (req.body.action == 'add'){
-        if(!req.session.dishes){
+    if (req.body.action == 'add') {
+        if(!req.session.dishes) {
             req.session.dishes = [];
         }
         var item = {};
@@ -51,15 +51,15 @@ router.post('/orders', function(req, res) {
     }
 });
 
-router.get('/orders', function(req, res){
+router.get('/orders', function(req, res) {
     res.render('menuPage', {orders: req.session.dishes});
 });
 
-router.post('/basket', function(req,res,next){
-    if (req.body.action == 'newOrder' && req.session.dishes){
+router.post('/basket', function(req,res,next) {
+    if (req.body.action == 'newOrder' && req.session.dishes) {
         var order = {};
         console.log(req.session.dishes);
-        for (var i = 0; i < req.session.dishes; i++){
+        for (var i = 0; i < req.session.dishes; i++) {
             console.log("time" + i);
         }
         order.dishes = req.session.dishes;
@@ -71,7 +71,7 @@ router.post('/basket', function(req,res,next){
     res.redirect('/');
 });
 
-router.get('/basket', function(req,res){
+router.get('/basket', function(req,res) {
     console.log(req.session.order);
     res.render('/', {order: req.session.order});
     req.session.order = {};
