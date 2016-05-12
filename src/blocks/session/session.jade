@@ -3,9 +3,9 @@ include ../company/company
 
 mixin session(name, time, logo, id)
     .session
+        +company(id, logo)
         .session__name= name
         .session__time= time
-        +company(id, logo)
 
         .session__controls
             +button("Хочу также!", [])

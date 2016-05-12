@@ -1,7 +1,7 @@
 @import '../../stylus/vars.styl'
 
 .sidebar-menu
-    width 240px
+    width 25%
     height 350px
     overflow hidden
     margin 0 auto
@@ -51,3 +51,20 @@
 
 .sidebar-menu_comppage
     margin-top 15px
+
+
+@media (max-width: 850px)
+    .sidebar-menu_comppage
+        display none
+
+@media (max-width: 800px)
+    .sidebar-menu
+        width 40%
+        float none
+        margin 0 auto
+        display block
+
+@media (max-width: 800px)
+    .sidebar-menu_comppage
+        display none
+

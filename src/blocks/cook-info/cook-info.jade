@@ -1,4 +1,4 @@
-mixin cook-info(kitchen)
-    .cook-info
+mixin cook-info(kitchen, mod)
+    .cook-info(class= mod)
         span.cook-info__title Кухня:
         span.cook-info__categories= kitchen

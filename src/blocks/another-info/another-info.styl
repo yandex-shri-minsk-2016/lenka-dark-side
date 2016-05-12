@@ -1,20 +1,62 @@
 @import '../../stylus/vars.styl'
 
+.another-info
+    width 100%
+
 .another-info__cost
-    width 120px
+    width 26.6%
     float left
     margin-top 10px
 
 .another-info__text
-    font-size 12px
+    font-size 0.75em
     margin-top 10px
     color offers-grey
 
 .another-info__dep
+    width 26.6%
     float left
     margin 10px 0 0 40px
 
 .another-info__time
-    width 120px
+    width 26.6%
     float left
     margin 10px 0 0 50px
+
+.another-info__mod
+    width 20%
+
+@media screen and (max-width: 800px)
+    .another-info
+        margin 0
+    .another-info__cost
+        padding 10px 0 5px 5px
+
+    .another-info__dep
+        float none
+        margin 0
+        padding 10px 0 5px 5px
+
+    .another-info__time
+        float none
+        margin 0
+        padding 0 0 5px 5px
+        margin-bottom 10px
+
+@media screen and (min-width: 800px) and (max-width: 1000px)
+    .another-info
+        width 75%
+        height 100px
+        margin 0 auto 
+        padding-top 30px
+
+    .another-info__dep
+        margin 10px 0 0 102px
+
+    .another-info__time
+        float none
+        padding 1px 0 0 0
+        margin 10px 0 0 359px
+
+    .another-info__mod-second
+        width 20%
