@@ -1,6 +1,5 @@
 var timeStart = new Date().getMilliseconds();
 
-
 function totalDisplay() {
     document.getElementById('total').style.display='block';
 }
@@ -10,9 +9,8 @@ function timer(time) {
 
     timeFinishHours*=3600000;
     timeFinishMinutes*=60000;
-    var timer = timeFinishHours+timeFinishMinutes-timeStart;
-    alert(timer);
-    //setTimeout(func, timeFinish-timeStart);    
+    var timer = timeFinishHours+timeFinishMinutes-timeStart;    
+    setTimeout(totalDisplay, timer);
 }
 
 
