@@ -5,7 +5,7 @@ mixin session(name, time, logo, id)
     .session
         +company(id, logo)
         .session__name= name
-        .session__time= time
+        #time.session__time= time
 
         .session__controls
             +button("Хочу также!", [])

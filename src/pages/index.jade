@@ -9,6 +9,7 @@ include ../blocks/footer/footer
 include ../blocks/group/group
 include ../blocks/subscriber/subscriber
 
+
 block title
     title Главная страница
     if user
@@ -22,6 +23,10 @@ block title
         .main-page
             each order in orders
                 +session(order.owner.name, order.time, order.service.logo, order.service._id)
+                if user
+                    if order.owner.name===user.name
+                        script.
+                            timer(document.getElementById('time').innerHTML);
                 each subscriber in order.subscriber
                     +subscriber(subscriber.person.name, subscriber.dishes)
                 form(action="/mymenu", method="post")
@@ -56,5 +61,3 @@ block title
                 {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'}]
             )
 
-    script.
-        timer(document.getElementById('time').innerHTML);
