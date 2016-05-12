@@ -3,7 +3,8 @@ include ../auth/auth
 
 mixin header(person)
     .header
-        h1.header__title Lenka
-        a.header__logo(alt="logo", href="/")
-        .header__slogan Не кушайте в одиночку!
+        .header__block
+            h1.header__title Lenka
+            a.header__logo(alt="logo" href="/")
+            .header__slogan Не кушайте в одиночку!
         +auth(person)

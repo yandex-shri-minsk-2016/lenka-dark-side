@@ -2,7 +2,7 @@
 
 .auth
     border-bottom 1px solid #E7FFFF
-    width 400px
+    width 30%
     position absolute
     top 30px
     right 120px
@@ -36,3 +36,29 @@
 .auth__social_fb
     background-image url(../images/social_fb.png)
     cursor pointer
+
+@media screen and (max-width:950px)
+    .auth
+        width 35%
+        position relative
+        left 0
+        top 0
+        padding-top 20px
+        margin 0 auto
+
+@media screen and (max-width:803px)
+    .auth
+        width 40%
+
+@media screen and (max-width:703px)
+    .auth
+        width 65%
+        padding-left 40px
+
+@media screen and (max-width:451px)
+    .auth
+        width 75%
+
+@media screen and (max-width:401px)
+    .auth
+        width 85%
