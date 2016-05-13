@@ -10,6 +10,7 @@ var myMenu = require('../controllers/myMenu');
 var setTime = require('../controllers/setTime');
 var addToShoppingCart = require('../controllers/addToShoppingCart');
 var addOrder = require('../controllers/addOrder');
+var wantAlsoController = require('../controllers/wantAlso.js');
 
 router.get('/', homeController);
 
