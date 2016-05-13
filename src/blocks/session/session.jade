@@ -8,7 +8,7 @@ mixin session(name, time, logo, id, order, user)
         #time.session__time= time
 
         .session__controls
-            form.form(action="/wantAlso" method="post" name="person")
+            form.form(action="/wantAlso", method="post")
                 if user
                     input(type="hidden" name="userId" value=user._id)
                 input(type="hidden" name="orderId" value=order._id)

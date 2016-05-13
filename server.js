@@ -42,8 +42,6 @@ app.set('view engine', 'jade');
 app.set('views', './src/pages');
 
 
-app.post('/wantAlso', wantAlsoController);
-
 app.use(errorLogger);
 app.use(errorHandler);
 app.use(express.static(__dirname + '/dist'));

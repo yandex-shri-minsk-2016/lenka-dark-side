@@ -21,17 +21,13 @@ block title
     .main-wrapper
         .main-page
             each order in orders
-                +session(order.owner.name, order.time, order.service.logo, order.service._id)
+                +session(order.owner.name, order.time, order.service.logo, order.service._id, order, user)
                 if user
                     if order.owner.name===user.name
                         script.
                             timer(document.getElementById('time').innerHTML);
                 each subscriber in order.subscriber
                     +subscriber(subscriber.person.name, subscriber.dishes, subscriber)
-                form(action="/mymenu", method="post")
-                    input(type="hidden", name="orderNameCustomer" value="#{order.owner.name}")
-                    input(type="hidden", name="orderTime" value="#{order.time}")
-                    input(type="hidden", name="orderServiceId" value="#{order.service._id}")
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
         button.total__button(onclick="document.getElementById('block').style.display='block'") Total
 
@@ -59,23 +55,3 @@ block title
                 {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'},
                 {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'}]
             )
-
-
-    //script.
-    //    var button = document.getElementsByName("action")[0];
-    //    console.log(button);
-    //    button.onclick = function (ev) {
-    //
-    //        var formData = new FormData();
-    //        formData.append("ll", "kk");
-    //
-    //
-    //        var xhr = new XMLHttpRequest();
-    //        var json = JSON.stringify({
-    //            user: document.getElementsByTagName('input')[0].value,
-    //            order: document.getElementsByTagName('input')[1].value
-    //        });
-    //
-    //        xhr.open("POST", "/wantAlso");
-    //        xhr.send(json);
-    //    };

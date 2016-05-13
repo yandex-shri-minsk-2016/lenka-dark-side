@@ -5,6 +5,7 @@ var servicesController = require('../controllers/services.js');
 var serviceController = require('../controllers/service.js');
 var passport = require('passport');
 var homeController = require('../controllers/home.js');
+var wantAlsoController = require('../controllers/wantAlso.js');
 
 router.get('/', homeController);
 router.get('/services', servicesController);
@@ -76,5 +77,7 @@ router.get('/basket', function(req,res){
     res.render('/', {order: req.session.order});
     req.session.order = {};
 });
+
+router.post('/wantAlso', wantAlsoController);
 
 exports.router = router;
