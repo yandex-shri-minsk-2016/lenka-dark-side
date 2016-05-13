@@ -5,9 +5,10 @@ module.exports = function ServiceController(req, res, next) {
         if (err) {
             return next(err);
         }
-        if (!orders) {
-        	var orders = [];
+        if (!req.session.dishes) {
+            req.session.dishes = [];
         }
-        res.render('menuPage', {service: service, orders: orders, user: req.user});
+        console.log(req.session.dishes);
+        res.render('menuPage', {service: service, orders: req.session.dishes, user: req.user});
     });
 };

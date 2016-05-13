@@ -28,7 +28,7 @@ block content
                 each dish in service.dishes
                     form(action="/orders", method="post").main-wrapper__menuitem
                         input(type="hidden", name="dishId" value="#{dish._id}")
-                        input(type="hidden", name="dishTitle" value="#{dish.title}")
+                        input(type="hidden", name="dishTitle" value="#{dish.name}")
                         input(type="hidden", name="dishPrice" value="#{dish.price}")
                         +menuitem(dish)
             .main-wrapper__cart

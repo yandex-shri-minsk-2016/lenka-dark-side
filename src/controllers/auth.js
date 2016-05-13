@@ -26,7 +26,6 @@ passport.use('facebook',
                     return done(err);
 
                 if (user) {
-                    console.log("here");
                     return done(null, user);
                 } else {
                     var newPerson = new Person();
@@ -35,7 +34,6 @@ passport.use('facebook',
                     newPerson.save(function (err) {
                         if (err)
                             throw err;
-
                         return done(null, newPerson);
                     });
                 }
@@ -67,7 +65,6 @@ passport.use('vk',
                     newPerson.save(function (err) {
                         if (err)
                             throw err;
-
                         return done(null, newPerson);
                     });
                 }

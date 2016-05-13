@@ -47,7 +47,10 @@ app.use(errorLogger);
 app.use(errorHandler);
 app.use(express.static(__dirname + '/dist'));
 
-
+app.get('/basket', function(req, res) {
+    console.log("get orders");
+    res.render('menuPage', {orders: req.session.dishes});
+});
 //already last(error processing)
 app.use(function(req, res) {
     res.render('404');
