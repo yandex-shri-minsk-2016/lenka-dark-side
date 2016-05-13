@@ -26,32 +26,15 @@ block title
                     if order.owner.name===user.name
                         script.
                             timer(document.getElementById('time').innerHTML);
+                        #total.total
+                            .total__close(onclick="document.getElementById('total').style.display='none'")
+                            .total__content
+                                .total__title Итого
+                                each dish in order.dishes
+                                    +group(dish.name, dish.url, dish.price)
+                                each subscriber in order.subscriber
+                                    each dish in subscriber.dishes
+                                        +group(dish.name, dish.url, dish.price)
                 each subscriber in order.subscriber
                     +subscriber(subscriber.person.name, subscriber.dishes, subscriber)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
-        button.total__button(onclick="document.getElementById('block').style.display='block'") Total
-
-    #total.total
-        .total__close(onclick="document.getElementById('total').style.display='none'")
-        .total__content
-            .total__title Итого
-            +group(
-            'Супы', [
-                {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'},
-                {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'}]
-            )
-            +group(
-            'Супы', [
-                {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'},
-                {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'}]
-            )
-            +group(
-            'Супы', [
-                {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'},
-                {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'}]
-            )
-            +group(
-            'Супы', [
-                {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'},
-                {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'}]
-            )
