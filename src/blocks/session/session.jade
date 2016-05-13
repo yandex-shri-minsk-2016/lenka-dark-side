@@ -3,7 +3,7 @@ include ../company/company
 
 mixin session(name, time, logo, id, order, user)
     .session
-        +company(id, logo)
+        +company(logo)
         .session__name= name
         #time.session__time= time
 
