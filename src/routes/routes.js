@@ -6,6 +6,7 @@ var serviceController = require('../controllers/service.js');
 var passport = require('passport');
 var homeController = require('../controllers/home.js');
 var myMenu = require('../controllers/myMenu');
+var addToShoppingCart = require('../controllers/addToShoppingCart');
 var addOrder = require('../controllers/addOrder');
 
 router.get('/', homeController);
@@ -25,26 +26,10 @@ router.get('/logout', function(req, res) {
     res.redirect('/');
 });
 
-router.post('/orders', addOrder);
+router.post('/orders', addToShoppingCart);
 
-router.post('/basket', function(req,res,next) {
-    if (req.body.action == 'newOrder' && req.session.dishes) {
-        var order = {};
-        console.log(req.session.dishes);
-        for (var i = 0; i < req.session.dishes; i++) {
-            console.log("time" + i);
-        }
-        order.dishes = req.session.dishes;
-        order.owner = req.user;
-        order.subscriber = [];
-        order.service = req.body.service;
-    }
-    req.session.order = order;
-    res.redirect('/');
-});
-
+router.post('/basket', addOrder);
 router.get('/basket', function(req,res) {
-    console.log(req.session.order);
     res.render('/', {order: req.session.order});
     req.session.order = {};
 });
