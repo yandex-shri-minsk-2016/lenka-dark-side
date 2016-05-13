@@ -9,7 +9,6 @@ include ../blocks/footer/footer
 include ../blocks/group/group
 include ../blocks/subscriber/subscriber
 
-
 block title
     title Главная страница
     if user
@@ -22,20 +21,17 @@ block title
     .main-wrapper
         .main-page
             each order in orders
-                form(action="/mymenu", method="post")
-                    input(type="hidden", name="orderId" value='#{order._id}')
-                    input(type="hidden", name="serviceId" value='#{order.service._id}')
-                    +session(order.owner.name, order.time, order.service.logo, order.service._id)
-                    if user
-                        if order.owner.name===user.name
-                            script.
-                                timer(document.getElementById('time').innerHTML);
-                    each subscriber in order.subscriber
-                        +subscriber(subscriber.person.name, subscriber.dishes, subscriber)
+                +session(order.owner.name, order.time, order.service.logo, order.service._id, order, user)
+                if user
+                    if order.owner.name===user.name
+                        script.
+                            timer(document.getElementById('time').innerHTML);
+                each subscriber in order.subscriber
+                    +subscriber(subscriber.person.name, subscriber.dishes, subscriber)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
         button.total__button(onclick="document.getElementById('block').style.display='block'") Total
 
-    //#total.total
+    #total.total
         .total__close(onclick="document.getElementById('total').style.display='none'")
         .total__content
             .total__title Итого
@@ -59,4 +55,3 @@ block title
                 {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'},
                 {title_dish: 'Блюдо 1', link: 'http://www.pizzatempo.by/menu/obed.html', quantity: '3', price: '170'}]
             )
-

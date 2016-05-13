@@ -1,14 +1,21 @@
 include ../button/button
 include ../company/company
 
-mixin session(name, time, logo, id)
+mixin session(name, time, logo, id, order, user)
     .session
         +company(id, logo)
         .session__name= name
         #time.session__time= time
 
         .session__controls
-            +button("Хочу также!", [])
-            +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
+            form.form(action="/wantAlso", method="post")
+                if user
+                    input(type="hidden" name="userId" value=user._id)
+                input(type="hidden" name="orderId" value=order._id)
+                +button("Хочу также!", [], {"type": "submit"})
 
-
+            form(action="/mymenu", method="post")
+                input(type="hidden", name="orderNameCustomer" value="#{name}")
+                input(type="hidden", name="orderTime" value="#{time}")
+                input(type="hidden", name="orderServiceId" value="#{id}")
+                +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
