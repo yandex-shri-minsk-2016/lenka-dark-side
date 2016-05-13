@@ -1,12 +1,7 @@
-mixin group(title_group, groups)
+mixin group(dish)
     .group
-        h2.group__name= title_group
-        each item in groups
-            .dish
-                a.dish__link(href=item.link target="_blank")
-                    img.link(src="/images/link.png")
-                .dish__title= item.title_dish
-                .dish__amount Кол-во:
-                    =item.quantity
-                .dish__cost $
-                    =item.price
+        .dish
+            a.dish__link(href=dish.url target="_blank")
+                img.link(src="/images/link.png")
+            .dish__title= dish.name
+            .dish__cost= dish.price
