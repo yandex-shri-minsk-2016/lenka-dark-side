@@ -1,5 +1,4 @@
 var DishModel = require('../models/dish').model;
-var Promise = require('promise');
 
 module.exports = function(req, res) {
     if (req.body.action == 'add') {

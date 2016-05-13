@@ -2,8 +2,15 @@ mixin sidebarmenu(title, mod)
     .sidebar-menu(class= mod)
         span.sidebar-menu__title= title
         ul.sidebar-menu__list
-            each val, index in ["Пицца","Суши","Бургеры","Шашлыки","Пироги","Китайская еда","Итальянская/Европейская","Японская/Китайская","Кавказкая/Узбекская","Американская/fastfood","Мексиканская","Экзотическая"]
-                li.sidebar-menu__elem
-                    input.sidebar-menu__filter(type="checkbox", id=index)
-                    label(for=index).sidebar-menu_name= val
+            if (title=="Кухни")
+                each val, index in ["Итальянская/Европейская", "Японская/Китайская", "Кавказкая/Узбекская", "Американская/fastfood", "Мексиканская", "Экзотическая"]
+                    li.sidebar-menu__elem
+                        input.sidebar-menu__filter(type="checkbox" id=index)
+                        label(for=index value= val).sidebar-menu_name= val
+            if (title=="Блюда")
+                each val, index in ["Пицца", "Суши", "Бургеры", "Горячее", "Салаты/закуски", "Пироги", "Десерты", "Супы"]
+                    li.sidebar-menu__elem
+                        input.sidebar-menu__filter(type="checkbox" id=index)
+                        label(for=index).sidebar-menu_name= val
+
 
