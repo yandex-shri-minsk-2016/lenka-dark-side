@@ -14,7 +14,6 @@ var express = require('express'),
     routes = require('./src/routes/routes.js'),
 
     cookieParser = require('cookie-parser');
-var DishModel = require('./src/models/dish').model;
 
 //TODO: Избавиться от хардкода(сделать конфиг)
 mongoose.connect('mongodb://localhost/lenka');

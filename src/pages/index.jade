@@ -14,7 +14,7 @@ block title
     title Главная страница
     if user
         +header(user)
-        +button("Создать новый заказ", [".button_new-order"],{'href': '/services'})
+        +button("Создать новый заказ", [".button_new-order"],{'href': '/services?owner=True', })
     else
         +header()
     script
