@@ -1,7 +1,7 @@
 mixin group(dish)
     .group
         .dish
-            a.dish__link(href=dish.link target="_blank")
+            a.dish__link(href=dish.url target="_blank")
                 img.link(src="/images/link.png")
             .dish__title= dish.name
             .dish__cost= dish.price

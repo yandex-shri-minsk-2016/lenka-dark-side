@@ -15,7 +15,7 @@ function timer(time) {
     timeStartHours*=3600000;
     timeStartMinutes*=60000;
     var timeStart = timeStartHours + timeStartMinutes;
-    var timer = timeFinishHours+timeFinishMinutes-timeStart;      
+    var timer = timeFinishHours+timeFinishMinutes-timeStart;
     if (timer>0) {
         setTimeout(totalDisplay, timer);
     }    
