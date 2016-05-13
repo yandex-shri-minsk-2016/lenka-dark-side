@@ -2,7 +2,6 @@ include ../order/order
 
 mixin basket(orders, service)
     .basket
-        .basket__title Корзина
         form.basket__form(action="/basket" method="post")
             input(type="hidden", name="service" value="#{service}")
             .orders
