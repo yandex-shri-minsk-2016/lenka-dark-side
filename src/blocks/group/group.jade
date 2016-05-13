@@ -1,8 +1,7 @@
-mixin group(title_dish, link, price)
+mixin group(dish)
     .group
         .dish
-            a.dish__link(href=link target="_blank")
+            a.dish__link(href=dish.link target="_blank")
                 img.link(src="/images/link.png")
-            .dish__title= title_dish
-            .dish__cost $
-                =price
+            .dish__title= dish.name
+            .dish__cost= dish.price
