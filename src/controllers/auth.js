@@ -50,8 +50,8 @@ passport.use('vk',
     function (token, refreshToken, profile, done) {
         process.nextTick(function () {
 
-            Person.findOne({vkID: profile.id}, function (err, user) {
-
+            Person.findOne({vkId: profile.id}, function (err, user) {
+                console.log(profile.id);
                 if (err)
                     return done(err);
 
@@ -72,4 +72,3 @@ passport.use('vk',
         });
     })
 );
-
