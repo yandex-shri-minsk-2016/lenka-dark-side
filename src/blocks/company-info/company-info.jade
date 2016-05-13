@@ -1,7 +1,12 @@
 include ../cook-info/cook-info
 include ../another-info/another-info
 
-mixin company-info(service)
+mixin company-info(service,ind)
     .company-info
+<<<<<<< 265e43f0bd3bbccab2c32dbc16fb1abe8423fd0a
         +cook-info(service.kitchen, "cook-info__mod")
         +another-info(service, "another-info__mod", "another-info__mod-second")
+=======
+        +cook-info(service.kitchen, ind)
+        +another-info(service)
+>>>>>>> filter for page services

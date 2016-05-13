@@ -10,7 +10,7 @@ mixin sidebarmenu(title, mod)
                 each val, index in ["Итальянская/Европейская", "Японская/Китайская", "Кавказкая/Узбекская", "Американская/fastfood", "Мексиканская", "Экзотическая"]
                     li.sidebar-menu__elem
                         input.sidebar-menu__filter(type="checkbox" id=index)
-                        label(for=index).sidebar-menu_name= val
+                        label(for=index value= val).sidebar-menu_name= val
             if (title=="Блюда")
                 each val, index in ["Пицца", "Суши", "Бургеры", "Горячее", "Салаты/закуски", "Пироги", "Десерты", "Супы"]
                     li.sidebar-menu__elem
