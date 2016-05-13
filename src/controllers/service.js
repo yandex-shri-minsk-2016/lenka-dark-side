@@ -8,7 +8,6 @@ module.exports = function ServiceController(req, res, next) {
         if (!req.session.dishes) {
             req.session.dishes = [];
         }
-        console.log(req.session.dishes);
         res.render('menuPage', {service: service, orders: req.session.dishes, user: req.user});
     });
 };

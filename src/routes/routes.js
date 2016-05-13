@@ -14,14 +14,12 @@ router.get('/services', servicesController);
 router.get('/services/:id', serviceController);
 
 router.post('/mymenu', myMenu);
-
 router.get('/mymenu', function(req, res){
     res.render('menuPage', {customerName: ownerName, time: orderTime, orderId: orderId});
 });
 
 router.get('/auth/fb',passport.authenticate('facebook', {successRedirect: 'back', failureRedirect: '/'}));
 router.get('/auth/vk',passport.authenticate('vk', {successRedirect: 'back', failureRedirect: '/'}));
-
 router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
