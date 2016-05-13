@@ -1,12 +1,15 @@
-mixin subscriber(name, dishes)
-    .subscriber
-        .subscriber__name= name
-        ol.subscriber__dishes
-            each dish in dishes
-                li.subscriber__dish
-                    .dish__name= dish.name
-                    .dish__hyphen -
-                    .dish__price= dish.price
-        .subscriber__checkbox
-            input.subscriber__check-money(type="checkbox")
-        hr
+mixin subscriber(name, dishes, id)
+    form.hide-form
+        input(id=id)(type="checkbox").hide-form__input
+        label(for=id) Показать присоеденившихся:
+        .subscriber
+            .subscriber__name= name
+            ol.subscriber__dishes
+                each dish in dishes
+                    li.subscriber__dish
+                        .dish__name= dish.name
+                        .dish__hyphen -
+                        .dish__price= dish.price
+            .subscriber__checkbox
+                input.subscriber__check-money(type="checkbox")
+            hr

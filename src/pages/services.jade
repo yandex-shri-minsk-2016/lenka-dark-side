@@ -5,6 +5,7 @@ include ../blocks/session/session
 include ../blocks/menuitem/menuitem
 include ../blocks/group/group
 include ../blocks/offers/offers
+include ../blocks/offers-plugin/offers-plugin
 include ../blocks/sidebarmenu/sidebarmenu
 include ../blocks/footer/footer
 
@@ -17,4 +18,6 @@ block content
             +sidebarmenu("Кухни/Блюда")
             each service in services
                 +offers(service)
+                    +offers-plugin(service)  
+                    //- дикий костыль, если будет время - переделать, потому что хуже костыля я еще не видел!
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")

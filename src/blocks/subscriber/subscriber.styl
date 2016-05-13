@@ -1,9 +1,44 @@
 @import '../../stylus/vars.styl'
 
+.hide-form__input, .hide-form__input + label ~ div
+  display none
+
+.hide-form__input
+  position relative
+
+.hide-form__input + label,
+.hide-form__input:checked + label
+  padding 0
+  cursor pointer
+
+.hide-form__input:checked + label
+  border-top 1px solid buttons
+
+.hide-form__input:checked + label + div
+  display inline-block
+  box-shadow inset (0 0 3px 0 rgba(229,229,229,1))
+  padding 10px
+
+.hide-form
+  width 48%
+  margin 0 auto
+  text-align center
+  position absolute
+  z-index 9999
+  left 50%
+  margin-left -25%
+  margin-top -32px
+  background #fff
+  border 2px dashed #ecebeb
+  border-top 1px solid #ecebeb
+  border-radius 0 0 10px 10px
+
+
 .subscriber
-  width 680px
+  width 90%
   background #f0f0f2
   margin 0 auto
+  margin-bottom 20px
 
 .subscriber__name
   display table-cell
@@ -39,4 +74,13 @@
   display table-cell
   vertical-align: middle
   padding-right 10px
+
+@media screen and (max-width: 401px)
+  .hide-form__input:checked + label
+    border-top none
+  .session 
+    margin-bottom 60px
+  .hide-form
+    margin-top -62px
+    margin-left -22%
 

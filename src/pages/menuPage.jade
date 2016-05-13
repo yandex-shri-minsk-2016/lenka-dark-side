@@ -26,7 +26,7 @@ block content
             .main-wrapper__menu
                 span.main-wrapper__title Что вы хотите съесть сегодня?
                 each dish in service.dishes
-                    form(action="/orders", method="post")
+                    form(action="/orders", method="post").main-wrapper__menuitem
                         input(type="hidden", name="dishId" value="#{dish._id}")
                         input(type="hidden", name="dishTitle" value="#{dish.title}")
                         input(type="hidden", name="dishPrice" value="#{dish.price}")
