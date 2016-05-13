@@ -20,7 +20,6 @@ passport.use('facebook',
     },
     function (token, refreshToken, profile, done) {
         process.nextTick(function () {
-            console.log(profile);
             Person.findOne({facebookId: profile.id}, function (err, user) {
                 if (err)
                     return done(err);

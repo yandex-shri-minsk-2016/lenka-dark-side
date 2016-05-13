@@ -6,12 +6,14 @@ var serviceController = require('../controllers/service.js');
 var passport = require('passport');
 var homeController = require('../controllers/home.js');
 var myMenu = require('../controllers/myMenu');
+var setTime = require('../controllers/setTime');
 var addToShoppingCart = require('../controllers/addToShoppingCart');
 var addOrder = require('../controllers/addOrder');
 
 router.get('/', homeController);
 
 router.get('/services', servicesController);
+router.post('/setTime', setTime);
 router.get('/services/:id', serviceController);
 
 router.post('/mymenu', myMenu);
@@ -25,6 +27,8 @@ router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
 });
+
+
 
 router.post('/orders', addToShoppingCart);
 
