@@ -28,7 +28,7 @@ block title
                         script.
                             timer(document.getElementById('time').innerHTML);
                 each subscriber in order.subscriber
-                    +subscriber(subscriber.person.name, subscriber.dishes)
+                    +subscriber(subscriber.person.name, subscriber.dishes, subscriber)
                 form(action="/mymenu", method="post")
                     input(type="hidden", name="orderNameCustomer" value="#{order.owner.name}")
                     input(type="hidden", name="orderTime" value="#{order.time}")
