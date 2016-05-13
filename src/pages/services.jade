@@ -16,9 +16,10 @@ block content
     .main-wrapper
         .main-wrapper__carry
             +sidebarmenu("Кухни")
-            each service, ind in services
-                +offers(service, "", ind)
+            each service in services
+                +offers(service, "") 
+                    +offers-plugin(service)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
-    script
-        include ../blocks/sidebarmenu/sidebarmenu.js
-
+    //- script
+    //-     include ../blocks/sidebarmenu/sidebarmenu.js
+//- , ind
