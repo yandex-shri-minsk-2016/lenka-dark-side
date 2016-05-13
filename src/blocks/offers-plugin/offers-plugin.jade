@@ -1,15 +1,17 @@
 include ../button/button
 
 mixin offers-plugin(id)
-    form.offers-plugin
-        input(id=id)(type="checkbox").offers-pluign__hide
+    form.offers-plugin(action="/setTime" method="post")
+        input(id=id, type="checkbox").offers-pluign__hide
         label(for=id) Нажмите, чтобы сделать заказ
         .offers-hide
             .offers-hide__timepicker
+                input(type="hidden", name="service" value='#{id}')
+                input(type="hidden", name="serviceId" value='#{id._id}')
                 p.offer-hide__title Введите время:
                 a.offers-hide__more
-                input.offers-hide__time-hrs
+                input.offers-hide__time-hrs(name="hrs")
                 span.offers-hide__dtt :
-                input.offers-hide__time-mnts
+                input.offers-hide__time-mnts(name="mnts")
                 a.offers-hide__less
-                +button("Сделать заказ", "offers-plugin__button")
+                +button("Сделать заказ", "offers-plugin__button", {"type": "submit", "name":"action", "value": "setTime"})

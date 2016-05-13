@@ -5,7 +5,8 @@ module.exports = function ServicesController(req, res) {
         if (err) {
             return next(err);
         }
+        req.session.isOwner = req.query.owner;
+        req.session.order = {};
         res.render('services', {services: services, user: req.user});
-
     });
 };

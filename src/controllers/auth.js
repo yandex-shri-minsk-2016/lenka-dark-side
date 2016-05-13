@@ -20,13 +20,11 @@ passport.use('facebook',
     },
     function (token, refreshToken, profile, done) {
         process.nextTick(function () {
-            console.log(profile);
             Person.findOne({facebookId: profile.id}, function (err, user) {
                 if (err)
                     return done(err);
 
                 if (user) {
-                    console.log("here");
                     return done(null, user);
                 } else {
                     var newPerson = new Person();
@@ -35,7 +33,6 @@ passport.use('facebook',
                     newPerson.save(function (err) {
                         if (err)
                             throw err;
-
                         return done(null, newPerson);
                     });
                 }
@@ -53,7 +50,7 @@ passport.use('vk',
     function (token, refreshToken, profile, done) {
         process.nextTick(function () {
 
-            Person.findOne({vkId: profile.id}, function (err, user) {
+            Person.findOne({vkID: profile.id}, function (err, user) {
 
                 if (err)
                     return done(err);
@@ -67,7 +64,6 @@ passport.use('vk',
                     newPerson.save(function (err) {
                         if (err)
                             throw err;
-
                         return done(null, newPerson);
                     });
                 }

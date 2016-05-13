@@ -3,10 +3,10 @@ include ../order/order
 mixin basket(orders, service)
     .basket
         form.basket__form(action="/basket" method="post")
-            input(type="hidden", name="service" value="#{service}")
+            input(type="hidden", name="service" value=service)
             .orders
                 each item in orders
-                    +order(item.title, item.price)
+                    +order(item.name, item.price)
             hr.basket__hr
             .basket__allcost
                 span Общая стоимость: 1000$
