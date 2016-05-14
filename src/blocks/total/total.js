@@ -19,6 +19,7 @@ function timer(time) {
     if (timer>0) {
         setTimeout(totalDisplay, timer);
     }
+
 }
 
 

@@ -1,8 +1,8 @@
 include ../cook-info/cook-info
 include ../another-info/another-info
 
-mixin company-info(service)
+mixin company-info(service, index)
     .company-info
-        +cook-info(service.kitchen, "cook-info__mod")
+        +cook-info(service.kitchen, "cook-info__mod", index)
         +another-info(service, "another-info__mod", "another-info__mod-second")
 
