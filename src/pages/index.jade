@@ -33,8 +33,9 @@ block title
                                 each dish in order.dishes
                                     +group(dish)
                                 each subscriber in order.subscriber
-                                    each dish in subscriber.dishes
-                                        +group(dish)
+                                    if subscriber.paid
+                                        each dish in subscriber.dishes
+                                            +group(dish)
                 each subscriber in order.subscriber
                     +subscriber(subscriber.person.name, subscriber.dishes, subscriber)
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
