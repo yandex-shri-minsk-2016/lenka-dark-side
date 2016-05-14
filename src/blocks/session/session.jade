@@ -8,12 +8,15 @@ mixin session(name, time, logo, id, order, user)
         #time.session__time= time
 
         .session__controls
-            form.form(action="/wantAlso", method="post")
-                if user
+            if user
+                form.form(action="/wantAlso", method="post")
                     input(type="hidden" name="userId" value=user._id)
-                input(type="hidden" name="orderId" value=order._id)
-                +button("Хочу также!", [], {"type": "submit"})
+                    input(type="hidden" name="orderId" value=order._id)
+                    +button("Хочу также!", [], {"type": "submit"})
 
-            form(action="/mymenu", method="post")
-                input(type="hidden", name="orderId" value=order._id)
-                +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
+                form(action="/mymenu", method="post")
+                    input(type="hidden", name="orderId" value=order._id)
+                    +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
+            else
+                +button("Хочу также!", ["button_not_active"])
+                +button("Хочу также!", ["button_not_active"])
