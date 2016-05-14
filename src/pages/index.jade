@@ -16,6 +16,7 @@ block title
         +button("Создать новый заказ", [".button_new-order"],{'href': '/services?owner=True' })
     else
         +header()
+        +button("Создать новый заказ", [".button_new-order", "button_not_active"])
     script
         include ../blocks/total/total.js
     .main-wrapper
