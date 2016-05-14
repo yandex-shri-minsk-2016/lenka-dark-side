@@ -8,8 +8,8 @@ mixin subscriber(name, dishes, id, subscriber, order)
                     .dish__hyphen -
                     .dish__price= dish.price
         .subscriber__checkbox
-            form(name='form')
-                input.subscriber__check-money(id=id type="checkbox" onclick="check()")
+            //form(name='form')
+            //    input.subscriber__check-money(id=id type="checkbox" onclick="check()")
             script.
                 function check() {
                     var order = !{JSON.stringify(order)};
@@ -30,4 +30,3 @@ mixin subscriber(name, dishes, id, subscriber, order)
                     xhr.send(json);
                     return false;
                 }
-        hr
