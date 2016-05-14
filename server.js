@@ -51,6 +51,6 @@ app.use(function(req, res) {
     res.render('404');
 });
 
-app.listen(3000, function() {
-    console.log('Working 3000');
+var server = app.listen(process.env.PORT || 3000, '0.0.0.0', function() {
+    console.log('Working ' + this.port);
 });
