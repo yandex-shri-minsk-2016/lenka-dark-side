@@ -10,17 +10,16 @@ module.exports = function HomeController(req, res, next) {
             }
             var now = new Date();
 
-            var orders = orders.filter(function(order) {
+            var orders = orders.filter(function(order) {                
+                var tz = (new Date().getTimezoneOffset() + 180) / 60;
+
                 var hrs = order.time.substring(0, order.time.indexOf(":"));
                 var mnts = order.time.substring(order.time.indexOf(":") + 1);
-                var date = new Date();
-                date.setHours(hrs);
-                date.setMinutes(mnts);
 
-                if (now.getTime() > date.getTime()){
-                    return 0;
-                }
-                return 1;
+                var current = (new Date().getHours() + tz) * 100 + new Date().getMinutes();
+                var orderTime = hrs * 100 + Number(mnts);
+
+                return orderTime > current;
             });
 
             console.log(orders);
