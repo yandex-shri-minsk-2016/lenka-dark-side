@@ -1,8 +1,7 @@
 var timeStartHours = new Date().getHours();
 var timeStartMinutes = new Date().getMinutes();
 
-function totalDisplay() {
-	alert("here");
+function totalDisplay() {	
     document.getElementById('total').style.display='block';
 }
 function timer(time) {
@@ -19,7 +18,7 @@ function timer(time) {
     var timer = timeFinishHours+timeFinishMinutes-timeStart;
     if (timer>0) {
         setTimeout(totalDisplay, timer);
-    }    
+    }
 }
 
 
