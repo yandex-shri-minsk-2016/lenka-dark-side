@@ -1,6 +1,6 @@
-mixin order(title, sum)
+mixin order(title, sum, id)
     .order
-        a.order__close(href="#")
+        a.order__close(href="/removeFromBasket/" + id)
             i.order__icon.order__icon_close
         .order__info #{item}
             = title

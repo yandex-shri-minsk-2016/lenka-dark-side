@@ -9,13 +9,15 @@ var myMenu = require('../controllers/myMenu');
 var setTime = require('../controllers/setTime');
 var addToShoppingCart = require('../controllers/addToShoppingCart');
 var addOrder = require('../controllers/addOrder');
-var wantSame = require('../controllers/wantSame.js');
+var wantAlsoController = require('../controllers/wantAlso.js');
+var removeFromBasketController = require('../controllers/removeFromBasket.js');
 
 router.get('/', homeController);
 
 router.get('/services', servicesController);
 router.post('/setTime', setTime);
 router.get('/services/:id', serviceController);
+router.get('/removeFromBasket/:id', removeFromBasketController);
 
 router.post('/mymenu', myMenu);
 

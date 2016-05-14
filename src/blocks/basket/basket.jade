@@ -6,7 +6,7 @@ mixin basket(orders, service)
             input(type="hidden", name="service" value=service)
             .orders
                 each item in orders
-                    +order(item.name, item.price)
+                    +order(item.name, item.price, item._id)
             hr.basket__hr
             .basket__allcost
                 span.total_sum Общая стоимость: 1000
