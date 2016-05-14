@@ -8,7 +8,8 @@ module.exports = function wantSame(req, res) {
             console.log("user: ", req.body.userId);
             order.subscriber.push({
                 person: person,
-                dishes: order.dishes
+                dishes: order.dishes,
+                paid: false
             });
             order.save();
         });

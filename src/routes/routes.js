@@ -11,6 +11,7 @@ var addToShoppingCart = require('../controllers/addToShoppingCart');
 var addOrder = require('../controllers/addOrder');
 var wantSame = require('../controllers/wantSame.js');
 var removeFromBasketController = require('../controllers/removeFromBasket.js');
+var checkController = require('../controllers/check.js');
 
 router.get('/', homeController);
 
@@ -37,5 +38,7 @@ router.get('/basket', function(req,res) {
 });
 
 router.post('/wantAlso', wantSame);
+
+router.post('/check', checkController);
 
 exports.router = router;

@@ -31,9 +31,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use( bodyParser.json() );
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-  extended: true
+    extended: true
 }));
 
 app.use('/', routes.router);
@@ -47,10 +47,10 @@ app.use(errorHandler);
 app.use(express.static(__dirname + '/dist'));
 
 //already last(error processing)
-app.use(function(req, res) {
+app.use(function (req, res) {
     res.render('404');
 });
 
-var server = app.listen(process.env.PORT || 3000, '0.0.0.0', function() {
+var server = app.listen(process.env.PORT || 3000, '0.0.0.0', function () {
     console.log('Working ' + this.port);
 });
