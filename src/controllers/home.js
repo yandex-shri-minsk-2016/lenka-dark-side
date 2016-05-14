@@ -15,14 +15,10 @@ module.exports = function HomeController(req, res, next) {
             }
             if (req.user) {
                 orders = orders.sort( function (a, b){
-                    console.log("a", a.owner._id);
-                    console.log("b", b.owner.id);
-                    console.log("user", typeof req.user._id);
                     if (a.owner.id == req.user.id) {
                         return -1;
                     }
                     if (b.owner.id == req.user.id) {
-                        console.log("trulala");
                         return 1;
                     }
                      if (isSubscriber(a.subscriber)) {
