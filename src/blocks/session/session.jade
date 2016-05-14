@@ -6,6 +6,8 @@ mixin session(name, time, logo, id, order, user)
         +company(logo)
         .session__name= name
         #time.session__time= time
+        each dish in order.dishes
+            .session__dish=dish.name
 
         .session__controls
             if user
