@@ -14,7 +14,7 @@
 .hide-form__input:checked + label
   border-top 1px solid buttons
 
-.hide-form__input:checked + label + div
+.hide-form__input:checked + label ~ div
   display inline-block
   box-shadow inset (0 0 3px 0 rgba(229,229,229,1))
   padding 10px
@@ -33,12 +33,21 @@
   border-top 1px solid #ecebeb
   border-radius 0 0 10px 10px
 
-
 .subscriber
   width 90%
   background #f0f0f2
   margin 0 auto
   margin-bottom 20px
+
+@media (min-width: 0px)
+  .subscriber
+    display inline-block
+  .subscriber__name
+    display block
+  .subscriber__dishes
+    display block
+  .subscriber__checkbox
+    display block
 
 .subscriber__name
   display table-cell
@@ -55,7 +64,8 @@
   padding-bottom 10px
   padding-top 10px
   //width 100%
-  padding-right 150px
+  padding-right 75px
+  padding-left 25px
 
 .dish__name
   display inline-block

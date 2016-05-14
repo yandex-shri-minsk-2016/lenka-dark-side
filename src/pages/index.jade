@@ -37,6 +37,9 @@ block title
                                     if subscriber.paid
                                         each dish in subscriber.dishes
                                             +group(dish)
-                each subscriber in order.subscriber
-                    +subscriber(subscriber.person.name, subscriber.dishes, subscriber)
+                form.hide-form
+                    input(id="s" + order.id type="checkbox").hide-form__input
+                    label(for="s" + order.id) Показать присоединившихся:
+                    each subscriber in order.subscriber
+                        +subscriber(subscriber.person.name, subscriber.dishes, subscriber._id)
         +footer("© Lenka-dark-side Corporation")
