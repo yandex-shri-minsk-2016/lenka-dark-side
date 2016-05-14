@@ -13,4 +13,4 @@ module.exports = function setTime(req, res, next) {
             res.redirect("back");
         }
     };
-}
+};

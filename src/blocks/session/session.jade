@@ -15,7 +15,5 @@ mixin session(name, time, logo, id, order, user)
                 +button("Хочу также!", [], {"type": "submit"})
 
             form(action="/mymenu", method="post")
-                input(type="hidden", name="orderNameCustomer" value="#{name}")
-                input(type="hidden", name="orderTime" value="#{time}")
-                input(type="hidden", name="orderServiceId" value="#{id}")
+                input(type="hidden", name="orderId" value=order._id)
                 +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
