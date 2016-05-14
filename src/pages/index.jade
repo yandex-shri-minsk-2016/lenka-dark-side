@@ -28,6 +28,7 @@ block title
                         script.
                             timer(document.getElementById('time').innerHTML);
                         #total.total
+                            form.form(action="/closeOrder", method="post")
                             .total__close(onclick="document.getElementById('total').style.display='none'")
                             .total__content
                                 .total__title Итого
