@@ -12,4 +12,5 @@ module.exports = function(req, res) {
         	res.redirect('/services/' + req.session.order.service._id);
         });
     }
-}
+};
+

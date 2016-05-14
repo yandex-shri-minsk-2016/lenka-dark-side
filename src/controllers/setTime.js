@@ -6,4 +6,4 @@ module.exports = function setTime(req, res, next) {
         req.session.serviceId = req.body.serviceId;
         res.redirect('/services/'+req.body.serviceId)
     };
-}
+};
