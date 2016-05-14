@@ -9,14 +9,14 @@ mixin basket(orders, service)
                     +order(item.name, item.price, item._id)
             hr.basket__hr
             .basket__allcost
-                span.total_sum Общая стоимость: 1000
+                span.total_sum Общая стоимость:
+                span руб.
                 script.
                     var spans = document.querySelectorAll('.order__cost_val');
                     var sum = 0;
                     for(var i = 0; i<spans.length; i++) {
                         sum+=+spans[i].innerHTML;
                     }
-                    console.log(document.querySelector('.total_sum').innerHTML = 'Общая стоимость: ' + sum);
             .basket__button
                 +button("Заказать", ['button_icon', 'button_icon-cart'], {"type": "submit", "name":"action", "value": "newOrder"})
             .basket__image
