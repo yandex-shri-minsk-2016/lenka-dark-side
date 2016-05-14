@@ -1,4 +1,4 @@
-mixin subscriber(name, dishes, id)
+mixin subscriber(name, dishes, id, subscriber, order)
     .subscriber
         .subscriber__name= name
         ol.subscriber__dishes
@@ -8,4 +8,26 @@ mixin subscriber(name, dishes, id)
                     .dish__hyphen -
                     .dish__price= dish.price
         .subscriber__checkbox
-            input.subscriber__check-money(type="checkbox")
+            form(name='form')
+                input.subscriber__check-money(id=id type="checkbox" onclick="check()")
+            script.
+                function check() {
+                    var order = !{JSON.stringify(order)};
+                    var subscriber =!{JSON.stringify(subscriber)};
+                    var id =!{JSON.stringify(id)};
+                    var input = document.getElementById(id)
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', '/check');
+                    xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+                    var json = JSON.stringify({
+                        orderId: order._id,
+                        subscriberId: subscriber._id,
+                        inputChecked: input.checked
+                    });
+
+                    console.log(json);
+                    xhr.send(json);
+                    return false;
+                }
+        hr
