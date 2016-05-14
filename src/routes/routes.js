@@ -5,12 +5,11 @@ var servicesController = require('../controllers/services.js');
 var serviceController = require('../controllers/service.js');
 var passport = require('passport');
 var homeController = require('../controllers/home.js');
-var wantAlsoController = require('../controllers/wantAlso.js');
 var myMenu = require('../controllers/myMenu');
 var setTime = require('../controllers/setTime');
 var addToShoppingCart = require('../controllers/addToShoppingCart');
 var addOrder = require('../controllers/addOrder');
-var wantAlsoController = require('../controllers/wantAlso.js');
+var wantSame = require('../controllers/wantSame.js');
 
 router.get('/', homeController);
 
@@ -27,8 +26,6 @@ router.get('/logout', function(req, res) {
     res.redirect('/');
 });
 
-
-
 router.post('/orders', addToShoppingCart);
 
 router.post('/basket', addOrder);
@@ -37,6 +34,6 @@ router.get('/basket', function(req,res) {
     req.session.order = {};
 });
 
-router.post('/wantAlso', wantAlsoController);
+router.post('/wantAlso', wantSame);
 
 exports.router = router;

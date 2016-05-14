@@ -1,5 +1,5 @@
 mixin button(content, mods, options)
-    .button(class= mods)
+    .button
         if options && options.href
             a.button__button(href=options.href)
                 span.button__icon
@@ -9,6 +9,6 @@ mixin button(content, mods, options)
                 span.button__icon
                 span.button__title= content
         else
-            button.button__button
+            button.button__button(class=mods)
                 span.button__icon
                 span.button__title= content
