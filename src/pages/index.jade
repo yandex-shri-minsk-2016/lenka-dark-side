@@ -42,5 +42,5 @@ block title
                     input(id="s" + order.id type="checkbox").hide-form__input
                     label(for="s" + order.id) Показать присоединившихся:
                     each subscriber in order.subscriber
-                        +subscriber(subscriber.person.name, subscriber.dishes, subscriber._id)
+                        +subscriber(subscriber.person.name, subscriber.dishes, subscriber._id, subscriber, order)
         +footer("© Lenka-dark-side Corporation")
