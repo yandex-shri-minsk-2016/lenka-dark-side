@@ -3,6 +3,8 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 var VKStrategy = require('passport-vkontakte').Strategy;
 var Person = require('./../models/person').model;
 
+var host = process.env.HOST || 'http://localhost:3000'
+
 passport.serializeUser(function (user, done) {
     done(null, user._id);
 });
@@ -16,7 +18,7 @@ passport.use('facebook',
     new FacebookStrategy({
         'clientID': '1055036224558106',
         'clientSecret': 'c4a9c9b0079b319785e5a75f3373c37b',
-        'callbackURL': 'http://localhost:3000/auth/fb'
+        'callbackURL': host + '/auth/fb'
     },
     function (token, refreshToken, profile, done) {
         process.nextTick(function () {
@@ -45,7 +47,7 @@ passport.use('vk',
     new VKStrategy({
         'clientID': '5444257',
         'clientSecret': '23fIOGbDEV77oxLIOuOL',
-        'callbackURL': 'http://localhost:3000/auth/vk'
+        'callbackURL': host + '/auth/vk'
     },
     function (token, refreshToken, profile, done) {
         process.nextTick(function () {
