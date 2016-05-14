@@ -33,6 +33,7 @@ block content
             .main-wrapper__cart
                 span.main-wrapper__title Корзина
                 +basket(orders, service)
+        +button("Назад к сервисам", [],{'href': '/services?owner=True'})
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
 
 
