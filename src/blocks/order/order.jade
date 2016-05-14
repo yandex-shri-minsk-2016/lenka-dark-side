@@ -6,8 +6,10 @@ mixin order(title, sum, id)
             = title
         a.order__less(href="#")
             i.order__icon.order__icon_less
-        input.order__value(value="1")
+        .order__value
+            input.order__value(value="1")
         a.order__more(href="#")
             i.order__icon.order__icon_more
         .order__cost
             span.order__cost_val= sum
+            span руб.
