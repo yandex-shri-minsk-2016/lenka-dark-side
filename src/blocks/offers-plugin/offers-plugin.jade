@@ -8,9 +8,10 @@ mixin offers-plugin(id)
             .offers-hide__timepicker
                 input(type="hidden", name="serviceId" value='#{id._id}')
                 p.offer-hide__title Введите время:
-                a.offers-hide__more
-                input.offers-hide__time-hrs(name="hrs")
-                span.offers-hide__dtt :
-                input.offers-hide__time-mnts(name="mnts")
-                a.offers-hide__less
+                .offers-hide__blockOfLogic
+                    a.offers-hide__more
+                    input.offers-hide__time-hrs(name="hrs")
+                    span.offers-hide__dtt :
+                    input.offers-hide__time-mnts(name="mnts")
+                    a.offers-hide__less
                 +button("Сделать заказ", "offers-plugin__button", {"type": "submit", "name":"action", "value": "setTime"})
