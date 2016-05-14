@@ -8,6 +8,32 @@ module.exports = function HomeController(req, res, next) {
             if (err) {
                 return next(err);
             }
+            function isSubscriber(subscribers){
+                return subscribers.some(function(subscriber){
+                    return subscriber.person.id == req.user.id;
+                });
+            }
+            if (req.user) {
+                orders = orders.sort( function (a, b){
+                    console.log("a", a.owner._id);
+                    console.log("b", b.owner.id);
+                    console.log("user", typeof req.user._id);
+                    if (a.owner.id == req.user.id) {
+                        return -1;
+                    }
+                    if (b.owner.id == req.user.id) {
+                        console.log("trulala");
+                        return 1;
+                    }
+                     if (isSubscriber(a.subscriber)) {
+                        return -1;
+                     }
+                     if (isSubscriber(b.subscriber)) {
+                        return 1;
+                    }
+                    return 0;
+                });
+            }
             res.render('index', {orders: orders, user: req.user});
         });
 };
