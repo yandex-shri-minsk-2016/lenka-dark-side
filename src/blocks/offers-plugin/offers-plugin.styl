@@ -71,8 +71,59 @@
 
 @media screen and (max-width: 1000px)
     .offers-plugin
-        width 50%
+        width 60%
         height 20px
         margin 0 auto
         text-align center
         padding-top 10px
+        
+    .offers-pluign__hide:checked + label + div
+        position absolute
+        width 52%
+        height 127px
+        z-index 10
+        
+    .offers-plugin__button
+        margin-left -86%
+        margin-top 15px
+        position relative
+@media screen and (max-width: 910px)
+     .offers-pluign__hide:checked + label + div
+         width 65%
+
+
+@media screen and (max-width: 800px)
+    .offers-plugin 
+        width 70%
+    
+    .offers-pluign__hide:checked + label + div 
+        width 67%
+        
+@media screen and (max-width: 720px)
+    .offers-pluign__hide:checked + label + div
+        height 140px
+
+    .offers-plugin__button
+        margin-left -97%
+        margin-top 71px
+        
+    .offer-hide__title
+        float none 
+        position absolute
+        margin 0 0 0 81px
+
+    .offers-hide__blockOfLogic
+        width 320px
+        height 50px
+        position absolute   
+        margin 37px 0 0 60px  
+
+@media screen and (max-width: 512px)
+    .offer-hide__title
+        margin 0 0 0 21px
+    
+    .offers-hide__blockOfLogic
+        margin 36px 0 0 -1px
+    
+    .offers-plugin__button
+        margin-left -168%   
