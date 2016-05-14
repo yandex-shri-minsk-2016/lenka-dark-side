@@ -6,7 +6,6 @@ mixin offers-plugin(id)
         label(for=id) Нажмите, чтобы сделать заказ
         .offers-hide
             .offers-hide__timepicker
-                input(type="hidden", name="service" value='#{id}')
                 input(type="hidden", name="serviceId" value='#{id._id}')
                 p.offer-hide__title Введите время:
                 a.offers-hide__more

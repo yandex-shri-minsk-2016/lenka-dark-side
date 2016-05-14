@@ -7,7 +7,6 @@ module.exports = function(req, res) {
                 return next(err);
             }
             req.session.dishes.push(dish);
-            console.log("dishes" + req.session.dishes);
             res.redirect('back');
         });
     }

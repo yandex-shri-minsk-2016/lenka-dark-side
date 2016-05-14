@@ -6,9 +6,9 @@ module.exports = function(req,res,next) {
         var order = {};
         if(req.session.isOwner == "True") {
             order.owner = req.user;
-            order.subscriber = [];
             order.dishes = req.session.dishes;
             order.time = req.session.time;
+            order.subscriber = [];
             ServiceModel.findOne({_id: req.session.serviceId}).populate("dishes").exec(function(err, service){
                 if (err) {
                     return next(err);
@@ -19,6 +19,7 @@ module.exports = function(req,res,next) {
                 o.save(function(err){
                     if(!err){
                         req.session.order = {};
+                        req.session.dishes = {};
                         res.redirect('/');
                     }else{
                         res.redirect('/');
@@ -31,7 +32,21 @@ module.exports = function(req,res,next) {
             subscriber.person = req.user;
             subscriber.dishes = req.session.dishes;
             subscriber.paid = false;
-            order.subscriber.push(subscriber);
+            OrderModel.findOne({_id: req.session.order}, function(err, order){
+                if(err) {
+                    next();
+                }
+                order.subscriber.push(subscriber);
+                order.save(function(err){
+                    if(!err){
+                        req.session.order = {};
+                        req.session.dishes = {};
+                        res.redirect('/');
+                    }else{
+                        res.redirect('/');
+                    }
+                });
+            });
         }
     }
 }
