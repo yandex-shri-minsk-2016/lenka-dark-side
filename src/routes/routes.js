@@ -9,7 +9,7 @@ var myMenu = require('../controllers/myMenu');
 var setTime = require('../controllers/setTime');
 var addToShoppingCart = require('../controllers/addToShoppingCart');
 var addOrder = require('../controllers/addOrder');
-var wantAlsoController = require('../controllers/wantAlso.js');
+var wantSame = require('../controllers/wantSame.js');
 var removeFromBasketController = require('../controllers/removeFromBasket.js');
 
 router.get('/', homeController);
