@@ -1,11 +1,11 @@
 mixin button(content, mods, options)
     .button
         if options && options.href
-            a.button__button(href=options.href)
+            a.button__button(href=options.href, class=mods)
                 span.button__icon
                 span.button__title= content
         else if options && options.type && options.name &&options.value
-            button.button__button(type=options.type, name=options.name, value=options.value)
+            button.button__button(class=mods, type=options.type, name=options.name, value=options.value)
                 span.button__icon
                 span.button__title= content
         else

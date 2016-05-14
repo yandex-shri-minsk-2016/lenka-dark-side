@@ -21,18 +21,8 @@ box-sizing()
     box-sizing()
     padding 10px
     display inline-block
-
-@media (min-width: 0px)
-  .menu-item
-    width 100%
-@media (min-width: 300px)
-  .menu-item
     width 49%
-@media (min-width: 600px)
-  .menu-item
-    width 32%
 
-    
 .menu-item__image
     width 100%
     transition(ease-in-out)
@@ -52,8 +42,10 @@ box-sizing()
     text-transform uppercase
     color #fff
     font-weight bold
-    font-size 17px
+    font-size 0.9em
     padding 10px
+    padding-top 0
+    padding-bottom 3px
     transition(ease-in-out)
 .menu-item__other-info
     background rgba(12, 34, 52, 0.6)
@@ -71,7 +63,7 @@ box-sizing()
     .menu-item__image
         scale(1.2)
     .menu-item__title
-        translateY(40%)
+        translateY(10%)
     .menu-item__other-info
         translateY(-10%)
     .menu-item__info 
@@ -80,4 +72,3 @@ box-sizing()
 
 .main-wrapper__menuitem
     display inline
-
