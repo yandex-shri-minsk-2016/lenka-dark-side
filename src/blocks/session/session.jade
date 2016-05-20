@@ -6,23 +6,19 @@ mixin session(owner, time, service, id, order, user, length)
         form.session__form.form(action="/sessionControls", method="post")
             .session__edit
                 +button("", ["button_icon", "button_icon-edit"], {"iconsOnly": "true", "type": "submit", "name": "action", "value": "edit"})
-            .session__delete
-                +button("", ["button_icon", "button_icon-delete"], {"iconsOnly": "true", "type": "submit", "name": "action", "value": "delete"})
-            //if user && owner.id == user.id
+            if user && owner.id == user.id
                 .session__delete
-                    +button("Удалить заказ", [], {"type": "submit", "name": "action", "value": "delete"})
+                    +button("", ["button_icon", "button_icon-delete"], {"iconsOnly": "true", "type": "submit", "name": "action", "value": "delete"})
             +person(owner)
             .session__info Сделал заказ в 
                 span=service.title
             .session__time=time
-            .session__controls
-                +button("Хочу также!", [], {"type": "submit", "name": "action", "value": "same"})
-                +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
-            //if user
-                input(type="hidden" name="userId" value=user._id)
-                input(type="hidden" name="orderId" value=order._id)
-                +button("Хочу также!", [], {"type": "submit", "name": "action", "value": "same"})
-                +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
+            if user
+                .session__controls
+                    input(type="hidden" name="userId" value=user._id)
+                    input(type="hidden" name="orderId" value=order._id)
+                    +button("Хочу также!", [], {"type": "submit", "name": "action", "value": "same"})
+                    +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
             .session__subscribers
                 .session__subsribers_info Присоеденилось 
                     span=length
