@@ -16,6 +16,8 @@ block content
     .main-wrapper
         .main-wrapper__company
             +offers(service, "offers_company", "offers__down-text-mod")
+                .offers__down-text
+                    .offers__text= service.phone
                 .feels
                     span.feels__voices Всего голосов: 1234
                     .feels__like

@@ -24,22 +24,23 @@ mixin session(owner, time, service, id, order, user, length)
                     span=length
                 .session__look Посмотреть заказ
                     +button("", ["button_icon", "button_icon-look"], {"iconsOnly": "true", "type": "submit", "name": "action", "value": "look"})
-        //+company(logo)
-        //.session__name= name
-        //#time.session__time= time
-        //each dish in order.dishes
-            .session__dish=dish.name
+        //- //+company(logo)
+        //- //.session__name= name
+        //- //#time.session__time= time
+        //- //each dish in order.dishes
+        //-     .session__dish=dish.name
 
-        //.session__controls
-            if user
-                form.form(action="/sessionControls", method="post")
-                    input(type="hidden" name="userId" value=user._id)
-                    input(type="hidden" name="orderId" value=order._id)
-                    +button("Хочу также!", [], {"type": "submit", "name": "action", "value": "same"})
-                    +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
-                    if order.owner.id == user.id
-                        +button("Удалить заказ", [], {"type": "submit", "name": "action", "value": "delete"})
-                        +button("Редактировать заказ", [], {"type": "submit", "name": "action", "value": "edit"})
-            else
-                +button("Хочу также!", ["button_not_active"])
-                +button("Своё меню!", ["button_not_active"])
+        //- //.session__controls
+        //-     if user
+        //-         form.form(action="/sessionControls", method="post")
+        //-             input(type="hidden" name="userId" value=user._id)
+        //-             input(type="hidden" name="orderId" value=order._id)
+        //-             +button("Хочу также!", [], {"type": "submit", "name": "action", "value": "same"})
+        //-             +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
+        //-             if order.owner.id == user.id
+        //-                 +button("Удалить заказ", [], {"type": "submit", "name": "action", "value": "delete"})
+        //-                 +button("Редактировать заказ", [], {"type": "submit", "name": "action", "value": "edit"})
+        //-     else
+        //-         +button("Хочу также!", ["button_not_active"])
+        //-         +button("Своё меню!", ["button_not_active"])
+
