@@ -1,0 +1,37 @@
+extends layout/layout
+include ../blocks/button/button
+include ../blocks/header/header
+include ../blocks/basket/basket
+include ../blocks/order/order
+include ../blocks/session/session
+include ../blocks/menuitem/menuitem
+include ../blocks/footer/footer
+include ../blocks/auth/auth
+
+block title
+    title Добро пожаловать!
+block content
+    .first-main-wrapper
+        .first-screen
+            .first-screen__form
+                .first-screen__title
+                    span.first-screen_text Авторизируйтесь
+                .first-screen__description
+                    p.first-screen_faq Пожалуйста, введите свое имя и email или войдите через социальную сеть.
+                .first-screen__iptName
+                    label.first-screen__placholder-input Ваше имя
+                    input(type="text" placeholder="Ваше имя").first-screen__name
+                .first-screen__inpEmail
+                    label.first-screen__placholder-email 
+                    input(type="text" placeholder="Email").first-screen__email
+                +button("Войти", "first-screen__button")
+                +auth(person, "first-screen__auth", "first-screen__span")
+            .first-screen__bottom-text
+                p.bottom-text__welcome Добро пожаловать на foodZZa.
+
+
+
+
+
+
+
