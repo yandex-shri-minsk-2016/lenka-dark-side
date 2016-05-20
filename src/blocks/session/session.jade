@@ -1,24 +1,49 @@
 include ../button/button
-include ../company/company
+include ../person/person
 
-mixin session(name, time, logo, id, order, user)
+mixin session(owner, time, service, id, order, user, length)
     .session
-        +company(logo)
-        .session__name= name
-        #time.session__time= time
-        each dish in order.dishes
+        form.session__form.form(action="/sessionControls", method="post")
+            .session__edit
+                +button("", ["button_icon", "button_icon-edit"], {"iconsOnly": "true", "type": "submit", "name": "action", "value": "edit"})
+            .session__delete
+                +button("", ["button_icon", "button_icon-delete"], {"iconsOnly": "true", "type": "submit", "name": "action", "value": "delete"})
+            //if user && owner.id == user.id
+                .session__delete
+                    +button("Удалить заказ", [], {"type": "submit", "name": "action", "value": "delete"})
+            +person(owner)
+            .session__info Сделал заказ в 
+                span=service.title
+            .session__time=time
+            .session__controls
+                +button("Хочу также!", [], {"type": "submit", "name": "action", "value": "same"})
+                +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
+            //if user
+                input(type="hidden" name="userId" value=user._id)
+                input(type="hidden" name="orderId" value=order._id)
+                +button("Хочу также!", [], {"type": "submit", "name": "action", "value": "same"})
+                +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
+            .session__subscribers
+                .session__subsribers_info Присоеденилось 
+                    span=length
+                .session__look Посмотреть заказ
+                    +button("", ["button_icon", "button_icon-look"], {"iconsOnly": "true", "type": "submit", "name": "action", "value": "look"})
+        //+company(logo)
+        //.session__name= name
+        //#time.session__time= time
+        //each dish in order.dishes
             .session__dish=dish.name
 
-        .session__controls
+        //.session__controls
             if user
-                form.form(action="/wantAlso", method="post")
+                form.form(action="/sessionControls", method="post")
                     input(type="hidden" name="userId" value=user._id)
                     input(type="hidden" name="orderId" value=order._id)
-                    +button("Хочу также!", [], {"type": "submit"})
-
-                form(action="/mymenu", method="post")
-                    input(type="hidden", name="orderId" value=order._id)
+                    +button("Хочу также!", [], {"type": "submit", "name": "action", "value": "same"})
                     +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
+                    if order.owner.id == user.id
+                        +button("Удалить заказ", [], {"type": "submit", "name": "action", "value": "delete"})
+                        +button("Редактировать заказ", [], {"type": "submit", "name": "action", "value": "edit"})
             else
                 +button("Хочу также!", ["button_not_active"])
                 +button("Своё меню!", ["button_not_active"])
