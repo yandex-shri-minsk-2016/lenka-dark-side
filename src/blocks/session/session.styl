@@ -1,17 +1,11 @@
 @import '../../stylus/vars.styl'
 
 .session
-    width 68%
-    z-index 1
-    height 200px
-    // border 3px solid #ccc
+    width 37%
+    height 400px
     position relative
     margin 0 auto
     background #fff
-    border 2px dashed border-offers
-    border-radius 10px
-    margin-bottom 30px
-    
     
 .session + .session 
     margin-top 30px
@@ -22,55 +16,70 @@
     &:last-child
         margin-bottom 10px
 
+.session__form
+    width 100%
+        
+.session__edit
+    width 42px
+    height 30px
+    position absolute
+    left 0
+    top 0
 
-.session__name
-    width 50%
-    font-size 1.2em
-    margin-left 250px
-    padding-top 20px
-    border-bottom 1px solid border-offers
+.session__delete
+    width 42px
+    height 30px
+    position absolute
+    top 0
+    right 0
+    
+.session__info
+    text-align center
+    font-size 14pt
 
 .session__dish
     width 50%
     margin-left 250px
 
 .session__time
-    width 7.3%
-    font-size 1.6em
-    margin-left 250px
+    width 100px
+    position relative
+    margin-top 30px
+    left 50%
+    margin-left -50px
+    font-size 22pt
     margin-bottom 10px
 
 .session__controls
-    margin-left 245px
+    position relative
+    width 90%
+    margin 0 auto
     padding-bottom 10px
+    
+.session__subsribers_info, .session__look
+    display inline-block
+    font-size 9pt
+    position absolute
+    
+.session__subsribers_info span
+    color #de3163
+    font-size 15pt
+    font-weight bold
+    
+.session__subsribers_info
+    left 10px
 
-@media screen and (max-width: 1000px)
-    .session
-        height 350px
+.session__look
+    margin-top -10px
+    right 10px
+    
 
-    .session__name, .session__dish
-        width 65%
+@media screen and (max-width: 1010px)
+    session__controls
+        width 150px
         margin 0 auto
-        text-align center
+//@media screen and (max-width: 860px)
 
-    .session__time
-        padding-top 10px
-        width 13.7%
-        margin 0 auto
-
-    .session__controls
-        width 70%
-        margin 0 auto
-        padding-top 15px
-        padding-left 70px
-
-@media screen and (max-width: 860px)
-
-    .session__name, .session__dish
-        width 75%
-
-    .session__controls
-        padding-left 16px
 
 @media screen and (max-width: 740px)
     .session
@@ -81,8 +90,6 @@
         padding-left 71px
 
 @media screen and (max-width: 650px)
-    .session__name, .session__dish
-        font-size 1.1em
 
     .session__controls
         width 60%

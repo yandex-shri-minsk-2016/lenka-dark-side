@@ -32,6 +32,7 @@ passport.use('facebook',
                     var newPerson = new Person();
                     newPerson.facebookId = profile.id;
                     newPerson.name = profile.displayName;
+                    newPerson.avatar = "https://graph.facebook.com/" + profile.username + "/picture" + "?width=200&height=200" + "&access_token=" + token;
                     newPerson.save(function (err) {
                         if (err)
                             throw err;
@@ -53,7 +54,6 @@ passport.use('vk',
         process.nextTick(function () {
 
             Person.findOne({vkId: profile.id}, function (err, user) {
-                console.log(profile.id);
                 if (err)
                     return done(err);
 
@@ -63,6 +63,7 @@ passport.use('vk',
                     var newPerson = new Person();
                     newPerson.vkId = profile.id;
                     newPerson.name = profile.displayName;
+                    newPerson.avatar = profile.photos[0].value;
                     newPerson.save(function (err) {
                         if (err)
                             throw err;
