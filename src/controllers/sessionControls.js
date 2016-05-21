@@ -25,7 +25,7 @@ module.exports = function(req, res) {
             break
         case 'same':
             OrderModel.findOne({_id: req.body.orderId}, function (err, order) {
-                PersonModel.findOne({_id: req.body.userId}, function (err, person) {
+                PersonModel.findOne({_id: req.body.userId}, function (err, person){
                     if (err) {
                         next();
                     }
