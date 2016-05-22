@@ -14,13 +14,12 @@ module.exports = function(req, res) {
         });
     }
     if (req.body.action == 'delete') {
-        console.log('delete')
         OrderModel.findOneAndRemove({_id: req.body.orderId}, function(err){
             if (err) {
                 next();
             }
+            res.redirect('back');
         });
-        res.redirect('back');
     }
     if (req.body.action == 'same') {
         OrderModel.findOne({_id: req.body.orderId}, function (err, order) {
@@ -35,15 +34,13 @@ module.exports = function(req, res) {
                 });
                 order.save();
             });
+            res.redirect('back');
         });
-        res.redirect('back');
     }
     if (req.body.action == 'edit') {
-        OrderModel.findOne({_id: req.body.orderId}, function (err, order) {
+        OrderModel.findOne({_id: req.body.orderId}).populate("dishes").exec(function(err, order) {
             req.session.order = order;
             req.session.dishes = order.dishes;
-            console.log(req.session.dishes);
-            console.log('------------------------------------------');
             res.redirect('/services/' + req.session.order.service._id);
         });
     }
