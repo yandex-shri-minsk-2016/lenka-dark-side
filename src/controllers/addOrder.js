@@ -4,7 +4,21 @@ var ServiceModel = require('../models/service').model;
 module.exports = function(req,res,next) {
     if (req.body.action == 'newOrder' && req.session.dishes) {
         var order = {};
-        if(req.session.isOwner == "True") {
+        if (req.session.edit == "True") {
+            OrderModel.findOne({_id: req.session.order}, function(err, order){
+                order.dishes = req.session.dishes;
+                order.save(function(err){
+                        if(!err){
+                            req.session.order = {};
+                            req.session.dishes = {};
+                            res.redirect('/');
+                        }else{
+                            res.redirect('/');
+                        }
+                });
+            });
+        }
+        else if (req.session.isOwner == "True") {
             order.owner = req.user;
             order.dishes = req.session.dishes;
             order.time = req.session.time;

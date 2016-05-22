@@ -39,6 +39,7 @@ module.exports = function(req, res) {
     }
     if (req.body.action == 'edit') {
         OrderModel.findOne({_id: req.body.orderId}).populate("dishes").exec(function(err, order) {
+            req.session.edit = "True";
             req.session.order = order;
             req.session.dishes = order.dishes;
             res.redirect('/services/' + req.session.order.service._id);
