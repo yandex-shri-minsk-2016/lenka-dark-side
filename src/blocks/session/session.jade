@@ -44,3 +44,24 @@ mixin session(owner, time, service, id, order, user, length)
         //-         +button("Хочу также!", ["button_not_active"])
         //-         +button("Своё меню!", ["button_not_active"])
 
+
+        //- +company(logo)
+        //- .session__name= name
+        //- #time.session__time= time
+        //- each dish in order.dishes
+        //-     .session__dish=dish.name
+
+        //- .session__controls
+        //-     if user
+        //-         form.form(action="/wantAlso", method="post")
+        //-             input(type="hidden" name="userId" value=user._id)
+        //-             input(type="hidden" name="orderId" value=order._id)
+        //-             +button("Хочу также!", [], {"type": "submit"})
+
+        //-         form(action="/mymenu", method="post")
+        //-             input(type="hidden", name="orderId" value=order._id)
+        //-             +button("Своё меню!", [], {"type": "submit", "name": "action", "value": "menu"})
+        //-     else
+        //-         +button("Хочу также!", ["button_not_active"])
+        //-         +button("Своё меню!", ["button_not_active"])
+
