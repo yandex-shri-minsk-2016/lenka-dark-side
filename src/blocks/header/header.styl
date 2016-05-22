@@ -8,11 +8,6 @@
   position relative
   border-bottom 3px solid buttons
 
-.header__title
-  margin 0 0 0 120px
-  font-size 2em
-  padding-top 10px
-
 .header__logo
   width 90px
   height 90px
@@ -23,8 +18,10 @@
   top: 0
 
 .header__slogan
-  margin 0 0 0 120px
-  font-size 1.2em
+  width 200px
+  height 80px
+  background url(../images/title1.png) no-repeat
+  margin 0 0 0 97px
   position relative
 
 .header__bell
@@ -33,6 +30,32 @@
   right:0
   top:0
 
+.header__link-adminRoom
+  margin-left 850px
+  display block
+  position absolute
+  top 30px
+  text-decoration none
+  &:hover
+    color buttons
+.header__button
+  width 16%
+  margin-left 982px
+  margin-top -74px
+
+
+@media screen and (max-width:1200px)
+  .header__link-adminRoom
+    margin-left 650px
+  .header__button
+    margin-left 772px
+
+@media screen and (max-width:1000px)
+  .header__link-adminRoom
+    margin-left 450px
+  .header__button
+    margin-left 542px
+
 @media screen and (max-width:950px)
   .header
     height 180px
@@ -40,7 +63,13 @@
     width 45%
     position relative
     margin 0 auto
-
+  .header__link-adminRoom
+    margin-top 100px
+    margin-left 0
+  .header__button
+    width 56%
+    margin-left 102px
+    margin-top 26px
 
 @media screen and (max-width:803px)
   .header__block

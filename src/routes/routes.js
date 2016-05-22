@@ -12,8 +12,10 @@ var addOrder = require('../controllers/addOrder');
 var wantSame = require('../controllers/wantSame.js');
 var removeFromBasketController = require('../controllers/removeFromBasket.js');
 var checkController = require('../controllers/check.js');
+var authController = require('../controllers/authController.js');
 
-router.get('/', homeController);
+router.get('/', authController);
+router.get('/home', homeController);
 
 router.get('/services', servicesController);
 router.post('/setTime', setTime);
@@ -22,8 +24,8 @@ router.get('/removeFromBasket/:id', removeFromBasketController);
 
 router.post('/mymenu', myMenu);
 
-router.get('/auth/fb',passport.authenticate('facebook', {successRedirect: 'back', failureRedirect: '/'}));
-router.get('/auth/vk',passport.authenticate('vk', {successRedirect: 'back', failureRedirect: '/'}));
+router.get('/auth/fb',passport.authenticate('facebook', {successRedirect: '/home', failureRedirect: 'back'}));
+router.get('/auth/vk',passport.authenticate('vk', {successRedirect: '/home', failureRedirect: 'back'}));
 router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');

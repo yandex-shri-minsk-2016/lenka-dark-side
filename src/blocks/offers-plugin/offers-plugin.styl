@@ -1,7 +1,8 @@
 @import '../../stylus/vars.styl'
 
 .offers-plugin
-    margin-top 10px
+    padding-top 122px
+    margin-left 145px
 
 .offers-pluign__hide, .offers-pluign__hide + label ~ div
     display none
@@ -87,6 +88,33 @@
         margin-left -86%
         margin-top 15px
         position relative
+
+@media screen and (max-width: 1206px)
+    .offers
+        height 270px
+
+    .offers-plugin__button
+        position relative
+        margin-left -140px
+        margin-top 40px
+
+@media screen and (max-width: 1000px)
+    .offers-plugin
+        padding-top 0
+
+    .offer-hide__title
+        margin 10px -27px 0 50px
+        float left
+
+    .offers-plugin__button
+        margin-left -390px
+
+    .offers-hide__time-hrs
+        margin-left 50px
+
+    .offers
+        height 490px
+
 @media screen and (max-width: 910px)
      .offers-pluign__hide:checked + label + div
          width 65%
@@ -94,6 +122,7 @@
 
 @media screen and (max-width: 800px)
     .offers-plugin 
+        margin-top 40px
         width 70%
     
     .offers-pluign__hide:checked + label + div 
@@ -109,21 +138,28 @@
         
     .offer-hide__title
         float none 
-        position absolute
-        margin 0 0 0 81px
+        margin 0 auto
+        margin-left -120px
 
     .offers-hide__blockOfLogic
         width 320px
         height 50px
         position absolute   
-        margin 37px 0 0 60px  
-
-@media screen and (max-width: 512px)
-    .offer-hide__title
-        margin 0 0 0 21px
-    
-    .offers-hide__blockOfLogic
-        margin 36px 0 0 -1px
+        margin 7px 0 0 56px  
     
     .offers-plugin__button
-        margin-left -168%   
+        margin-left -73%
+        margin-top 51px
+@media screen and (max-width: 480px)
+    .offers-plugin
+        margin-left 9px
+
+@media screen and (max-width: 440px)
+    .offers
+        height 540px
+
+    .offers-plugin
+        margin-left -31px
+        margin-top 70px
+
+
