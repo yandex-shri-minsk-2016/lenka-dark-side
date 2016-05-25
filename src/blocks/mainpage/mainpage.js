@@ -34,12 +34,13 @@
             } else {
                 console.log('it work');
             }
+            var intrv = setInterval(function() {      
+            if((Notification.permission === "granted") && (timeMe <=18)) {
 
-            if((Notification.permission === "granted") && (timeMe <=27)) {
                 var msg = new Notification("test");
             } else if(Notification.permission !== "denied") {
                 Notification.requestPermission(function(permission) {
-                    if((permission === "granted") && (timeMe <=27)) {
+                    if((permission === "granted") && (timeMe <=18)) {
                         var msg = new Notification('test1');
                     } else {
                         console.log("Разрешение не получено или время еще не пришло...");
@@ -48,6 +49,7 @@
             } else {
                 console.log('Человек решил не отвечать!');
             }
+        }, 180000);
         }
     })
 })();
