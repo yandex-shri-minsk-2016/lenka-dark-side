@@ -12,9 +12,11 @@ var addOrder = require('../controllers/addOrder');
 var removeFromBasketController = require('../controllers/removeFromBasket.js');
 var checkController = require('../controllers/check.js');
 var authController = require('../controllers/authController.js');
+var HomeJSONController = require('../controllers/getJsonHome.js');
 
 router.get('/', authController);
 router.get('/home', homeController);
+router.get('/homejson', HomeJSONController);
 
 router.get('/services', servicesController);
 router.post('/setTime', setTime);

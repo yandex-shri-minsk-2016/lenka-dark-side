@@ -11,9 +11,9 @@ module.exports = function(req,res,next) {
                         if(!err){
                             req.session.order = {};
                             req.session.dishes = {};
-                            res.redirect('/');
+                            res.redirect('/home');
                         }else{
-                            res.redirect('/');
+                            res.redirect('/home');
                         }
                 });
             });
@@ -34,9 +34,9 @@ module.exports = function(req,res,next) {
                     if(!err){
                         req.session.order = {};
                         req.session.dishes = {};
-                        res.redirect('/');
+                        res.redirect('/home');
                     }else{
-                        res.redirect('/');
+                        res.redirect('/home');
                     }
                 });
             });
