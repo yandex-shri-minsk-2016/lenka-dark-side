@@ -1,16 +1,15 @@
 extends ../views/layout/layout
 include ../blocks/header/header
 include ../blocks/button/button
-include ../blocks/basket/basket
 include ../blocks/order/order
 include ../blocks/session/session
-include ../blocks/menuitem/menuitem
 include ../blocks/footer/footer
 include ../blocks/group/group
 include ../blocks/subscriber/subscriber
 
 block title
     title Главная страница
+block content
     if user
         +header(user)
         +button("Создать новый заказ", [".button_new-order"],{'href': '/services?owner=True' })
@@ -22,7 +21,7 @@ block title
     .main-wrapper
         .main-page
             each order in orders
-                +session(order.owner.name, order.time, order.service.logo, order.service._id, order, user)
+                +session(order.owner, order.time, order.service, order.service._id, order, user, order.subscriber.length)
                 if user
                     if order.owner.name===user.name
                         script.
@@ -38,9 +37,11 @@ block title
                                     if subscriber.paid
                                         each dish in subscriber.dishes
                                             +group(dish)
-                form.hide-form
+                //form.hide-form
                     input(id="s" + order.id type="checkbox").hide-form__input
                     label(for="s" + order.id) Показать присоединившихся:
                     each subscriber in order.subscriber
                         +subscriber(subscriber.person.name, subscriber.dishes, subscriber._id, subscriber, order)
         +footer("© Lenka-dark-side Corporation")
+    script
+        include ../blocks/mainpage/mainpage.js

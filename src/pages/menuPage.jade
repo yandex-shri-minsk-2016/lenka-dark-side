@@ -16,6 +16,8 @@ block content
     .main-wrapper
         .main-wrapper__company
             +offers(service, "offers_company", "offers__down-text-mod")
+                .offers__down-text
+                    .offers__text= service.phone
                 .feels
                     span.feels__voices Всего голосов: 1234
                     .feels__like
@@ -32,7 +34,7 @@ block content
                         +menuitem(dish)
             .main-wrapper__cart
                 span.main-wrapper__title Корзина
-                +basket(orders, service)
+                +basket(dishes, service)
         +button("Назад к сервисам", [],{'href': '/services?owner=True'})
         +footer("Заказывайте еду на нашей стороне, на темной стороне...")
 

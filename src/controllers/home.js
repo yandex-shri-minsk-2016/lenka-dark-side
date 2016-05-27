@@ -22,8 +22,6 @@ module.exports = function HomeController(req, res, next) {
                 return orderTime > current;
             });
 
-            console.log(orders);
-
             function isSubscriber(subscribers){
                 return subscribers.some(function(subscriber){
                     return subscriber.person.id == req.user.id;

@@ -1,9 +1,12 @@
 mixin another-info(service, mod, secMod)
         .another-info
-            .another-info__cost(class= mod)= service.mincost
+            .another-info__cost(class= mod)
+                span.another-info__mncost= service.mincost
                 .another-info__text мин-сумма заказа
-            .another-info__dep(class= mod)= service.costDelivery
+            .another-info__dep(class= mod)
+                span.another-info__dlcost= service.costDelivery
                 .another-info__text стоимость доставки
-            .another-info__time(class= secMod)= service.departureTime
+            .another-info__time(class= secMod)
+                span.another-info__dptime= service.departureTime
                 .another-info__text гарантированное время доставки
 

@@ -4,9 +4,7 @@ include ../auth/auth
 mixin header(person)
     .header
         .header__block
-            h1.header__title Food
-                span(style='color: #d80027') ZZ
-                span a
-            a.header__logo(alt="logo" href="/")
-            .header__slogan Не кушайте в одиночку!
-        +auth(person)
+            a.header__logo(alt="logo" href="/home")
+            .header__slogan
+            a.header__link-adminRoom(href="") Мои кабинет
+            +button("Сделать заказ", "header__button")
