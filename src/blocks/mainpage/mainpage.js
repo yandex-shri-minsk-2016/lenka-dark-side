@@ -10,6 +10,43 @@
             } else {
                 console.log('it work');
             }
+
+            var intrvlOfEnd = setInterval(function(){
+                var strTimeOrd = data[3].time;
+                var now = new Date();
+                var timeOfOrder = new Date();
+
+                var hours = strTimeOrd[0] + strTimeOrd[1];
+                var min = strTimeOrd[3] + strTimeOrd[4];
+
+                var nhours = parseInt(hours);
+                var nmin = parseInt(min);
+
+                console.log(nhours);
+                console.log(nmin);
+
+                timeOfOrder.setHours(nhours);
+                timeOfOrder.setMinutes(nmin);
+
+                var nowMLS = now.getTime();
+                var timeOfOrderMLS = timeOfOrder.getTime();
+
+                var diff = timeOfOrderMLS - nowMLS;
+
+                var timeMe = diff/60000;
+
+
+
+                    if ((Notification.permission === "granted") && (timeMe <=0)) {
+                        var msg = new Notification("Заказ уже в пути!", {
+                        body: "Ваш заказ уже выехал." + "\n" + "Примерное время доставки " + data[3].service.departureTime,
+                        icon: "../images/notification/icon.png"
+                });
+                    }
+                clearInterval(intrvlOfEnd);
+                }, 10000);
+
+
             var intrv = setInterval(function() {    
 
             var strTimeOrd = data[3].time;
