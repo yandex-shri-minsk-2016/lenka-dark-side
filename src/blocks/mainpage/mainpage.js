@@ -3,7 +3,16 @@
         success: function(data) {
             console.log(data);
 
-            var strTimeOrd = data[0].time;
+            console.log(data[0].service.departureTime);
+
+            if(!window.Notification) {
+                alert("Извините, ваш браузер не разрешает отправлять вам уведомления... Советуем его")
+            } else {
+                console.log('it work');
+            }
+            var intrv = setInterval(function() {    
+
+            var strTimeOrd = data[3].time;
             var now = new Date();
             var timeOfOrder = new Date();
 
@@ -28,20 +37,30 @@
 
             var timeMe = diff/60000;
 
-
-            if(!window.Notification) {
-                alert("Извините, ваш браузер не разрешает отправлять вам уведомления... Советуем его")
-            } else {
-                console.log('it work');
+            var dataOrder = {
+                deadline: timeMe
             }
-            var intrv = setInterval(function() {      
-            if((Notification.permission === "granted") && (timeMe <=18)) {
 
-                var msg = new Notification("test");
+            if (timeMe <= 10) {
+                clearInterval(intrv);
+                console.log("Уведомления остановлены");
+            }
+
+
+            if((Notification.permission === "granted") && (timeMe <=20)) {
+                var msg = new Notification("Осталось совсем чуть-чуть", {
+                    body: "До оформления вашего заказа осталось " + dataOrder.deadline + " минут." + "\n" + "Поспешите собрать деньги на заказ :)",
+                    icon: "../images/notification/icon.png"
+
+                });
             } else if(Notification.permission !== "denied") {
                 Notification.requestPermission(function(permission) {
-                    if((permission === "granted") && (timeMe <=18)) {
-                        var msg = new Notification('test1');
+                    if((permission === "granted") && (timeMe <=20)) {
+                        var msg = new Notification("Осталось совсем чуть-чуть", {
+                            body: "До оформления вашего заказа осталось " + dataOrder.deadline + " минут." + "\n" + "Поспешите собрать деньги на заказ :)",
+                            icon: "../images/notification/icon.png"
+
+                });
                     } else {
                         console.log("Разрешение не получено или время еще не пришло...");
                     }
@@ -49,7 +68,7 @@
             } else {
                 console.log('Человек решил не отвечать!');
             }
-        }, 180000);
+        }, 300000);
         }
     })
 })();
