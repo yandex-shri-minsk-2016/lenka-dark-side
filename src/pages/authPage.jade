@@ -18,14 +18,7 @@ block content
                 .first-screen__title
                     span.first-screen_text Авторизируйтесь
                 .first-screen__description
-                    p.first-screen_faq Пожалуйста, введите свое имя и email или войдите через социальную сеть.
-                .first-screen__iptName
-                    label.first-screen__placholder-input Ваше имя
-                    input(type="text", placeholder="Ваше имя", name="personName").first-screen__name
-                .first-screen__inpEmail
-                    label.first-screen__placholder-email 
-                    input(type="text", placeholder="Email", name="personEmail").first-screen__email
-                +button("Войти", "first-screen__button", {"type": "submit", "name": "action", "value": "auth"})
+                    p.first-screen_faq Пожалуйста, войдите через социальную сеть.
                 +auth(person, "first-screen__auth", "first-screen__span")
             .first-screen__bottom-text
                 p.bottom-text__welcome Добро пожаловать на foodZZa.
